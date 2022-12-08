@@ -1,0 +1,32 @@
+workflow:
+  rules:
+    - if: $CI_MERGE_REQUEST_ID               # Execute jobs in merge request context
+    - if: $CI_COMMIT_BRANCH == 'master'      # Execute jobs when a new commit is pushed to master branch
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - sudo docker build -t talpibot-react:$CI_COMMIT_SHORT_SHA .
+
+deploy:
+  stage: deploy
+  needs:
+    - build
+  script:
+    - sudo docker tag talpibot-react:$CI_COMMIT_SHORT_SHA talpibot-react:latest
+    - sudo docker rmi talpibot-react:$CI_COMMIT_SHORT_SHA
+    - sudo docker create -ti --name talpibot-react-container_$CI_COMMIT_SHORT_SHA talpibot-react:latest bash
+    - sudo docker cp talpibot-react-container_$CI_COMMIT_SHORT_SHA:/react-frontend/build/ /home/talpibot_user/TalpiBot/React/data/react-frontend
+    - sudo docker rm -f talpibot-react-container_$CI_COMMIT_SHORT_SHA
+  after_script:
+    - sudo docker image prune -f
+  only:
+  - master

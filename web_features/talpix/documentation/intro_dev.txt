@@ -1,0 +1,177 @@
+&&&
+תיעוד למפתח
+&&&
+
+%%%
+הקדמה
+%%%
+כדי להתחיל לעבוד יש להוריד את התוכנות הבאות:
+
+Python 3.7 (לא 3.9)
+^^^
+https://www.python.org/downloads/release/python-377/
+^^^
+Node.js & npm v16 (לא v17)
+^^^
+https://nodejs.org/download/release/v16.13.0/node-v16.13.0-x64.msi
+^^^
+
+התחברו דרך חשבון Gitlab ותעשו clone לפרויקט
+^^^
+https://gitlab.com/JordNGhelfN/talpix
+^^^
+
+כדי לעדכן את סביבת העבודה תריצו את הקובץ env_setup.bat
+כדי להריץ את האתר תריצו את הקובץ run_site.bat
+כדי להריץ את הבוט תריצו את הקובץ run_bot.bat
+עבדו על בראנץ' development
+
+
+%%%
+פיתוח עמוד בTalpiWeb
+%%%
+שלום רב,
+דף זה מכיל הוראות והנחיות כחצד לבנות דף באתר TalpiWeb, אנא עקבו אחרי ההוראות בקפידה.
+בנוסף, ישנו תיאור של ה-Components השונים לנוחיותכם.
+בהצלחה בפיתוח הדף הבא של TalpiWeb!
+$$$
+from web_framework.server_side.infastructure.page import Page
+from web_framework.server_side.infastructure.components.stack_panel import StackPanel
+from web_features.roles import *
+
+class ExamplePage(Page):
+
+    def __init__(self, params):
+        super().__init__()
+        self.sp = None
+
+    @staticmethod
+    def get_title():
+        return "דוגמה"
+
+    @staticmethod
+    def is_authorized(user):  # who can view
+        return MATLAM in user.role  # Only the people of the base
+
+    def get_page_ui(self, user):
+        self.sp = StackPanel([])
+        return self.sp
+$$$
+
+%%%
+אז איך מתחילים?
+%%%
+
+על מנת להתחיל, יש לפתוח תיקייה חדשה תחת web_features. בתוך התיקייה יש ליצור קובץ חדש, בו תיצרו מחלקה היורשת מ-Page. צריכה להיראות בפורמט הבא:
+
+get_title() - מחזיר את השם של הדף כפי שיוצג באתר.
+is_authorized() - מחזיר True או False לפי המשתמש שהתקבל, האם הוא מורשה גישה או לא.
+get_page_ui() - כאן הדף עצמו בנוי. תחילה אנו יוצרים Component בשם StackPanel.
+נרחיב עליו יותר בהמשך, אך מה שחשוב לנו לדעת כרגע זה שהוא מכיל בתוכו components אחרים ומציג אותם אחד מתחת לשני.
+לבסוף, אנו מחזירים את ה-StackPanel.
+
+כעת יש שתי אפשרויות:
+1) הדף שלכם ישתייך לקטגוריה חדשה
+2) הדף שלכם ישתייך לקטגוריה קיימת
+
+
+%%%
+אפשרות 1 - יצירת קטגוריה חדשה
+%%%
+
+יש ליצור קובץ חדש (לדוגמה ExampleCategory.py) בתוך התיקייה הנוכחית. תוכן הקובץ:
+$$$
+from web_framework.server_side.infastructure.category import Category
+from web_framework.server_side.infastructure.roles_constants import MATLAM
+from web_features.documentation.example_page import ExamplePage
+
+class ExampleCategory(Category):
+    def __init__(self):
+        super().__init__(pages={"example": ExamplePage})
+
+    def get_title(self) -> str:
+        return "דוגמה"
+
+    def is_authorized(self, user):
+        return MATLAM in user.role  # Only the people of the base
+
+$$$
+
+לאחר מכן יש להיכנס לקובץ features.py תחת התיקייה web_features,
+להוסיף שם import לקטגוריה שיצרתם ולהוסיף אובייקט של הקטגוריה שלכם לרשימה של הקטגוריות.
+
+
+%%%
+אפשרות 2 - הוספת הדף לקטגוריה קיימת
+%%%
+
+במצב זה יש לפתוח את הקובץ בה מוגדרת הקטגוריה הרצויה, להוסיף import לדף שיצרתם ולהוסיף אותו למילון pages.
+למשל, נניח שאנחנו רוצים להוסיף את הדף Example2 (נניח שיצרנו כזה) לקטגוריה ExampleCategory. במקרה זה הקובץ של הקטגוריה יראה כך:
+
+$$$
+from web_framework.server_side.infastructure.category import Category
+from web_framework.server_side.infastructure.roles_constants import MATLAM
+from web_features.documentation.example_page import ExamplePage
+from web_features.documentation.example_page2 import ExamplePage2
+
+
+class ExampleCategory(Category):
+    def __init__(self):
+        super().__init__(pages={"example": ExamplePage, "example2": ExamplePage2})
+
+    def get_title(self) -> str:
+        return "דוגמה"
+
+    def is_authorized(self, user):
+        return MATLAM in user.role  # Only the people of the base
+
+$$$
+
+%%%
+הוספת Components לדף
+%%%
+מזל טוב! יצרתם את העמוד הראשון שלכם באתר, אבל הוא די ריק כרגע...
+עכשיו נלמד כיצד להוסיף Components לדף שלכם וליצוק לתוכו תוכן.
+נדגים זאת באמצעות הרכיב הכי פשוט - Label. רכיב זה משמש להצגת טקסט בדף, ומקבל מספר פרמטרים:
+$$$
+- text: הטקסט שיוצג בדף
+- bg_color: צבע רקע.
+- fg_color: הצבע של הטקסט עצמו.
+- size: גודל הטקסט
+$$$
+מלבד פרמטר הטקסט, לשאר הפרמטרים נעביר את אחד מהקבועים אשר נמצאים בקובץ server_side/infrastructure/constants.py.
+לדוגמה, על מנת להוסיף Label עם הטקסט "כותרת" בגודל ניצור את ה-Label:
+$$$
+title = Label(text="כותרת", size=SIZE_LARGE)
+$$$
+זאת לאחר שייבאנו את הרכיב Label ואת הקבועים מהקובץ constants לאחר מכן נוסיף את ה-Label שיצרנו לעמוד כך:
+$$$
+self.sp.add_component(title)
+$$$
+הקובץ הכולל וה-Label שתופיע ייראו עתה כך:
+
+$$$
+from web_framework.server_side.infastructure.page import Page
+from web_framework.server_side.infastructure.components.stack_panel import StackPanel
+from web_framework.server_side.infastructure.components.label import Label
+from web_framework.server_side.infastructure.constants import *
+from web_features.roles import *
+
+class ExamplePage(Page):
+
+    def __init__(self, params):
+        super().__init__()
+        self.sp = None
+
+    @staticmethod
+    def get_title():
+        return "דוגמה"
+
+
+    def get_page_ui(self, user):
+        self.sp = StackPanel([])
+        title = Label(text="כותרת", size=SIZE_LARGE)
+        self.sp.add_component(title)
+        return self.sp
+
+$$$

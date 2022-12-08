@@ -1,0 +1,12 @@
+{
+  "BOT_TOKEN": "XXX",
+  "MAIN_DATABASE_NAME": "talpibot_main",
+  "CURRENT_DATABASE_NAME": "talpiot_dev",
+  "MONGO_USER": "readWriteDevelopment",
+  "MONGO_PASSWORD": "password-development!@#",
+  "MONGO_URL": "talpibot.westeurope.cloudapp.azure.com",
+  "MONGO_PORT": 27018,
+  "GMAIL_USER": "XXX@gmail.com",
+  "GMAIL_PASSWORD": "XXX",
+  "AZURE_BLOBS_CONNECTION_STRING": "XXX"
+}

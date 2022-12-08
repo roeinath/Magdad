@@ -1,0 +1,40 @@
+<div align="center">
+<img src="https://user-images.githubusercontent.com/57357104/78452952-418b2a00-7697-11ea-9f6f-4d50a973d8f6.png">
+
+
+# Welcome to `TalpiBot Wiki`!
+
+# חדש לכתיבת פיצ'ר? התחל פה
+# `הוויקי עדיין בבניה, אם משהו חסר אנא כתבו בקבוצה`
+
+
+</div>
+
+# 📚 קריאה מקדימה
+* להסבר כללי על הפרוייקט שלנו, [לחצו עלי](About).
+* פעם ראשונה בפרוייקט קוד פתוח? רוצים להתחבר לאווירה שכולם מדברים עליה? [לחצו עלי](Being a TalpiBot Developer).
+* חדשים לגיט? צריכים להתרענן? [לחצו עלי](Using Git).
+
+# 🔧 התקנת סביבת עבודה
+לפני שאתם ניגשים לכתוב את הפיצ'ר הראשון שלכם, אתם צריכים לעבור תהליך התקנות קצר. למדריך [לחצו עלי](Getting Started).
+
+#  🔥 יצירת פיצ'ר חדש
+להסבר על מה זה פיצ'ר, ואיך הוא בנוי, [לחצו עלי](Feature Structure).
+# 🎓 כלים לכתיבת פיצ'ר
+*    לעבודה עם טלגרם [לחצו עלי.](Telegram)
+*    לעבודה עם ה-Database [לחצו עלי.](DB)
+*  עבודה עם שירותים חיצוניים (גוגל, מודל וכו'), [לחצו עלי.](External APIs)
+
+# 🍾 סיום
+מרגישים אבודים ולא יודעים איך להתחיל? צפו [בפיצ'ר לדוגמא](ARP) שבו אנחנו מסבירים צעד אחרי צעד מה צריך לעשות
+
+# 🐬 שונות
+*  חדשים לגיט? [לחצו עלי](Using Git).
+*  שמירת מידע רגיש (טוקן הבוט, סיסמה לDB), [לחצו עלי](Credentials Vault).
+*  לשימוש נכון בLogger כדי להדפיס מידע רלוונטי, [לחצו עלי](Using the Logger).
+*  לעבודה עם קבוצות, [לחצו עלי.](Groups API)
+
+
+
+
+

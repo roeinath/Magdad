@@ -1,0 +1,3 @@
+[submodule "packages/talpiot"]
+	path = packages/talpiot
+	url = ../../shay/talpiot.git

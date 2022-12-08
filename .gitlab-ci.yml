@@ -1,0 +1,203 @@
+workflow:
+  rules:
+    - if: $CI_MERGE_REQUEST_ID               # Execute jobs in merge request context
+    - if: $CI_COMMIT_BRANCH == 'master'      # Execute jobs when a new commit is pushed to master branch
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+stages:
+  - build
+  - test
+  - deploy
+
+.bot_task:
+  only:
+    changes:
+      - .gitlab-ci.yml
+      - Dockerfile-bot
+      - requirements.txt
+      - bot_features/*
+      - bot_features/**/*
+      - bot_framework/*
+      - bot_framework/**/*
+
+.ide_bot_task:
+  only:
+    changes:
+      - .gitlab-ci.yml
+      - Dockerfile-ide-bot
+      - requirements.txt
+      - ide_framework/*
+      - ide_framework/**/*
+
+
+.django_task:
+  only:
+    changes:
+      - .gitlab-ci.yml
+      - Dockerfile-web
+      - Dockerfile-react
+      - requirements.txt
+      - web_framework/server_side/*
+      - web_framework/server_side/**/*
+      - web_features/*
+      - web_features/**/*
+
+
+.react_task:
+  stage: build
+  only:
+    changes:
+      - .gitlab-ci.yml
+      - Dockerfile-web
+      - Dockerfile-react
+      - requirements.txt
+      - web_framework/client_side/*
+      - web_framework/client_side/**/*
+
+
+
+# -----------
+# DJANGO
+# -----------
+
+django build:
+  extends: .django_task
+  stage: build
+  script:
+    - sudo docker build -t talpibot-site-new:$CI_COMMIT_SHORT_SHA . -f Dockerfile-web
+
+
+django test and cleanup:
+  extends: .django_task
+  stage: test
+  needs:
+    - django build
+  script:
+    - sudo docker run --rm talpibot-site-new:$CI_COMMIT_SHORT_SHA python -m unittest
+  after_script:
+    - sudo docker rmi talpibot-site-new:$CI_COMMIT_SHORT_SHA
+    - sudo docker image prune -f --all --filter "until=5h"
+  except:
+    - master
+
+
+django test:
+  extends: .django_task
+  stage: test
+  needs:
+    - django build
+  script:
+    - sudo docker run --rm talpibot-site-new:$CI_COMMIT_SHORT_SHA python -m unittest
+
+
+django deploy:
+  extends: .django_task
+  stage: deploy
+  needs:
+    - django test
+  script:
+    - sudo docker tag talpibot-site-new:$CI_COMMIT_SHORT_SHA talpibot-site-new:latest
+    - sudo docker rmi talpibot-site-new:$CI_COMMIT_SHORT_SHA
+    - sudo systemctl restart talpibot-site-new
+  after_script:
+    - sudo docker image prune -f
+
+
+# -----------
+# REACT
+# -----------
+
+react build:
+  extends: .react_task
+  stage: build
+  script:
+    - sudo docker build -t talpibot-react-new:$CI_COMMIT_SHORT_SHA . -f Dockerfile-react
+
+
+react deploy:
+  extends: .react_task
+  stage: deploy
+  needs:
+    - react build
+  script:
+    - sudo docker tag talpibot-react-new:$CI_COMMIT_SHORT_SHA talpibot-react-new:latest
+    - sudo docker rmi talpibot-react-new:$CI_COMMIT_SHORT_SHA
+    - sudo docker create -ti --name talpibot-react-container_$CI_COMMIT_SHORT_SHA talpibot-react-new:latest bash
+    - sudo docker cp talpibot-react-container_$CI_COMMIT_SHORT_SHA:/react-frontend/build/ /home/talpibot_user/TalpiBot/React/data/react-frontend
+    - sudo docker rm -f talpibot-react-container_$CI_COMMIT_SHORT_SHA
+  after_script:
+    - sudo docker image prune -f --all --filter "until=5h"
+
+
+# ---------
+# Telegram Bot
+# ---------
+
+
+bot build:
+  extends: .bot_task
+  stage: build
+  script:
+    - sudo docker build -t talpibot-bot:$CI_COMMIT_SHORT_SHA . -f Dockerfile-bot
+
+
+bot test and cleanup:
+  extends: .bot_task
+  stage: test
+  needs:
+    - bot build
+  script:
+    - sudo docker run --rm talpibot-bot:$CI_COMMIT_SHORT_SHA python -m unittest
+  after_script:
+    - sudo docker image prune -f
+    - sudo docker rmi talpibot-bot:$CI_COMMIT_SHORT_SHA
+  except:
+    - master
+
+
+bot test:
+  extends: .bot_task
+  stage: test
+  needs:
+    - bot build
+  script:
+    - sudo docker run --rm talpibot-bot:$CI_COMMIT_SHORT_SHA python -m unittest
+
+
+bot deploy:
+  extends: .bot_task
+  stage: deploy
+  needs:
+    - bot test
+  script:
+    - sudo docker tag talpibot-bot:$CI_COMMIT_SHORT_SHA talpibot-bot:latest
+    - sudo docker rmi talpibot-bot:$CI_COMMIT_SHORT_SHA
+    - sudo systemctl restart talpibot-bot
+  after_script:
+    - sudo docker image prune -f
+
+
+# ---------
+# IDE Telegram Bot
+# ---------
+
+
+ide_bot build:
+  extends: .ide_bot_task
+  stage: build
+  script:
+    - sudo docker build -t talpibot-ide-bot:$CI_COMMIT_SHORT_SHA . -f Dockerfile-ide-bot
+
+
+ide_bot deploy:
+  extends: .ide_bot_task
+  stage: deploy
+  script:
+    - sudo docker tag talpibot-ide-bot:$CI_COMMIT_SHORT_SHA talpibot-ide-bot:latest
+    - sudo docker rmi talpibot-ide-bot:$CI_COMMIT_SHORT_SHA
+    - sudo systemctl restart talpibot-ide-tal
+  after_script:
+    - sudo docker image prune -f
+

@@ -1,0 +1,7 @@
+
+Reorganize Main.js / Index.js responsibilities
+
+in Main.js - find a better way to check front page, currently pages containing 'front' will go to the front page
+
+In MultiComponentRender.js - change findAndEditByIndex to just edit, and move the lookup to doActionOnComponent
+

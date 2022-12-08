@@ -1,0 +1,20 @@
+.toScroll {
+    height: auto;
+    width: auto;
+    margin: 0;
+    animation: text_scroll linear infinite;
+}
+
+.center_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  height:20%;
+}
+
+@keyframes text_scroll {
+    0%   { transform: translate(0, 110%); }
+    100% { transform: translate(0, -100%); }
+}
+

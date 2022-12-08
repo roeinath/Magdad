@@ -1,0 +1,320 @@
+&&&
+תיאור Components
+&&&
+
+%%%
+StackPanel
+%%%
+
+
+רכיב זה, בניגוד לרכיבים האחרים אינו נראה ישירות על המסך אלא משמש לאריזה של כמה components בארגון מרחבי מסוים: מאונך או מאוזן.
+הפרמטרים שהרכיב מקבל:
+
+$$$
+
+- children: רשימה של components שיהיו בתוך ה-StackPanel
+- orientation: האם הרכיבים יסודרו במאוניך או במאוזן
+$$$
+
+דוגמה של StackPanel שמכיל שני Labels המסודרים במאוזן:
+
+$$$*
+sp = StackPanel([])
+example_stack_panel = StackPanel([Label("טקסט 1"), Label("טקסט 2")], 0)
+sp.add_component(example_stack_panel)
+$$$*
+
+
+
+%%%
+Label
+%%%
+
+רכיב זה משמש להצגת טקסט בדף, ומקבל מספר פרמטרים:
+
+$$$
+- text: הטקסט שיוצג בדף
+- bg_color: צבע רקע.
+- fg_color: הצבע של הטקסט עצמו.
+- size: גודל הטקסט
+- bold: ערך boolean, האם הטקסט מודגש או לא
+- italic: ערך boolean, האם הטקסט נטוי או לא
+$$$
+
+מלבד פרמטר הטקסט, לשאר הפרמטרים נעביר את אחד מהקבועים אשר נמצאים בקובץ server_side/infrastructure/constants.py.
+לדוגמה, על מנת להוסיף Label עם הטקסט "כותרת" בגודל ניצור את ה-Label:
+
+$$$
+title = Label(text="כותרת", size=SIZE_LARGE)
+$$$
+
+זאת לאחר שייבאנו את הרכיב Label ואת הקבועים מהקובץ constants.
+הקובץ הכולל ייראה עתה כך:
+
+$$$*
+sp = StackPanel([])
+title = Label(text="כותרת", size=SIZE_LARGE)
+sp.add_component(title)
+$$$*
+
+
+
+%%%
+Button
+%%%
+
+רכיב זה מציג כפתור על המסך אשר המשתמש יכול ללחוץ עליו, ובתגובה ללחיצה הכפתור יבצע פעולה כלשהי.
+הפרמטרים שהרכיב מקבל:
+
+$$$
+- text: הטקסט שיוצג על הכפתור
+- action: פונקציה שתיקרא בעקבות לחיצה על הכפתור
+- bg_color: צבע רקע
+- fg_color: צבע של הטקסט
+- size: גודל הטקסט
+$$$
+
+דוגמה של כפתור אשר כתוב עליו "תלחצו עליי", ובעקבות לחיצה משנה את צבעו:
+
+$$$*
+sp = StackPanel([])
+button_example = Button("תלחצו עליי!")
+button_example.set_action(lambda b=button_example: b.update_color(COLOR_PRIMARY if b.bg_color == COLOR_PRIMARY_DARK else COLOR_PRIMARY_DARK))
+sp.add_component(button_example)
+$$$*
+
+
+%%%
+GridPanel
+%%%
+
+רכיב זה משמש להצגת רשימת components בצורה מרובעת (כמו טבלה).
+הפרמטרים שהרכיב מקבל:
+
+$$$
+- row_count: מספר השורות בטבלה
+- column_count: מספר העמודות בטבלה
+- bg_color: צבע רקע של הטבלה
+- bordered: ערך boolean, האם הטבלה תהיה עם גבולות או לא
+$$$
+
+דוגמה לטבלה של 2 עמודות ושורה אחת, שבה יופיעו שתי תוויות (Label):
+
+$$$*
+sp = StackPanel([])
+label1 = Label("טקסט 1")
+label2 = Label("טקסט 2")
+example_gridpanel = GridPanel(1, 2, bg_color=COLOR_PRIMARY_LIGHT, bordered=True)
+example_gridpanel.add_component(label1, 0, 0)
+example_gridpanel.add_component(label2, 0, 1)
+sp.add_component(example_gridpanel)
+$$$*
+
+
+
+%%%
+ComboBox
+%%%
+
+
+רכיב זה משמש לבחירה של המשתמש בין כמה אופציות. הפרמטרים שהרכיב מקבל:
+
+$$$
+- options: מילון שממפה בין מחרוזות, בתצוגה יופיעו הערכים של המילון ובלחיצה על ערך יועבר המפתח התואם ל-on_chnaged
+- on_changed: פונקציה שמופעלת כאשר האופציה שהמשתמש בחר השתנתה. הפונקציה מקבלת כפרמטר את המפתח התואם לאופציה שנלחצה.
+$$$
+
+דוגמה ל-ComboBox אשר מכיל שתי אופציות לצבעים ומשנה את הצבע של Label בהתאם לבחירה:
+
+$$$*
+sp = StackPanel([])
+example_label = Label()
+example_combobox = ComboBox({COLOR_PRIMARY_DARK: "Dark", COLOR_PRIMARY_LIGHT: "Light"}, lambda selected: example_label.update_color(selected))
+sp.add_component(example_combobox)
+sp.add_component(example_label)
+$$$*
+
+
+
+%%%
+HyperLink
+%%%
+
+רכיב זה משמש להצגת קישורים.
+הפרמטרים שהרכיב מקבל:
+
+$$$
+- text: הטקסט שיוצג על המסך
+- bg_color: צבע רקע
+- fg_color: צבע של הטקסט
+- bold: ערך boolean, האם הטקסט מודגש או לא
+- italic: ערך boolean, האם הטקסט נטוי או לא
+- size: גודל הטקסט
+- url: הכתובת של האתר אליו מפנה הקישור
+$$$
+
+דוגמה: קישור לעמוד הראשי של TalpiWeb:
+
+$$$*
+sp = StackPanel([])
+example_hyperlink = HyperLink("TalpiWeb", bg_color=COLOR_PRIMARY_LIGHT, bold=True, italic=True, url=r"https://bot.talpiot.org/react/page/front")
+sp.add_component(example_hyperlink)
+$$$*
+
+
+
+%%%
+Image
+%%%
+
+רכיב זה משמש להצגת תמונות, ומקבל שני פרמטרים:
+
+$$$
+- url: קישור לתמונה
+- scale: בכמה להקטין/להגדיל את התמונה
+$$$
+
+לדוגמה, תמונה מוקטנת של סמל תלפיות:
+
+$$$*
+sp = StackPanel([])
+logo = Image(url="https://bot.talpiot.org/react/static/media/talpiot-logo.a8281457.png", scale=0.25)
+sp.add_component(logo)
+$$$*
+
+
+
+%%%
+Accordion
+%%%
+
+רכיב זה משמש להצגה כמה components, כאשר בכל רגע רק אחד מהם מוצג: ישנה רשימה של תוויות ובלחיצה על תווית הרכיב המתאים מופיע.
+הפרמטרים שהרכיב מקבל:
+
+$$$
+-children: רשימה של components שיוצגו
+-titles: הכותרות שיופיעו לכל component בהתאמה
+-bg_color: צבע רקע
+-fg_color: צבע טקסט
+-size: גודל טקסט
+$$$
+
+דוגמה של accordion אשר מציג לחילופין שתי תוויות (Label):
+
+$$$*
+sp = StackPanel([])
+label1 = Label("טקסט 1")
+label2 = Label("טקסט 2")
+example_accordion = Accordion([label1, label2], ["Label 1", "Label 2"])
+sp.add_component(example_accordion)
+$$$*
+
+
+
+%%%
+ChartjsComponent
+%%%
+
+רכיב זה משמש להצגת גרפים על בסיס chartjs (חפשו בגוגל), ומקבל את הפרמטרים הבאים:
+
+$$$
+- width: רוחב הגרף
+- height: גובה הגרף
+$$$
+
+בנוסף, לcomponent יש פונקציות שמקבלת כפרמטר רשימה של נתונים ומציגה אותם בגרף:
+
+$$$
+- plot(x, y, label=None, color=None, border_color=None, border_width=None, fill=None)
+- bar(self y, label=None, color=None, border_color=None, border_width=None, fill=None)
+- radar(x, y, label=None, color=None, border_color=None, border_width=None, fill=None)
+- scatter(x, y, label=None, color=None, border_color=None, border_width=None, fill=None)
+- pie(self y, label=None, color=None, border_color=None, border_width=None, fill=None)
+- doughnut(x, y, label=None, color=None, border_color=None, border_width=None, fill=None)
+- title(text: str, size: int = 50)
+- legend(size: int = 20, position: str = 'top')
+- scale(label_name: str, min: int = 0, max: int = 6)
+- labels(label_name: str, size: int)
+$$$
+
+לדוגמה, גרף של כמות המשתמשים בכל יום באתר:
+
+$$$*
+sp = StackPanel([])
+example_chart = ChartjsComponent(width="600px", height="400px")
+example_chart.plot([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], label="משתמשים")
+example_chart.title("משתמשים באתר בכל יום", size=30)
+example_chart.legend()
+sp.add_component(example_chart)
+$$$*
+
+
+
+%%%
+PopUp
+%%%
+
+רכיב זה משמש להצגת חלונית קטנה שמופיעה על המסך, ומקבל את הפרמטרים הבאים:
+
+$$$
+- ui_component: הרכיב שיופיע בחלונית
+- is_shown: האם החלונית תופיע בכל זמן
+- is_cancelable: האם ניתן לסגור את החלונית בלחיצה על החלק החופף
+- title: הכותרת שתופיע בחלונית
+$$$
+
+לדוגמה, חלונית שמציגה תווית:
+
+$$$*
+sp = StackPanel([])
+label = Label("טקסט")
+popup = PopUp(label, is_shown=False, is_cancelable=True, title="כותרת")
+button = Button("לחצו כאן", action=lambda p=popup: p.show())
+sp.add_component(button)
+sp.add_component(popup)
+$$$*
+
+
+
+%%%
+JsonSchemaForm
+%%%
+
+רכיב זה משמש להצגת טופס על בסיס סכמת נתונים כפי שמוגדרת בסכמת json-schema (חפשו בגוגל), ומקבל את הפרמטרים הבאים:
+
+$$$
+- cls (class): סוג המחלקה של הנתונים שיוצגו בטופס, צריך שתירש מDocument
+- value: הערך הנוכחי, אובייקט של המחלקה של הנתונים שיוצגו בטופס
+- visible: רשימה של איזה שדות של המחלקה יוצגו בטופס
+- not_editable: רשימה של איזה שדות של המחלקה לא יהיו ניתנים לעריכה
+- display_name: מילון שמתאים לכל שדה את השם שיוצג בטופס
+- paragraphTexts: רשימה של איזה שדות הן טקסט חופשי
+- placeholder: מילון שמתאים לכל שדה את הטקסט שיופיע בתיבת הטקסט כאשר השדה ריק
+- options: מילון שמתאים לכל שדה את האופציות מתוכן יהיה אפשר לבחור
+- options_display: מילון שמתאים לכל שדה את הפונקציה שממפה את האופציה לטקסט שיוצג בטופס
+- submit: הפונקציה לה יקראו בהגשת הטופס
+$$$
+
+לדוגמה, טופס של מחלקה של משתמש:
+
+$$$*
+from APIs.TalpiotAPIs import User
+sp = StackPanel([])
+form = JsonSchemaForm(User, visible=["name"], display_name={"name": "שם"})
+sp.add_component(form)
+$$$*
+
+
+
+%%%
+Divider
+%%%
+
+רכיב זה משמש להצגת קו נפרד בין רכיבים:
+
+$$$*
+sp = StackPanel([])
+divider = Divider()
+sp.add_component(divider)
+$$$*
+

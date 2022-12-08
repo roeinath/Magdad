@@ -1,0 +1,2958 @@
+
+07/04/2022 16:51:47
+
+
+07/04/2022 16:52:23
+
+
+07/04/2022 16:53:34
+
+
+07/04/2022 16:53:43
+
+
+07/04/2022 16:55:05
+
+
+07/04/2022 16:56:20
+
+
+07/04/2022 17:03:29
+
+
+07/04/2022 17:03:57
+
+
+07/04/2022 17:12:02
+
+
+07/04/2022 17:15:07
+
+
+07/04/2022 17:17:36
+
+
+07/04/2022 17:17:39
+
+
+07/04/2022 17:18:02
+
+
+07/04/2022 17:18:07
+
+
+07/04/2022 17:27:50
+
+
+07/04/2022 17:28:26
+
+
+07/04/2022 17:28:54
+
+
+07/04/2022 17:29:12
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 84, in pull_student_grades
+    raise Exception("something is wrong, log as failure")
+Exception: something is wrong, log as failure
+
+
+07/04/2022 17:36:15
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 84, in pull_student_grades
+    raise Exception("something is wrong, log as failure")
+Exception: something is wrong, log as failure
+
+
+07/04/2022 17:36:35
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 84, in pull_student_grades
+    raise Exception("something is wrong, log as failure")
+Exception: something is wrong, log as failure
+
+
+26/04/2022 20:44:11
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 84, in pull_student_grades
+    raise Exception("something is wrong, log as failure")
+Exception: something is wrong, log as failure
+
+
+26/04/2022 20:53:13
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 84, in pull_student_grades
+    raise Exception("something is wrong, log as failure")
+Exception: something is wrong, log as failure
+
+
+26/04/2022 20:53:36
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 84, in pull_student_grades
+    raise Exception("something is wrong, log as failure")
+Exception: something is wrong, log as failure
+
+
+26/04/2022 20:57:09
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 84, in pull_student_grades
+    raise Exception("something is wrong, log as failure")
+Exception: something is wrong, log as failure
+
+
+26/04/2022 20:57:29
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 84, in pull_student_grades
+    raise Exception("something is wrong, log as failure")
+Exception: something is wrong, log as failure
+
+
+26/04/2022 20:57:43
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 84, in pull_student_grades
+    raise Exception("something is wrong, log as failure")
+Exception: something is wrong, log as failure
+
+
+26/04/2022 20:57:56
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 84, in pull_student_grades
+    raise Exception("something is wrong, log as failure")
+Exception: something is wrong, log as failure
+
+
+26/04/2022 20:58:30
+
+
+26/04/2022 21:05:09
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+  File "C:\Apps\SchoolApps\PyCharm Community Edition 2020.2.3\plugins\python-ce\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 554, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 29, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 38, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 90, in login
+    driver = webdriver.Chrome(r"chromedriver.exe", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+26/04/2022 21:05:32
+
+
+26/04/2022 21:08:15
+
+
+26/04/2022 21:11:48
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 29, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 38, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 90, in login
+    driver = webdriver.Chrome(r"chromedriver.exe", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+26/04/2022 21:12:05
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 29, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 38, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 90, in login
+    driver = webdriver.Chrome(r"chromedriver.exe", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+26/04/2022 21:12:21
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 29, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 38, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 90, in login
+    driver = webdriver.Chrome(r"chromedriver.exe", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+26/04/2022 21:13:55
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 29, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 38, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 90, in login
+    driver = webdriver.Chrome(r"chromedriver.exe", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+26/04/2022 21:14:10
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 29, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 38, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 91, in login
+    driver = webdriver.Chrome(r"chromedriver.exe", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+26/04/2022 21:14:19
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 29, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 38, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 91, in login
+    driver = webdriver.Chrome(r"chromedriver.exe", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+26/04/2022 21:14:37
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 29, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 38, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 91, in login
+    driver = webdriver.Chrome(r"chromedriver.exe", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+26/04/2022 21:15:16
+
+
+26/04/2022 21:16:19
+
+
+26/04/2022 21:24:23
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 29, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 38, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 91, in login
+    driver = webdriver.Chrome(r"chromedriver.exe", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+26/04/2022 21:25:16
+
+
+26/04/2022 21:25:50
+
+
+26/04/2022 21:26:02
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 29, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 38, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 91, in login
+    driver = webdriver.Chrome(r"chromedriver", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+26/04/2022 21:26:13
+
+
+26/04/2022 21:26:47
+
+
+26/04/2022 21:27:06
+
+
+26/04/2022 21:28:15
+
+
+26/04/2022 21:28:32
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+  File "C:\Apps\SchoolApps\PyCharm Community Edition 2020.2.3\plugins\python-ce\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 554, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 29, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 38, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 91, in login
+    driver = webdriver.Chrome(r"chromedriver.exe", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+26/04/2022 21:30:42
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 29, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 38, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 92, in login
+    driver = webdriver.Chrome(r"chromedriver.exe", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+26/04/2022 21:30:57
+
+
+26/04/2022 21:32:22
+
+
+26/04/2022 21:32:51
+
+
+26/04/2022 21:33:46
+
+
+26/04/2022 21:34:24
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+  File "C:\Apps\SchoolApps\PyCharm Community Edition 2020.2.3\plugins\python-ce\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 554, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 29, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 38, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 95, in login
+    driver = webdriver.Chrome(r"chromedriver.exe", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+26/04/2022 21:38:06
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 29, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 38, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 91, in login
+    driver = webdriver.Chrome(r"chromedriver.exe", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+26/04/2022 21:44:33
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 93, in login
+    driver = webdriver.Chrome(r"chromedriver.exe", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+26/04/2022 21:46:39
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.XPATH, r'/html/body/div/div/div[2]/div/div[3]/form/div[1]/input').send_keys(id_num)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x009448E3+1001699]
+	Ordinal0 [0x00943FBE+999358]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 21:47:12
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.XPATH, r'/html/body/div/div/div[2]/div/div[3]/form/div[1]/input').send_keys(id_num)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x009448E3+1001699]
+	Ordinal0 [0x00943FBE+999358]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 21:49:07
+
+
+26/04/2022 21:50:59
+
+
+26/04/2022 21:52:25
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.XPATH, r'/html/body/div/div/div[2]/div/div[3]/form/div[1]/input').send_keys(id_num)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x009448E3+1001699]
+	Ordinal0 [0x00943FBE+999358]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 21:53:49
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.XPATH, r'/html/body/div/div/div[2]/div/div[3]/form/div[1]/input').send_keys(id_num)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x009448E3+1001699]
+	Ordinal0 [0x00943FBE+999358]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 21:59:15
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 93, in login
+    driver = webdriver.Chrome(ChromeDriverManager().install(), r"chromedriver.exe", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 70, in start
+    cmd.extend(self.command_line_args())
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\service.py", line 48, in command_line_args
+    return ["--port=%d" % self.port] + self.service_args
+TypeError: %d format: a real number is required, not str
+
+
+26/04/2022 21:59:32
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 93, in login
+    driver = webdriver.Chrome(r"chromedriver.exe",ChromeDriverManager().install(), chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 70, in start
+    cmd.extend(self.command_line_args())
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\service.py", line 48, in command_line_args
+    return ["--port=%d" % self.port] + self.service_args
+TypeError: %d format: a real number is required, not str
+
+
+26/04/2022 22:00:53
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 94, in login
+    driver = webdriver.Chrome(r"chromedriver", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+26/04/2022 22:01:13
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 93, in login
+    driver = webdriver.Chrome(r"chromedriver",ChromeDriverManager().install(), chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 70, in start
+    cmd.extend(self.command_line_args())
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\service.py", line 48, in command_line_args
+    return ["--port=%d" % self.port] + self.service_args
+TypeError: %d format: a real number is required, not str
+
+
+26/04/2022 22:01:35
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.XPATH, r'/html/body/div/div/div[2]/div/div[3]/form/div[1]/input').send_keys(id_num)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x009448E3+1001699]
+	Ordinal0 [0x00943FBE+999358]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:03:13
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.XPATH, r'/html/body/div/div/div[2]/div/div[3]/form/div[1]/input').send_keys(id_num)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x009448E3+1001699]
+	Ordinal0 [0x00943FBE+999358]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:04:48
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.XPATH, '//button[text()="Some text"]').send_keys(id_num)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()="Some text"]"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x009491DD+1020381]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:05:14
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.XPATH, '//button[text()="Some text"]')
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()="Some text"]"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x009491DD+1020381]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:12:02
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element('textarea').send_keys("lets go")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: invalid locator
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x00949340+1020736]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:16:22
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element("email").send_keys("lets go")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: invalid locator
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x00949340+1020736]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:16:41
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element("email").send_keys("lets go")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: invalid locator
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x00949340+1020736]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:17:13
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element("ID ").send_keys("lets go")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: invalid locator
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x00949340+1020736]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:17:39
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element("ID number").send_keys("lets go")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: invalid locator
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x00949340+1020736]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:27:22
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.ID("ID number")).send_keys("lets go")
+TypeError: 'str' object is not callable
+
+
+26/04/2022 22:28:09
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.ID("email")).send_keys("lets go")
+TypeError: 'str' object is not callable
+
+
+26/04/2022 22:28:31
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.ID("email")).send_keys("lets go")
+TypeError: 'str' object is not callable
+
+
+26/04/2022 22:29:49
+
+
+26/04/2022 22:31:34
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 103, in login
+    driver.find_element(By.XPATH, r'/html/body/div/div/div[2]/div/div[3]/form/div[2]/input').send_keys(password)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x009448E3+1001699]
+	Ordinal0 [0x00943FBE+999358]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:31:56
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 103, in login
+    driver.find_element(By.XPATH, r'/html/body/div/div/div[2]/div/div[3]/form/div[2]/input').send_keys(password)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x009448E3+1001699]
+	Ordinal0 [0x00943FBE+999358]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:34:23
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.ID,"ID").send_keys("32323")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="ID"]"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x009491DD+1020381]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:34:45
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.ID,"id").send_keys("32323")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="ID"]"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x009491DD+1020381]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:35:11
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.ID,"id").send_keys("32323")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="id"]"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x009491DD+1020381]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:39:08
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.ID,"username").send_keys("32323")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x009448E3+1001699]
+	Ordinal0 [0x00943FBE+999358]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:39:25
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 103, in login
+    driver.find_element(By.ID,"username").send_keys("32323")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x009448E3+1001699]
+	Ordinal0 [0x00943FBE+999358]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:43:44
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 103, in login
+    driver.find_element(By.NAME,"username").send_keys("32323")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x009448E3+1001699]
+	Ordinal0 [0x00943FBE+999358]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:44:08
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 103, in login
+    driver.find_element(By.NAME,"ID number (9 digits)").send_keys("32323")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[name="ID number (9 digits)"]"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x009491DD+1020381]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:46:40
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 103, in login
+    driver.find_element(By.TAG_NAME,"ID number (9 digits)").send_keys("32323")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x0091F064+847972]
+	Ordinal0 [0x0091EF22+847650]
+	Ordinal0 [0x0091F1B0+848304]
+	Ordinal0 [0x00948EF2+1019634]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:47:07
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 101, in login
+    driver.find_element(By.ID, "email").send_keys("rom.faibish@mail.huji.ac.il")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x00904480+738432]
+	Ordinal0 [0x00966999+1141145]
+	Ordinal0 [0x00973AA2+1194658]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:47:13
+
+
+26/04/2022 22:47:16
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.TAG_NAME,"ID number (9 digits)").send_keys("32323")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x0091F064+847972]
+	Ordinal0 [0x0091EF22+847650]
+	Ordinal0 [0x0091F1B0+848304]
+	Ordinal0 [0x00948EF2+1019634]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:52:13
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 111, in login
+    WebDriverWait(driver, 30).until(
+  File "C:\Python310\lib\site-packages\selenium\webdriver\support\wait.py", line 89, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x009491DD+1020381]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 118, in login
+    WebDriverWait(driver, 30).until(
+  File "C:\Python310\lib\site-packages\selenium\webdriver\support\wait.py", line 89, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x009491DD+1020381]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 124, in login
+    raise Exception("couldn't log in")
+Exception: couldn't log in
+
+
+26/04/2022 22:55:17
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 103, in login
+    driver.find_element(By.CLASS_NAME, "btn btn-primary g-recaptcha")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".btn btn-primary g-recaptcha"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x009491DD+1020381]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 22:59:27
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 103, in login
+    driver.find_element(By.CLASS_NAME, "button")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".button"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x009491DD+1020381]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 23:00:01
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 103, in login
+    driver.find_element(By.CLASS_NAME, "button")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".button"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x009491DD+1020381]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 23:00:24
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 103, in login
+    driver.find_element(By.CLASS_NAME, "button")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".button"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x009491DD+1020381]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 23:01:24
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 103, in login
+    driver.find_element(By.CLASS_NAME, "button").click()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".button"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x009491DD+1020381]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 23:07:10
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 103, in login
+    driver.find_element(By.CLASS_NAME, "btn btn-primary g-recaptcha").click()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".btn btn-primary g-recaptcha"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x009491DD+1020381]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+26/04/2022 23:08:41
+
+
+27/04/2022 07:44:49
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 101, in login
+    driver.find_element(By.TAG_NAME, "pills-email-tab").click()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1248, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"pills-email-tab"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C658+837208]
+	Ordinal0 [0x009491DD+1020381]
+	Ordinal0 [0x0094949B+1021083]
+	Ordinal0 [0x00976032+1204274]
+	Ordinal0 [0x00964194+1130900]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+27/04/2022 07:45:28
+
+
+27/04/2022 07:48:56
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.ID, "password").send_keys("romf90123")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x009448E3+1001699]
+	Ordinal0 [0x00943FBE+999358]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+27/04/2022 07:55:00
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.ID, "username").send_keys("rom.faibish@mail.huji.ac.il")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x009448E3+1001699]
+	Ordinal0 [0x00943FBE+999358]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+27/04/2022 07:55:41
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.ID, "username").send_keys("rom.faibish@mail.huji.ac.il")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x009448E3+1001699]
+	Ordinal0 [0x00943FBE+999358]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+27/04/2022 07:57:26
+
+
+27/04/2022 07:59:39
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 102, in login
+    driver.find_element(By.NAME, "username").send_keys("rom.faibish@mail.huji.ac.il")
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 540, in send_keys
+    self._execute(Command.SEND_KEYS_TO_ELEMENT,
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x009448E3+1001699]
+	Ordinal0 [0x00943FBE+999358]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+27/04/2022 08:02:11
+
+
+27/04/2022 08:02:53
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 105, in login
+    driver.find_element(By.TAG_NAME, "button").click()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 81, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x0094A1F3+1024499]
+	Ordinal0 [0x0093FF93+982931]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+27/04/2022 08:04:59
+
+
+27/04/2022 08:08:47
+
+
+27/04/2022 08:08:56
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 105, in login
+    driver.find_element(By.TAG_NAME, "button").click()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 81, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x0094A1F3+1024499]
+	Ordinal0 [0x0093FF93+982931]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+27/04/2022 08:10:11
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 106, in login
+    driver.find_element(By.TAG_NAME, "button").click()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 81, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 710, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 425, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00A97413+2389011]
+	Ordinal0 [0x00A29F61+1941345]
+	Ordinal0 [0x0091C520+836896]
+	Ordinal0 [0x0094A1F3+1024499]
+	Ordinal0 [0x0093FF93+982931]
+	Ordinal0 [0x0096414C+1130828]
+	Ordinal0 [0x0093F974+981364]
+	Ordinal0 [0x00964364+1131364]
+	Ordinal0 [0x00974302+1196802]
+	Ordinal0 [0x00963F66+1130342]
+	Ordinal0 [0x0093E546+976198]
+	Ordinal0 [0x0093F456+980054]
+	GetHandleVerifier [0x00C49632+1727522]
+	GetHandleVerifier [0x00CFBA4D+2457661]
+	GetHandleVerifier [0x00B2EB81+569713]
+	GetHandleVerifier [0x00B2DD76+566118]
+	Ordinal0 [0x00A30B2B+1968939]
+	Ordinal0 [0x00A35988+1989000]
+	Ordinal0 [0x00A35A75+1989237]
+	Ordinal0 [0x00A3ECB1+2026673]
+	BaseThreadInitThunk [0x75C26739+25]
+	RtlGetFullPathName_UEx [0x779A8E7F+1215]
+	RtlGetFullPathName_UEx [0x779A8E4D+1165]
+
+
+
+27/04/2022 08:20:12
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+  File "C:\Apps\SchoolApps\PyCharm Community Edition 2020.2.3\plugins\python-ce\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 554, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 93, in login
+    driver = webdriver.Chrome(r"chromedriver", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+27/04/2022 08:20:22
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+  File "C:\Apps\SchoolApps\PyCharm Community Edition 2020.2.3\plugins\python-ce\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 554, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 93, in login
+    driver = webdriver.Chrome(r"chromedriver", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+27/04/2022 08:20:32
+
+rom faibish: Couldn't finish
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 71, in start
+    self.process = subprocess.Popen(cmd, env=self.env,
+  File "C:\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+  File "C:\Apps\SchoolApps\PyCharm Community Edition 2020.2.3\plugins\python-ce\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 554, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\HujiGradePuller.py", line 81, in pull_student_grades
+    all_final_grades = FinalGradePuller(row).pull_grades(visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 31, in pull_grades
+    table = FinalGradePuller.get_student_table(
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 40, in get_student_table
+    driver = FinalGradePuller.login(id_num, password, visible=visible)
+  File "C:\Users\romf9\PycharmProjects\tsyunomat\FinalGradePuller.py", line 93, in login
+    driver = webdriver.Chrome(r"chromedriver", chrome_options=options)
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 70, in __init__
+    super(WebDriver, self).__init__(DesiredCapabilities.CHROME['browserName'], "goog",
+  File "C:\Python310\lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 90, in __init__
+    self.service.start()
+  File "C:\Python310\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+
+27/04/2022 08:20:54
+
+
+27/04/2022 08:22:54
+
+rom faibish: Finished
+
+27/04/2022 08:24:57
+
+
+27/04/2022 08:34:04
+
+rom faibish: Finished

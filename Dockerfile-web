@@ -1,0 +1,71 @@
+###########
+# BUILDER #
+###########
+
+# pull official base image
+FROM python:3.8 as builder
+
+# set work directory
+WORKDIR /usr/src/app
+
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# lint
+#RUN apt update
+#RUN /usr/local/bin/python -m pip install --upgrade pip
+#RUN pip install flake8
+#COPY . .
+#RUN flake8 --ignore=E501,F401 .
+
+# install dependencies
+COPY ./requirements.txt .
+RUN pip wheel --no-cache-dir --no-deps --wheel-dir /usr/src/app/wheels -r requirements.txt
+
+#########
+# FINAL #
+#########
+
+# pull official base image
+FROM python:3.7.9
+
+# create directory for the app user
+RUN mkdir -p /home/app
+
+# create the app user
+RUN groupadd -r app && useradd -r -g app app
+
+# create the appropriate directories
+ENV HOME=/home/app
+ENV APP_HOME=/home/app/web
+RUN mkdir $APP_HOME
+RUN mkdir $APP_HOME/static
+WORKDIR $APP_HOME
+
+# Add the TalpiBot dependencies
+ENV PYTHONPATH "${PYTHONPATH}:/home/app/web/talpiot"
+
+# install dependencies
+RUN apt update
+# COPY --from=builder /usr/src/app/wheels /wheels
+# COPY --from=builder /usr/src/app/requirements.txt .
+# RUN pip install --no-cache /wheels/*
+COPY requirements.txt $APP_HOME/requirements.txt
+RUN pip install -r requirements.txt
+
+# copy project
+RUN mkdir $APP_HOME/web_features && mkdir $APP_HOME/web_framework && mkdir $APP_HOME/web_framework/server_side && mkdir $APP_HOME/web_framework/APIs
+COPY ./web_framework/server_side $APP_HOME/web_framework/server_side
+COPY ./APIs  $APP_HOME/APIs
+COPY ./web_features $APP_HOME/web_features
+COPY run_site.py $APP_HOME/run_site.py
+COPY run_server_side.py $APP_HOME/run_server_side.py
+COPY ./ide_framework $APP_HOME/ide_framework
+
+# chown all the files to the app user
+RUN chown -R app:app $APP_HOME
+
+# change to the app user
+USER app
+

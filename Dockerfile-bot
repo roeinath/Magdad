@@ -1,0 +1,60 @@
+###  TalpiBot project
+###  -----------------------------
+###  A Dockerfile to setup and download all requirements
+###  for the TalpiBot project
+###
+
+## Stage 0 - Create linux_requirements and feature_reqs_combined
+## For Stage 1
+FROM python:3.8
+
+# Install dos2unix to prevent bug with linux_requirements.txt
+RUN apt-get update && apt-get install -y dos2unix
+
+# Fix linux_requirements.txt line endings
+COPY bot_framework/linux_requirements.txt /generate_reqs/
+WORKDIR /generate_reqs
+RUN dos2unix linux_requirements.txt && cp linux_requirements.txt linux_requirements_unix.txt
+
+# Generate the feature requirements by combining all feature's requirements.txt
+# and output file called feature_reqs_combined_sorted.txt
+COPY . /generate_reqs
+# RUN find /generate_reqs/bot_features -type f -name 'requirements.txt' -exec cat {} \; -exec echo \; > feature_reqs_combined.txt \
+#     && sort -u feature_reqs_combined.txt | grep . > feature_reqs_combined_sorted.txt
+
+## Stage 1 - Create the TalpiBot work environment
+FROM python:3.8
+
+#  Setup locales
+## Install locales dependencies & Configure timezone and locale
+RUN apt update && apt-get update && apt-get install -y --no-install-recommends \
+        locales \
+        apt-utils && \
+    rm -rf /var/lib/apt/lists/* && \ 
+    rm -f /etc/localtime && \
+    ln -fs /usr/share/zoneinfo/Asia/Jerusalem /etc/localtime && \
+    dpkg-reconfigure -f noninteractive tzdata && \
+    sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
+    sed -i -e 's/# he_IL.UTF-8 UTF-8/he_IL.UTF-8 UTF-8/' /etc/locale.gen && \
+    echo 'LANG="he_IL.UTF-8"'>/etc/default/locale && \
+    locale-gen he he_IL he_IL.UTF-8 && \
+    dpkg-reconfigure --frontend=noninteractive locales && \
+    update-locale LANG=he_IL.UTF-8
+
+#  Install Linux & Python requirements
+
+# install linux_requirements using apt-get
+COPY --from=0 /generate_reqs/linux_requirements_unix.txt /bot/src/linux_requirements.txt
+WORKDIR /bot/src
+
+# install talpibot's core python requirements
+RUN apt-get update && cat linux_requirements.txt | xargs apt-get --no-install-recommends -qq -y install
+COPY bot_framework/requirements.txt .
+RUN pip install -r requirements.txt
+
+# install feature's python requirements
+# COPY --from=0 /generate_reqs/feature_reqs_combined_sorted.txt .
+# RUN pip install -r feature_reqs_combined_sorted.txt
+
+#  Add everything to cache
+COPY . /bot/src

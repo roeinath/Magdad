@@ -1,0 +1,58 @@
+## Stage 0 - Create Linux Environment
+FROM python:3.8
+
+# Install dos2unix to prevent bug with Linux requirements
+RUN apt-get update && apt-get install -y dos2unix
+
+# Install ca-certificates
+RUN apt-get install ca-certificates
+
+#Install Linux requirements
+COPY bot_framework/linux_requirements.txt .
+
+RUN dos2unix linux_requirements.txt
+
+
+## Stage 1 - Create the work environment
+
+#  Setup local
+## Install local dependencies & Configure timezone and locale
+RUN apt update && apt-get update && apt-get install -y --no-install-recommends \
+        locales \
+        apt-utils && \
+    rm -rf /var/lib/apt/lists/* && \
+    rm -f /etc/localtime && \
+    ln -fs /usr/share/zoneinfo/Asia/Jerusalem /etc/localtime && \
+    dpkg-reconfigure -f noninteractive tzdata && \
+    sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
+    sed -i -e 's/# he_IL.UTF-8 UTF-8/he_IL.UTF-8 UTF-8/' /etc/locale.gen && \
+    echo 'LANG="he_IL.UTF-8"'>/etc/default/locale && \
+    locale-gen he he_IL he_IL.UTF-8 && \
+    dpkg-reconfigure --frontend=noninteractive locales && \
+    update-locale LANG=he_IL.UTF-8
+
+WORKDIR /bot/src
+
+
+# install linux requirements
+RUN apt-get update && cat linux_requirements.txt | xargs apt-get --no-install-recommends -qq -y install
+
+#  Add everything to cache
+COPY . /bot/src
+
+# install requirements
+RUN pip install -r requirements.txt
+
+# copy ssh key and config for gitlab
+COPY APIs/SSH /bot/src/.ssh
+
+RUN chmod 700 .ssh && chmod 600 .ssh/id_rsa && chmod 644 .ssh/id_rsa.pub && \
+    eval "$(ssh-agent)" && ssh-add .ssh/id_rsa && git config http.sslVerify false && \
+    ssh -Tvvv -o StrictHostKeyChecking=no git@gitlab.com &&\
+    git clone git@gitlab.com:JordNGhelfN/talpix.git \
+
+
+
+
+
+
