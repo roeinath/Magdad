@@ -29,6 +29,10 @@ from web_framework.server_side.infastructure.page import Page
 from APIs.TalpiotAPIs.mahzors_utils import *
 
 
+DAY_LABEL_FORMAT = 'עלמ"ש ביום {day_name}'
+GUARDING_TIME_FORMAT = 'יום {day_name} מ-{start_time} עד {end_time}'
+
+
 def get_current_guarding_week():
     x = GuardingWeek.objects(first_date=str(get_current_sunday()))
     if x:
@@ -61,6 +65,7 @@ class ViewGuardings(Page):
 
     def __init__(self, params):
         super().__init__()
+        self.headers = None
         self.container_table = None
         self.popup = None
 
@@ -120,7 +125,7 @@ class ViewGuardings(Page):
             return self.sp
 
     def show_week(self, week_id, user):
-        week = GuardingWeek.objects(id=week_id)[0]
+        week = GuardingWeek.objects.get(id=week_id)
         self.current_week = week
 
         self.title.update_text("שמירות " + week.name)
@@ -146,9 +151,9 @@ class ViewGuardings(Page):
             day_header = StackPanel([])
             self.headers.add_component(day_header, 0, day_number)
             day_header.add_component(
-                Label(translate_day_name(day.date.strftime("%A")), bold=True, size=SIZE_LARGE, fg_color='White'))
+                Label(DAY_LABEL_FORMAT.format(day_name=translate_day_name(day.date.strftime("%A"))),
+                      bold=True, size=SIZE_LARGE, fg_color='White'))
             day_header.add_component(Label(day.date.strftime("%d.%m.%y"), size=SIZE_MEDIUM, fg_color='White'))
-
         for day_number, day in enumerate(week.days):
             for i, task in enumerate(day.guardings):
                 stack = StackPanel([], orientation=VERTICAL)
@@ -156,7 +161,9 @@ class ViewGuardings(Page):
                 cell_header = StackPanel([], orientation=HORIZONTAL)
                 stack.add_component(cell_header)
 
-                title_str = "%s עד %s" % (task.start_time.strftime("%H:%M"), task.end_time.strftime("%H:%M"))
+                title_str = GUARDING_TIME_FORMAT.format(day_name=translate_day_name(task.start_time.strftime("%A")),
+                                                        start_time=task.start_time.strftime("%H:%M"),
+                                                        end_time=task.end_time.strftime("%H:%M"))
                 title = Label(title_str, fg_color='White', size=SIZE_MEDIUM)
                 cell_header.add_component(title)
                 if task.task_type.description:

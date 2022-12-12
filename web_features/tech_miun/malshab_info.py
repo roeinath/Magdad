@@ -1,21 +1,17 @@
 import csv
 import os.path
 import random
-import traceback
 from dataclasses import dataclass
 
 # constants for analyzing csv file
-from web_features.tech_miun import constants
+from web_features.tech_miun.constants import MASTERS_DIR
 
 NOT_FILLED = 0
 ESTIMATOR_COLUMNS = (2, 4, 6)
 ESTIMATOR_EMAIL_COLUMNS = (3, 5, 7)
 CLASS_NUMBER_COLUMN = 8
 TEAM_COLUMN = 9
-MALSHAB_COLUMNS = (10, 12, 14, 16)
-
-LOCAL_DIR = os.path.abspath(os.path.dirname(__file__))
-
+MALSHAB_COLUMNS = (10, 12, 14, 16, 18, 20, 22, 24, 26, 28)
 
 @dataclass
 class Malshab:
@@ -42,10 +38,10 @@ class MalshabInfo:
 
     def load_local_file(self):
         # opens the master file
-        if not os.path.isfile(os.path.join(LOCAL_DIR, self.filename)):
+        if not os.path.isfile(os.path.join(MASTERS_DIR, self.filename)):
             return
 
-        with open(os.path.join(LOCAL_DIR, self.filename), 'r', newline='', encoding='utf-8') as f:
+        with open(os.path.join(MASTERS_DIR, self.filename), 'r', newline='', encoding='utf-8') as f:
             reader = csv.reader(f)
             data = list(reader)
 
@@ -79,7 +75,8 @@ class MalshabInfo:
 
                 # add the malshabs to the dictionary
                 for malshab in malshabs:
-                    self.estimator_email_to_malshabs[email].append(malshab)
+                    if malshab not in self.estimator_email_to_malshabs[email]:
+                        self.estimator_email_to_malshabs[email].append(malshab)
 
     def get_malshabs_by_estimator_email(self, estimator_email):
         return self.estimator_email_to_malshabs.get(estimator_email, [])
@@ -100,5 +97,5 @@ class MalshabInfo:
         """
         return list(self.estimator_email_to_malshabs.keys())
 
-    def is_filled(self, estimator_email, malshab):
-        return bool(random.choice([True, False]))
+    def get_max_malshabs_of_estimator(self):
+        return max([len(val) for val in self.estimator_email_to_malshabs.values()], default=0)

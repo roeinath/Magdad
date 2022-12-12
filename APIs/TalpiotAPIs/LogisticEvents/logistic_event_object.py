@@ -20,9 +20,9 @@ class LogisticEventObject(Document):
     @staticmethod
     def new_mission(logistic_event: LogisticEvent, description: str, users_in_charge: List[User] = [],
                     deadline: datetime = None, comments: str = '', approved: bool = False):
-        return LogisticEventMission(logistic_event=logistic_event, description=description,
-                                    users_in_charge=users_in_charge, deadline=deadline,
-                                    comments=comments, approved=approved)
+        return LogisticEventObject(logistic_event=logistic_event, description=description,
+                                   users_in_charge=users_in_charge, deadline=deadline,
+                                   comments=comments, approved=approved)
 
     def is_user_permitted(self, user):
         return user in self.users_in_charge

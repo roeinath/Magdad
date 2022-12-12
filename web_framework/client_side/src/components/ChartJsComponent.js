@@ -10,7 +10,7 @@ const ChartJsComponent = ({chart, options, width, height}) => {
             options={options}
             width={width}
             height={height}
-            style={{minWidth: width, minHeight: height}}
+            // style={{minWidth: width, minHeight: height}}
         />
 };
 

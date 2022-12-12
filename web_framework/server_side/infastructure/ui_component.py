@@ -73,6 +73,18 @@ class UIComponent(ABC):
                          JSON_TEXT: self.text}
         })
 
+    def redirect_page(self, new_url: str, override: bool = False):
+        """
+        Redirects the page to a new url
+        :param new_url: the full or partial url to redirect to
+        :param override: if True, the url will be replaced in the browser's history (default is False)
+        :return: noting
+        """
+        self.add_action({
+            JSON_ACTION: JSON_REDIRECT,
+            JSON_VALUE: {JSON_ID: self.id, JSON_URL: new_url, JSON_OVERRIDE: override}
+        })
+
     def add_action(self, action):
         request_handlers.actions_lsts[self.session_id].append(action)
 

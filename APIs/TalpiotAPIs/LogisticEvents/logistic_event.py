@@ -16,14 +16,17 @@ class LogisticEvent(Document):
     sagaz_in_charge: List[User] = ListField(ReferenceField(User), default=[])
     sagab_in_charge: List[User] = ListField(ReferenceField(User), default=[])
     current_status: LogisticEventStatus = ReferenceField(LogisticEventStatus, default=None)
+    statuses: List[LogisticEventStatus] = ListField(ReferenceField(LogisticEventStatus), default=[])
     drive_folder_id: str = StringField(required=False)
     closed: bool = BooleanField(default=False)
 
     @staticmethod
     def new_status_from_option(event, status_option: LogisticEventStatusOptions):
+        permitted_users = status_option.permitted_users if status_option.permitted_users else event.sagab_in_charge
+        deadline = event.event_date - timedelta(weeks=status_option.deadline_weeks_before)
+
         return LogisticEventStatus(event_name=event.event_name, status_name=status_option.status_name,
-                   permitted_users=status_option.permitted_users,
-                   deadline=event.event_date - timedelta(weeks=status_option.deadline_weeks_before)).save()
+                                   permitted_users=permitted_users, deadline=deadline).save()
 
     def get_current_status(self):
         return self.current_status

@@ -29,6 +29,9 @@ import CountDown from "./CountDown";
 import Markdown from "./Markdown";
 import GoogleDocsDisplay from "./GoogleDocsDisplay";
 import DownloadButton from "./DownloadButton";
+import Card from './Card'
+import GridView from "./GridView";
+import Container from './Container'
 // import PureHTML from "./PureHTML";
 
 
@@ -97,6 +100,12 @@ const ComponentSelector = ({type, text, action, ...props}) => {
                     return <div style={{margin: '7px 0', width: '32vw',borderTop: '1px solid rgba(0, 0, 0, 0.15)'}}/>
                 if (type === 'GoogleDocsDisplay')
                     return <GoogleDocsDisplay {...props}/>
+                if (type === 'Card')
+                    return <Card {...props}/>
+                if (type === 'GridView')
+                    return <GridView {...props}/>
+                if (type === 'Container')
+                    return <Container {...props}/>
             }
         }
     </pageContext.Consumer>);

@@ -15,7 +15,7 @@ from web_framework.server_side.infastructure.constants import *
 from web_framework.server_side.infastructure.ui_component import UIComponent
 
 
-def default_label_component_parser(row_data, field_data) -> Label:
+def default_label_component_parser(row_data, field_data, *args) -> Label:
     return Label(str(field_data))
 
 

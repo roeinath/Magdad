@@ -116,10 +116,12 @@ class GoogleCalendar(PooledWorker):
                 body=event.get_data_dict(),
                 sendUpdates=send_updates
             ).execute()
-        except:
+        except Exception as e:
+            print(f"ERROR: {e}")
             return None
 
         if "id" not in result:
+            print(f"ERROR: {result}")
             return None
 
         event.calendar_event_id = result["id"]

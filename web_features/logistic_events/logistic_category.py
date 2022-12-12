@@ -14,7 +14,7 @@ class LogisticEventsCategory(Category):
         })
 
     def get_title(self) -> str:
-        return "לוגיסטיקה"
+        return "אירועים"
 
     def is_authorized(self, user):
         return MATLAM in user.role  # Only the people of the base

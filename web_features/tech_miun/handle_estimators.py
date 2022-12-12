@@ -3,8 +3,8 @@ from mongoengine import *
 from APIs.TalpiotAPIs import User
 from web_features.groups.add_users_from_csv import add_users_from_csv
 from web_features.tech_miun import permissions
-from web_framework.server_side.infastructure.components.divider import Divider
 from web_framework.server_side.infastructure.components.button import Button
+from web_framework.server_side.infastructure.components.divider import Divider
 from web_framework.server_side.infastructure.components.document_grid_panel import DocumentGridPanel, \
     DocumentGridPanelColumn
 from web_framework.server_side.infastructure.components.hyper_link import HyperLink
@@ -15,8 +15,8 @@ from web_framework.server_side.infastructure.components.stack_panel import Stack
 from web_framework.server_side.infastructure.components.upload_files import UploadFiles
 from web_framework.server_side.infastructure.constants import *
 from web_framework.server_side.infastructure.page import Page
-from web_features.tech_miun.constants import ADD_USERS_URL
 
+ADD_USERS_URL = r"https://drive.google.com/file/d/1KrWhrVx6gGkEASi-6l9wCSUNHkztCD6D/view"
 TITLE = "ניהול הרשאות מיון"
 
 
@@ -42,6 +42,10 @@ class HandleEstimators(Page):
         return self.sp
 
     def draw(self):
+        """
+        Draws the page UI: a grid with all the users and their permissions and a button to add new users from a csv file
+        :return: None
+        """
         self.sp.clear()
         self.sp.add_component(Label(TITLE, size=SIZE_EXTRA_LARGE, fg_color=COLOR_PRIMARY_DARK))
 
@@ -66,6 +70,12 @@ class HandleEstimators(Page):
         self.sp.add_component(HyperLink('פורמט קובץ להוספת משתמשים', bold=True, url=ADD_USERS_URL))
 
     def edit_user(self, user):
+        """
+        Opens a popup with a form to edit the user
+        :param user: User object
+        :return: None
+        """
+
         def save_user(obj):
             user.email = obj.email
             user.name = obj.name
@@ -81,6 +91,13 @@ class HandleEstimators(Page):
         self.sp.add_component(self.popup)
 
     def edit_permissions_for_miun(self, title, handle_group_schema):
+        """
+        Opens a popup with a form to change the permissions of a user group (add or remove)
+        :param title: str - the title of the popup
+        :param handle_group_schema: method - the method to apply on the users
+        :return: None
+        """
+
         def on_submit(group: GroupSchema):
             handle_group_schema(group)
             self.popup.hide()
@@ -99,6 +116,11 @@ class HandleEstimators(Page):
         self.sp.add_component(self.popup)
 
     def add_permissions_for_miun(self):
+        """
+        Opens a popup with a form to add permissions to a user group
+        :return: None
+        """
+
         def add_permissions_to_group(group: GroupSchema):
             for user in group.participants:
                 if group.miun_type not in user.role:
@@ -108,6 +130,11 @@ class HandleEstimators(Page):
         self.edit_permissions_for_miun("הוספת הרשאות מיון ✅", add_permissions_to_group)
 
     def remove_permissions_for_miun(self):
+        """
+        Opens a popup with a form to remove permissions from a user group
+        :return: None
+        """
+
         def remove_permissions_to_group(group: GroupSchema):
             for user in group.participants:
                 if group.miun_type in user.role:
@@ -117,6 +144,11 @@ class HandleEstimators(Page):
         self.edit_permissions_for_miun("הורדת הרשאות מיון ❌", remove_permissions_to_group)
 
     def create_miun_users_from_csv(self):
+        """
+        Opens a popup with a form to add users from a csv file and give them permissions
+        :return: None
+        """
+
         def set_miun_type(chosen_miun_type):
             self.popup.hide()
             self.sp.delete_component(self.popup)
@@ -133,6 +165,12 @@ class HandleEstimators(Page):
         self.sp.add_component(self.popup)
 
     def add_miun_users_from_csv(self, files, miun_type):
+        """
+        Adds users from a csv file and gives them permissions
+        :param files: list of files uploaded - only the first file is used
+        :param miun_type: str - the type of permissions to give to the users
+        :return: None
+        """
         participants = []
         add_users_from_csv(files[0], participants, remove_numer=False)
         for participant in participants:

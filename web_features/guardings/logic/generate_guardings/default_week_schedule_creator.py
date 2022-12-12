@@ -2,6 +2,13 @@ from __future__ import annotations
 
 from APIs.TalpiotAPIs.Tasks.guarding.guarding_week import GuardingWeek
 from web_features.guardings.logic.generate_guardings.week_schedule_creator import *
+from web_features.guardings.guarding_constants import *
+
+NIGHT_TYPE = TaskType.objects(id=NIGHT_TYPE_ID)[0]
+DAY_TYPE = TaskType.objects(id=DAY_TYPE_ID)[0]
+DAY_WORK_TYPE = TaskType.objects(id=DAY_WORK_TYPE_ID)[0]
+MENZA_TYPE = TaskType.objects(id=MENZA_TYPE_ID)[0]
+FRANCE_TYPE = TaskType.objects(id=FRANCE_TYPE_ID)[0]
 
 
 def create_week_default(sunday: datetime.date, name: str,
@@ -23,11 +30,6 @@ def create_week_default(sunday: datetime.date, name: str,
     :param week_schedule: WeekSchedule
     :return:
     """
-    NIGHT_TYPE = TaskType.objects(id="60735c25b8d8c21a625ef6f2")[0]
-    DAY_TYPE = TaskType.objects(id="6069aeb73a66bc131352dec2")[0]
-    DAY_WORK_TYPE = TaskType.objects(id="61c4848b075260f9537105f8")[0]
-    MENZA_TYPE = TaskType.objects(id="60735c045b21ab8f061de8ef")[0]
-    FRANCE_TYPE = TaskType.objects(id="615c25264691abbcfea9c185")[0]
 
     week = GuardingWeek(first_date=str(sunday), name=name)
     for i in range(0, 5):

@@ -79,7 +79,7 @@ Group.create_new_group(name: str, description: str, participants: [User], admins
 | participants | כל המשתתפים שלוקחים חלק בקבוצה |
 | admins | המנהלים של הקבוצה |
 
-נניח שיש לנו מערך של users של כל הסג"ב. (איך ניתן לקבל אותו ראו [עבודה עם ה-DB המרכזי](Using the main DB))
+נניח שיש לנו מערך של users של כל הסג"ב. (איך ניתן לקבל אותו ראו [עבודה עם ה-DB המרכזי](Using-the-main-DB.md))
 אז ניצור את ה-group באופן הבא:
 
 ```python

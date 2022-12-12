@@ -1,11 +1,11 @@
 import csv
 import os
 
+from web_features.tech_miun.constants import RESPONSES_DIR
+
 ESTIMATOR_COLUMN = 1
 ESTIMATOR_EMAIL_COLUMNS = 2
 MALSHAB_NUMBER_COLUMN = 5
-
-LOCAL_DIR = os.path.abspath(os.path.dirname(__file__))
 
 
 class StatusManager:
@@ -19,10 +19,10 @@ class StatusManager:
 
     def load_local_file(self):
         # opens the results
-        if not os.path.isfile(os.path.join(LOCAL_DIR, self.filename)):
+        if not os.path.isfile(os.path.join(RESPONSES_DIR, self.filename)):
             return
 
-        with open(os.path.join(LOCAL_DIR, self.filename), 'r', newline='', encoding='utf-8') as f:
+        with open(os.path.join(RESPONSES_DIR, self.filename), 'r', newline='', encoding='utf-8') as f:
             reader = csv.reader(f)
             data = list(reader)
 

@@ -112,8 +112,13 @@ env.bak/
 venv.bak/
 Virtual_Environments/
 
-
+web_features/tech_miun/responses_files/Behaviour Law - Responses
+web_features/tech_miun/responses_files/Behaviour Planning - Responses
+web_features/tech_miun/responses_files/Hackab - Responses
+web_features/tech_miun/responses_files/Sagab Planning - Responses
+web_features/tech_miun/responses_files/Solution - Responses
 *.csv
+
 !installation/FeatureTemplate/*.csv
 
 Main/get_master_token.py

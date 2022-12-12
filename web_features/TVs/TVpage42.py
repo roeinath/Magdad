@@ -1,5 +1,6 @@
 from datetime import date, datetime, timedelta
 
+from APIs.ExternalAPIs import GoogleDrive
 from web_features.TVs import permissions
 from web_framework.server_side.infastructure.components.label import Label
 from web_framework.server_side.infastructure.components.stack_panel import StackPanel
@@ -46,6 +47,9 @@ PUPPY_URLS = {
 }
 
 
+DRIVE_ID = "13ftcoq65DRAozFShYms60h9SXjOSeHvN"
+
+
 class TVpage42(Page):
     def __init__(self, params):
         super().__init__()
@@ -63,24 +67,24 @@ class TVpage42(Page):
         return permissions.is_user_tv_allowed(user)
 
     def get_page_ui(self, user) -> UIComponent:
-        self.sp = StackPanel(orientation=1)
-        self.sp1 = StackPanel(orientation=0)
+        self.sp = StackPanel(orientation=HORIZONTAL)
+        self.sp1 = StackPanel(orientation=VERTICAL)
         self.caru = Slideshow(interval=6000)
 
-        self.sp.add_component(Label("מחזור מ\"ב - הכי טוב!", size=SIZE_EXTRA_LARGE))
-        self.sp.add_component(Label("מטה שמדכא", size=SIZE_LARGE, fg_color=COLOR_PRIMARY_DARK))
+        self.sp1.add_component(Label("מחזור מ\"ב - הכי טוב!", size=SIZE_EXTRA_LARGE, fg_color=COLOR_PRIMARY_DARK))
+        self.sp1.add_component(Label(f"עוד", size=SIZE_EXTRA_LARGE))
+        self.sp1.add_component(CountDown(datetime(2023, 8, 13, hour=1)))
+        self.sp1.add_component(Label(f"לקבע", size=SIZE_EXTRA_LARGE))
+
         self.sp.add_component(self.sp1)
-        self.sp1.add_component(Ynet())
-        self.sp1.add_component(self.caru)
-        sp2 = StackPanel([])
-        sp2.add_component(Label(f"עוד", size=SIZE_EXTRA_LARGE))
-        sp2.add_component(CountDown(date(2023, 8, 13)))
-        sp2.add_component(Label(f"לקבע", size=SIZE_EXTRA_LARGE))
-        sp2.add_component(Label(size=SIZE_EXTRA_LARGE))
-        sp2.add_component(Label(f"עוד", size=SIZE_EXTRA_LARGE))
-        sp2.add_component(CountDown(datetime(2022, 7, 24, 9, 30, 21)))
-        sp2.add_component(Label(f"לסדרות", size=SIZE_EXTRA_LARGE))
-        self.sp1.add_component(sp2)
+        self.sp.add_component(self.caru)
+
+        with GoogleDrive.get_instance() as gd:
+            files = gd.list_files(DRIVE_ID, no_folders=True)
+            for f in files['files']:
+                img_url = gd.get_thumbnail_from_id(f)
+                self.caru.add_component(Image(url=img_url))
+
 
         # num_of_puppies = 20
         # response = requests.get(f'https://dog.ceo/api/breeds/image/random/{num_of_puppies}').json()
@@ -88,10 +92,10 @@ class TVpage42(Page):
         # for puppy_url in puppies:
         #     self.caru.add_component(Image(url=puppy_url, scale=0.6))
 
-        for name, puppy_url in PUPPY_URLS.items():
-            pup_sp = StackPanel(orientation=1)
-            pup_sp.add_component(Label(name, size='xl'))
-            pup_sp.add_component(Image(url=puppy_url, scale=90))
-            self.caru.add_component(pup_sp)
+        # for name, puppy_url in PUPPY_URLS.items():
+        #     pup_sp = StackPanel(orientation=1)
+        #     pup_sp.add_component(Label(name, size='xl'))
+        #     pup_sp.add_component(Image(url=puppy_url, scale=90))
+        #     self.caru.add_component(pup_sp)
 
         return self.sp

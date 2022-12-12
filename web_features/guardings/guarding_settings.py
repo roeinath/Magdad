@@ -19,6 +19,7 @@ from web_framework.server_side.infastructure.components.label import Label
 from web_framework.server_side.infastructure.components.pop_up import PopUp
 from web_framework.server_side.infastructure.components.stack_panel import StackPanel
 from web_framework.server_side.infastructure.page import Page
+from web_features.guardings.guarding_constants import *
 
 
 def delete_bad_guardings():
@@ -89,7 +90,7 @@ class GuardingSettings(Page):
         self.sp.add_component(self.popup)
 
     def delete_exemption(self, user):
-        user.special_attributes['guarding_exemption'] = 0
+        user.special_attributes['guarding_exemption'] = GUARDING_EXEMPTION_NONE
         user.save()
         self.show_information()
 
@@ -125,10 +126,10 @@ class GuardingSettings(Page):
         night_exempt_users = []
         for user in User.objects:
             if 'guarding_exemption' not in user.special_attributes:
-                user.special_attributes['guarding_exemption'] = 0
-            if user.special_attributes['guarding_exemption'] == 1:
+                user.special_attributes['guarding_exemption'] = GUARDING_EXEMPTION_NONE
+            if user.special_attributes['guarding_exemption'] == GUARDING_EXEMPTION_TOTAL:
                 completely_exempt_users.append(user)
-            if user.special_attributes['guarding_exemption'] == 2:
+            if user.special_attributes['guarding_exemption'] == GUARDING_EXEMPTION_NIGHT:
                 night_exempt_users.append(user)
 
         print(completely_exempt_users)

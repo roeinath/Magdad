@@ -1,8 +1,5 @@
-from web_framework.server_side.infastructure.ui_component import UIComponent
-import web_framework.server_side.infastructure.ids_manager as ids_manager
-
-from typing import Callable, Dict
 from web_framework.server_side.infastructure.constants import *
+from web_framework.server_side.infastructure.ui_component import UIComponent
 
 DEFAULT_SIZE = '40vw'
 
@@ -17,14 +14,21 @@ class ChartjsComponent(UIComponent):
     PIE = 'pie'
     DOUGHNUT = 'doughnut'
 
-    def __init__(self, width: str = DEFAULT_SIZE, height: str = DEFAULT_SIZE):
+    def __init__(self, width: str = None, height: str = None, min_x: int = 0, min_y: int = 0, ):
         super().__init__()
+        self.__min_y = min_y
+        self.__min_x = min_x
         self.__height = height  # can be 100%, 100px, 100rem, 100vw, 100hw (any number)
         self.__width = width  # can be 100%, 100px, 100rem, 100vw, 100hw (any number)
         self.__datasets = []
         self.__labels = []
-        self.__plugins = {'legend': None}
+        self.__plugins = {'legend': {'display': False}}
         self.__scales = {}
+        self.__additional_options = {}
+        self.__animations = {}
+
+    def set_option(self, option, value):
+        self.__additional_options[option] = value
 
     def render(self):
         return {
@@ -37,10 +41,9 @@ class ChartjsComponent(UIComponent):
                 },
             },
             'options': {
-                'responsive': True,
+                **self.__additional_options,
                 'plugins': self.__plugins,
                 'scales': self.__scales,
-
             },
             JSON_WIDTH: self.__width,
             'height': self.__height
@@ -65,6 +68,21 @@ class ChartjsComponent(UIComponent):
     def doughnut(self, x, y, label=None, color=None, border_color=None, border_width=None, fill=None):
         self.__chart(self.DOUGHNUT, x, y, label, color, border_color, border_width, fill)
 
+    def update_data(self, dataset, x, y):
+        self.__labels = x
+        self.__datasets[dataset]['data'] = y
+        self.add_action({
+            JSON_ACTION: JSON_CHANGE,
+            JSON_VALUE: {JSON_ID: self.id,
+                         'chart': {
+                             'data': {
+                                 'labels': self.__labels,
+                                 'datasets': self.__datasets
+                             },
+                         }
+                         }
+        })
+
     def __chart(self, type: str, x, y, label=None, color=None, border_color=None, border_width=None, fill=None):
         dataset = {
             'type': type,
@@ -87,11 +105,12 @@ class ChartjsComponent(UIComponent):
         self.__labels = x
         self.__datasets.append(dataset)
 
-    def title(self, text: str, size: int = 50):
+    def title(self, text: str, size: int = 50, align: str = 'end'):
         self.__plugins['title'] = {
             'display': True,
             'text': text,
-            'font': {'size': size}
+            'font': {'size': size},
+            'align': align
         }
 
     def legend(self, size: int = 20, position: str = 'top'):
@@ -100,9 +119,9 @@ class ChartjsComponent(UIComponent):
             'labels': {'font': {'size': size}}
         }
 
-    def scale(self, label_name: str, min: int = 0, max: int = 6):
+    def scale(self, label_name: str, min: int = None, max: int = None, grid: bool = False):
         scales = self.__scales.get(label_name, {})
-        scales.update({'min': min, 'max': max})
+        scales.update({'min': min, 'max': max, 'grid': {'display': grid}})
         self.__scales[label_name] = scales
 
     def labels(self, label_name: str, size: int):

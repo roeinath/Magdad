@@ -18,12 +18,15 @@ from web_framework.server_side.infastructure.components.stack_panel import HORIZ
 from web_framework.server_side.infastructure.constants import *
 from web_framework.server_side.infastructure.page import Page
 
+from web_features.guardings.view_guardings import DAY_LABEL_FORMAT, GUARDING_TIME_FORMAT
+
 
 class GenerateGuardings(Page):
     def __init__(self, params):
         super().__init__()
 
         self.mahzor_selections = {}
+        self.buttons_selections = {}
 
         self.sp = None
         self.popup = None
@@ -115,15 +118,40 @@ class GenerateGuardings(Page):
             self.is_kaztar_selected = True
             self.week.save()
 
-        def mahzor_toggled(task, mahzor_button, mahzor):
+        def mahzor_toggled(task, mahzor):
+            """
+            Toggles the mahzor's availability to take part in a given task, while updating the mahzor_button
+            :param task:
+            :param mahzor_button:
+            :param mahzor:
+            :return:
+            """
+            btn = self.buttons_selections[(task, mahzor)]
             if mahzor in self.mahzor_selections[task]:
                 print(f"removed {mahzor} from {task}")
-                mahzor_button.update_color(bg_color='Gray')
+                btn.update_color(bg_color='Gray')
                 self.mahzor_selections[task].remove(mahzor)
             else:
                 print(f"added {mahzor} from {task}")
-                mahzor_button.update_color(bg_color=get_mahzor_color(mahzor))
+                btn.update_color(bg_color=get_mahzor_color(mahzor))
                 self.mahzor_selections[task].append(mahzor)
+
+        def mahzor_toggled_week(task_list, mahzor):
+            """
+            Toggles the mahzor's availability for the entire week.
+            If the mahzor is available for at least one task, make it unavailable for all tasks
+            otherwise, make it available to all tasks.
+            :param task_list: the list of tasks for the day
+            :param mahzor: the mahzor's number
+            """
+            if any((mahzor in self.mahzor_selections[task] for task in task_list)):  # mahzor is available for at least
+                # one task
+                for task in task_list:
+                    if mahzor in self.mahzor_selections[task]:
+                        mahzor_toggled(task, mahzor)
+            else:  # mahzor unavailable for all tasks, make it available to all
+                for task in task_list:
+                    mahzor_toggled(task, mahzor)
 
         kaztar_sp = StackPanel([], orientation=HORIZONTAL)
         kaztar_sp.add_component(Label("בחר קצתר"))
@@ -162,26 +190,28 @@ class GenerateGuardings(Page):
         for day_number, day in enumerate(self.week.days):
             day_column_ind = day_number
 
-            day_of_week_name = day_of_week_num_to_hebrew_name(day.date.weekday())
+            day_title = DAY_LABEL_FORMAT.format(day_name=translate_day_name(day.date.strftime("%A")))
             day_header_stack = StackPanel([])
-            day_header_stack.add_component(Label(day_of_week_name, fg_color='White', size=SIZE_MEDIUM))
+            day_header_stack.add_component(Label(day_title, fg_color='White', size=SIZE_MEDIUM))
             little_stack = StackPanel([], orientation=HORIZONTAL)
             day_header_stack.add_component(little_stack)
 
             for m in get_mahzors():
                 btn = Button(text=m.short_name, bg_color=get_mahzor_color(m.mahzor_num), fg_color='black')
-                btn.set_action(lambda btn=btn, key=m.mahzor_num, tasks=day.guardings:
-                               [mahzor_toggled(tsk, btn, key) for tsk in tasks])
+                btn.set_action(lambda key=m.mahzor_num, tasks=day.guardings:
+                               mahzor_toggled_week(tasks, key))
                 little_stack.add_component(btn)
             table.add_component(day_header_stack, 0, day_column_ind, 1, 1, bg_color=COLOR_PRIMARY_DARK)
 
             for i, task in enumerate(day.guardings):
-
+                task_time = GUARDING_TIME_FORMAT.format(
+                    day_name=translate_day_name(task.start_time.strftime("%A")),
+                    start_time=task.start_time.strftime("%H:%M"),
+                    end_time=task.end_time.strftime("%H:%M"))
                 if task.task_type.description:
-                    title_str = task.start_time.strftime("%H:%M") + " עד " + task.end_time.strftime(
-                        "%H:%M") + " ( " + task.task_type.description + ")"
+                    title_str = task_time + " ( " + task.task_type.description + ")"
                 else:
-                    title_str = task.start_time.strftime("%H:%M") + " עד " + task.end_time.strftime("%H:%M")
+                    title_str = task_time
                 title = Label(title_str, size=SIZE_MEDIUM, fg_color='White')
 
                 stack1 = StackPanel([])
@@ -189,11 +219,13 @@ class GenerateGuardings(Page):
                 stack1.add_component(title)
 
                 mahzors = StackPanel(orientation=HORIZONTAL)
+                # populate mahzors that can take the tasks
                 self.mahzor_selections[task] = []
                 for m in get_mahzors():
                     self.mahzor_selections[task].append(m.mahzor_num)
                     btn = Button(text=m.short_name, bg_color=get_mahzor_color(m.mahzor_num), fg_color='black')
-                    btn.set_action(lambda task=task, btn=btn, key=m.mahzor_num: mahzor_toggled(task, btn, key))
+                    self.buttons_selections[(task, m.mahzor_num)] = btn
+                    btn.set_action(lambda task=task, key=m.mahzor_num: mahzor_toggled(task, key))
                     mahzors.add_component(btn)
                 stack1.add_component(mahzors)
 
@@ -240,7 +272,7 @@ class GenerateGuardings(Page):
 
         self.sp.add_component(Label('שבועות קיימים', size=SIZE_LARGE))
 
-        weeks = GuardingWeek.objects
+        weeks = GuardingWeek.objects.all()
 
         weeks_grid = GridPanel(len(weeks), 4, bg_color='White')
         self.sp.add_component(weeks_grid)

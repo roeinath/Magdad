@@ -56,7 +56,7 @@ class ManageLogisticStatuses(Page):
 
         table.add_column(lambda option: StackPanel([
             Button("עריכה", lambda: self.add_or_edit_new_option(option)),
-            ConfirmationButton("מחיקה", lambda: option.delete(), bg_color='red')
+            ConfirmationButton("מחיקה", lambda: option.delete(), bg_color=COLOR_RED)
         ], orientation=HORIZONTAL))
 
         self.sp.add_component(Label("ניהול סטטוסי אירועים אפשריים", size=SIZE_EXTRA_LARGE))

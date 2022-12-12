@@ -6,7 +6,7 @@ from web_features.talpix.ide_demo import IDEDemo, IDE_DEMO_PAGE_URI
 from web_features.talpix.ide import IDE, IDE_PAGE_URI
 from web_features.talpix.talpiot_users import TalpiotUsers
 from web_features.talpix.talpix_logs import TalpiXLogs
-from web_features.talpix.wiki import Wiki
+from web_features.talpix.documentation.bot_wiki import BotWiki
 from web_framework.server_side.infastructure.category import Category
 from web_framework.server_side.infastructure.constants import *
 from web_features.talpix.files_management import FilesManager
@@ -18,13 +18,13 @@ class TalpiXCategory(Category):
             'talpibot_users': TalpiotUsers,
             "intro_dev": IntroDev,
             "components_description": ComponentsDescription,
+            "bot_wiki": BotWiki,
             'suggestions': FeaturesSuggestions,
             "bot_signup": BotSignup,
             'general_test': FIRST_MVP,
             IDE_DEMO_PAGE_URI: IDEDemo,
             IDE_PAGE_URI: IDE,
             'logs': TalpiXLogs,
-            "wiki": Wiki,
             'files': FilesManager
         })
 

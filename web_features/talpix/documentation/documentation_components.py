@@ -46,7 +46,7 @@ TAGS = {
 def get_page_by_file(file_path: str):
     sp = StackPanel([])
 
-    with open(os.path.join(CUR_DIR, file_path), 'r') as f:
+    with open(os.path.join(CUR_DIR, file_path), 'r', encoding='utf8') as f:
         lines = []
         current_tag = None
         for line in f.readlines():

@@ -14,6 +14,10 @@ class AddImage(Page):
     def get_title() -> str:
         return "הוספת תמונה לטלוויזיה מחזורית"
 
+    @staticmethod
+    def is_authorized(user) -> bool:
+        return False
+
     def create_request(self):
         def save_request(x: TVImageLink):
             x.mahzor = self.user.mahzor

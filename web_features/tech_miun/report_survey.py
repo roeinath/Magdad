@@ -1,18 +1,5 @@
 import urllib.parse
-
-SOLUTION_SURVEY = {"survey_name": "SOLUTIONS",
-                   "link": "https://docs.google.com/forms/d/e/1FAIpQLSfjQ2PdB1p40E0LZHEQYhHTmXShQSki5g6hdQ-yuM2kKe9dZA/viewform?usp=pp_url&entry.751990674=<ESTIMATOR_NAME>&entry.691454428=<ESTIMATOR_MAIL>&entry.1523634118=<TEAM_NUMBER>&entry.206=<MALSHAB_NAME>&entry.1190630109=<MALSHAB_SERIAL_NUMBER>"
-                   }
-
-CHAKAB_SURVEY = {"survey_name": "HACKAB",
-                 "link": "https://docs.google.com/forms/d/e/1FAIpQLSeblAHPcLIV-89-J7df2zEnWGuDLX765mjFUKt_5GUnQ-V_GA/viewform?usp=pp_url&entry.751990674=<ESTIMATOR_NAME>&entry.983971753=<ESTIMATOR_MAIL>&entry.1523634118=<TEAM_NUMBER>&entry.206=<MALSHAB_NAME>&entry.1799172708=<MALSHAB_SERIAL_NUMBER>"
-                 }
-
-QA_SURVEY = {"survey_name": "QA",
-                 "link": "https://docs.google.com/forms/d/e/1FAIpQLSckLEN9XOpcf8ynKZqESUVciDmUTe9RakkAo2WbxnQrMQxCtQ/viewform?usp=pp_url&entry.751990674=<ESTIMATOR_NAME>&entry.691454428=<ESTIMATOR_MAIL>&entry.1523634118=<TEAM_NUMBER>&entry.206=<MALSHAB_NAME>&entry.1190630109=<MALSHAB_SERIAL_NUMBER>"
-            }
-
-SURVEY_LIST = [SOLUTION_SURVEY, CHAKAB_SURVEY, QA_SURVEY]
+from web_features.tech_miun.constants import *
 
 PRE_FILlED = {
     "ESTIMATOR_NAME": "<ESTIMATOR_NAME>",
@@ -42,13 +29,15 @@ class ReportSurvey:
 
     @staticmethod
     def generate_survey(survey, estimator, malshab):
-        survey = {"survey_name": survey["survey_name"],
-                        "link": ReportSurvey.pre_filled_survey(survey["link"], estimator, malshab), }
+        survey = {SURVEY_NAME_DICT_KEY: survey[SURVEY_NAME_DICT_KEY],
+                  HEBREW_NAME_DICT_KEY: survey[HEBREW_NAME_DICT_KEY],
+                  LINK_DICT_KEY: ReportSurvey.pre_filled_survey(survey[LINK_DICT_KEY], estimator, malshab), }
         return survey
 
     @staticmethod
     def get_surveys():
-        return SURVEY_LIST
+        return SURVEY_LIST_ALL
+
 
 def format_link(link):
     FIELD_DIC = {
@@ -63,22 +52,33 @@ def format_link(link):
 
     return link
 
+
 def main():
-    survey_link = [{"survey_name": "SOLUTIONS",
-                    "link": "https://docs.google.com/forms/d/e/1FAIpQLSfjQ2PdB1p40E0LZHEQYhHTmXShQSki5g6hdQ-yuM2kKe9dZA/viewform?usp=pp_url&entry.751990674=ESTIMATOR_NAME&entry.691454428=ESTIMATOR_MAIL&entry.1523634118=%D7%90&entry.206=MALSHAB_NAME&entry.1190630109=MALSHAB_SERIAL_NUMBER"
+    survey_link = [{SURVEY_NAME_DICT_KEY: SOLUTION_SURVEY[SURVEY_NAME_DICT_KEY],
+                    LINK_DICT_KEY: "https://docs.google.com/forms/d/e/1FAIpQLSfjQ2PdB1p40E0LZHEQYhHTmXShQSki5g6hdQ-yuM2kKe9dZA/viewform?usp=pp_url&entry.751990674=ESTIMATOR_NAME&entry.691454428=ESTIMATOR_MAIL&entry.1523634118=%D7%90&entry.206=MALSHAB_NAME&entry.1190630109=MALSHAB_SERIAL_NUMBER"
                     },
-                   {"survey_name": "HACKAB",
-                    "link": "https://docs.google.com/forms/d/e/1FAIpQLSeblAHPcLIV-89-J7df2zEnWGuDLX765mjFUKt_5GUnQ-V_GA/viewform?usp=pp_url&entry.751990674=ESTIMATOR_NAME&entry.983971753=ESTIMATOR_MAIL&entry.1523634118=%D7%90&entry.206=MALSHAB_NAME&entry.1799172708=MALSHAB_SERIAL_NUMBER"
+                   {SURVEY_NAME_DICT_KEY: CHAKAB_SURVEY[SURVEY_NAME_DICT_KEY],
+                    LINK_DICT_KEY: "https://docs.google.com/forms/d/e/1FAIpQLSeblAHPcLIV-89-J7df2zEnWGuDLX765mjFUKt_5GUnQ-V_GA/viewform?usp=pp_url&entry.751990674=ESTIMATOR_NAME&entry.983971753=ESTIMATOR_MAIL&entry.1523634118=%D7%90&entry.206=MALSHAB_NAME&entry.1799172708=MALSHAB_SERIAL_NUMBER"
                     },
-                   {"survey_name": "QA",
-                    "link": "https://docs.google.com/forms/d/e/1FAIpQLSckLEN9XOpcf8ynKZqESUVciDmUTe9RakkAo2WbxnQrMQxCtQ/viewform?usp=pp_url&entry.751990674=ESTIMATOR_NAME&entry.691454428=ESTIMATOR_MAIL&entry.1523634118=%D7%90&entry.206=MALSHAB_NAME&entry.1190630109=MALSHAB_SERIAL_NUMBER"
+                   {SURVEY_NAME_DICT_KEY: QA_SURVEY[SURVEY_NAME_DICT_KEY],
+                    LINK_DICT_KEY: "https://docs.google.com/forms/d/e/1FAIpQLSckLEN9XOpcf8ynKZqESUVciDmUTe9RakkAo2WbxnQrMQxCtQ/viewform?usp=pp_url&entry.751990674=ESTIMATOR_NAME&entry.691454428=ESTIMATOR_MAIL&entry.1523634118=%D7%90&entry.206=MALSHAB_NAME&entry.1190630109=MALSHAB_SERIAL_NUMBER"
+                    },
+                   {SURVEY_NAME_DICT_KEY: BEHAVIOR_DIAGNOSTICIAN_PLANNING_SURVEY[SURVEY_NAME_DICT_KEY],
+                    LINK_DICT_KEY: "https://docs.google.com/forms/d/e/1FAIpQLSel5h6BY_tQnQzn197eIORJLEksSJTYPZyDsMO-FghTy-LfeA/viewform?usp=pp_url&entry.751990674=ESTIMATOR_NAME&entry.691454428=ESTIMATOR_MAIL&entry.1523634118=%D7%90&entry.206=MALSHAB_NAME&entry.1190630109=MALSHAB_SERIAL_NUMBER"
+                    },
+                   {SURVEY_NAME_DICT_KEY: BEHAVIOR_DIAGNOSTICIAN_LAW_SURVEY[SURVEY_NAME_DICT_KEY],
+                    LINK_DICT_KEY: "https://docs.google.com/forms/d/e/1FAIpQLSdVfiFVR-pFHyk3DSintOM7vp1xYwLQ69N8LlX_euWOmg5hVg/viewform?usp=pp_url&entry.751990674=ESTIMATOR_NAME&entry.691454428=ESTIMATOR_MAIL&entry.1523634118=%D7%90&entry.206=MALSHAB_NAME&entry.1190630109=MALSHAB_SERIAL_NUMBER"
+                    },
+                   {SURVEY_NAME_DICT_KEY: SAGAB_SURVEY[SURVEY_NAME_DICT_KEY],
+                    LINK_DICT_KEY: "https://docs.google.com/forms/d/e/1FAIpQLSd4-pUna1OVwvR_uCp0sMNS08H8_wbXRKMDYX1ENeBACsBuwQ/viewform?usp=pp_url&entry.751990674=ESTIMATOR_NAME&entry.691454428=ESTIMATOR_MAIL&entry.1523634118=%D7%90&entry.206=MALSHAB_NAME&entry.1190630109=MALSHAB_SERIAL_NUMBER"
                     }
                    ]
     for index, link in enumerate(survey_link):
-        survey_link[index]["link"] = format_link(link["link"])
+        survey_link[index][LINK_DICT_KEY] = format_link(link[LINK_DICT_KEY])
 
     for link in survey_link:
-        print("for ", link["survey_name"], " survey copy:\n", link["link"])
+        print("for ", link[SURVEY_NAME_DICT_KEY], " survey copy:\n", link[LINK_DICT_KEY])
+
 
 if __name__ == "__main__":
     main()

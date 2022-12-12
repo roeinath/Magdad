@@ -3,6 +3,6 @@
 בעמוד הזה תוכלו ללמוד על ספריית ExternalAPIs של TalpiBot, שנותנת לכם ממשקים ידידותיים לכמה מהשירותים הנפוצים ביותר במתל"ם. כמובן שתמיד אפשר להשתמש ב-API הרגיל שהשירות מספק, אבל הממשקים הנוחים שתמצאו כאן אמורים להספיק לכל שימוש בסיסי שתזדקקו לו בשביל הפיצ'ר שלכם.
 
 ## Google Sheets
-לשימוש בGoogle Sheets, [לחצו עליי](Google Sheets) 
+לשימוש בGoogle Sheets, [לחצו עליי](Google-Sheets.md) 
 ## Google Calendar
-לשימוש בCalendar, [לחצו עליי](Google Calendar) 
+לשימוש בCalendar, [לחצו עליי](Google-Calendar.md) 

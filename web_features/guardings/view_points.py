@@ -1,6 +1,7 @@
 # from general import *
 from APIs.TalpiotAPIs.Tasks.task import Task
 from APIs.TalpiotAPIs.Tasks.dummy_task import DummyTask
+from APIs.TalpiotAPIs.Tasks.task_type import TaskType
 from web_features.guardings import permissions
 from web_framework.server_side.infastructure.components.pop_up import PopUp
 from web_framework.server_side.infastructure.components.json_schema_form import JsonSchemaForm
@@ -16,6 +17,8 @@ from web_framework.server_side.infastructure.components.combo_box import ComboBo
 from web_framework.server_side.infastructure.page import Page
 from web_framework.server_side.infastructure.constants import *
 from APIs.TalpiotAPIs.mahzors_utils import *
+from web_features.guardings.logic.calculate_guarding_points import calculate_guarding_points
+
 
 class ViewPoints(Page):
     @staticmethod
@@ -49,10 +52,10 @@ class ViewPoints(Page):
             'date': '0000-00-00'
         }, options={
             'users': User.objects,
-        }, options_display= {
+        }, options_display={
             'users': lambda x: "%d - %s" % (x.mahzor, str(x))
         },
-        submit= lambda x: self.add_dummy_task(x))
+                              submit=lambda x: self.add_dummy_task(x))
 
         self.popup = PopUp(form, title="יצירת שמירת דמה", is_shown=True, is_cancelable=False)
         self.sp.add_component(self.popup)
@@ -61,16 +64,12 @@ class ViewPoints(Page):
         mahzor = int(mahzor)
 
         all_users = list(User.objects(mahzor=mahzor))
-
         table = GridPanel(len(all_users), 2, bg_color=COLOR_PRIMARY_DARK)
 
-        users_points = {}
-
-        for u in all_users:
-            users_points[u] = sum([x.task_type.points for x in Task.objects(assignment=u)])
-            users_points[u] += sum([x.points for x in DummyTask.objects(users=u)])
+        users_points = calculate_guarding_points(all_users)
 
         all_users.sort(key=lambda x: users_points[x], reverse=True)
+        print("done calculation")
 
         for i,u in enumerate(all_users):
             if u not in users_points:
@@ -102,7 +101,7 @@ class ViewPoints(Page):
         headers.add_component(Label("צוער/ת", fg_color='White', size=SIZE_LARGE), 0, 0)
         headers.add_component(Label("נקודות", fg_color='White', size=SIZE_LARGE), 0, 1)
         self.layout_table.add_component(headers, 0, 0)
-        
+
         self.sp.add_component(self.layout_table)
         self.draw_table(str(user.mahzor), user)
 

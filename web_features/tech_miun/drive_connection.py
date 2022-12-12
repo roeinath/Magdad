@@ -1,14 +1,12 @@
-import os
-
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+
 from web_features.tech_miun.constants import *
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets',
           "https://www.googleapis.com/auth/drive.file",
           "https://www.googleapis.com/auth/drive"]
 
-LOCAL_DIR = os.path.abspath(os.path.dirname(__file__))
 
 
 class DriveConnection:
@@ -23,11 +21,11 @@ class DriveConnection:
 
         self.files_dict = dict()
 
-    def update_sheet(self, filename):
+    def update_sheet(self, filedir, filename):
         self.files_dict[filename] = self.client.open(os.path.splitext(filename)[0]).sheet1.get_all_values()
 
         print(f"Open file: {filename}")
-        with open(os.path.join(LOCAL_DIR, filename), 'w', encoding='utf-8') as f:
+        with open(os.path.join(filedir, filename), 'w', encoding='utf-8') as f:
             for line in self.files_dict[filename]:
                 for item in line:
                     f.write(f"{item},")
@@ -36,12 +34,11 @@ class DriveConnection:
 
     def __call__(self):
         print("DriveConnection: Updating files")
-        self.update_sheet(SOLUTIONS)
-        self.update_sheet(HACKAB)
-        self.update_sheet(QA)
-        self.update_sheet(SOLUTION_RESULTS)
-        self.update_sheet(HACKAB_RESULTS)
-        self.update_sheet(QA_RESULTS)
+
+        for survey in SURVEY_LIST_ALL:
+            self.update_sheet(MASTERS_DIR, survey[MASTER_FILE_DICT_KEY])
+            self.update_sheet(RESPONSES_DIR, survey[RESULT_FILE_DICT_KEY])
+
         print("DriveConnection: Done updating files")
 
     def get_sheet(self, filename):

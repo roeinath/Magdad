@@ -1,0 +1,6 @@
+from web_features.logistic_events.logistic_comonnents.general_logistic_components import GeneralLogisticComponents
+from web_features.logistic_events.logistic_comonnents.logistic_status_table import LogisticStatusTable
+from web_features.logistic_events.logistic_comonnents.logistic_mission_table import LogisticMissionTable
+from web_features.logistic_events.logistic_comonnents.logistic_external_google_manager import \
+    LogisticExternalGoogleManager
+

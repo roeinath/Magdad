@@ -1,10 +1,10 @@
 from web_features.tech_miun import permissions
+from web_features.tech_miun.assessments.behavioral_diagnostician_miun_page import BehavioralDiagnosticianPage
+from web_features.tech_miun.assessments.estimator_page import EstimatorPage
 from web_features.tech_miun.handle_estimators import HandleEstimators
-from web_framework.server_side.infastructure.category import Category
-from web_features.tech_miun.estimator_page import EstimatorPage
 from web_features.tech_miun.master_page import MasterPage
-from web_features.tech_miun.sagab_miun_page import SagabPage
-from web_features.tech_miun.behavioral_diagnostician_miun_page import BehavioralDiagnosticianPage
+from web_features.tech_miun.assessments.sagab_miun_page import SagabPage
+from web_framework.server_side.infastructure.category import Category
 
 
 # TODO: add documentation to class and methods

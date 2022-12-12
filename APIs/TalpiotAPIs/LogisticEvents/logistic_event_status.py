@@ -4,6 +4,7 @@ from typing import List
 from mongoengine import Document, ReferenceField, ListField, StringField, DateField, DateTimeField, \
     BooleanField, IntField
 
+from APIs.ExternalAPIs import CalendarEvent
 from APIs.TalpiotAPIs import User
 
 
@@ -20,6 +21,7 @@ class LogisticEventStatus(Document):
     deadline: datetime = DateField()
     attached_file_link: str = StringField(required=False)
     comments: str = StringField(default='')
+    calendar_event: CalendarEvent = ReferenceField(CalendarEvent, default=None)
     approved: bool = BooleanField(default=None)
     relevant: bool = BooleanField(default=True)
 
@@ -32,3 +34,6 @@ class LogisticEventStatus(Document):
 
     def is_user_permitted(self, user):
         return user in self.permitted_users
+
+    def __str__(self):
+        return f"{self.event_name} - {self.status_name}"

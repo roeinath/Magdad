@@ -1,17 +1,8 @@
-from APIs.TalpiotAPIs.AssessmentAPI.Database.platform import Platform
-from APIs.TalpiotSystem import TalpiotSettings, TalpiotDatabaseCredentials, Vault
-from APIs.TalpiotAPIs.AssessmentAPI.Database.platform_grade import PlatformGrade
-from APIs.TalpiotAPIs.User.user import User
-from APIs.TalpiotAPIs.AssessmentAPI.Database.api.querycalls.filter import Filter
-from APIs.TalpiotAPIs.AssessmentAPI.Database.course_grade import CourseGrade
-from APIs.TalpiotAPIs.AssessmentAPI.Database.course import Course
-from APIs.TalpiotAPIs.Group.group import Group
-from web_features.personal_page.permissions import *
+from web_features.Elements.personal_page.permissions import *
 from APIs.TalpiotAPIs.Group.mahzor_group import MahzorGroup
 from APIs.TalpiotAPIs.Group.division_group import DivisionGroup
 from APIs.init_APIs import main as connect_db
 
-import csv
 import random
 
 """
