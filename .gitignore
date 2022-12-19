@@ -3,6 +3,9 @@
 #in miun folder
 web_features/tech_miun/
 
+#visual studio
+.vs/
+
 #in web_framework/client_side/
 ###################
 # dependencies
