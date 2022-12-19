@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+#in miun folder
+web_features/tech_miun/
+
 #in web_framework/client_side/
 ###################
 # dependencies

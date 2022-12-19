@@ -8,16 +8,11 @@ from web_features.cleaning_duties.cleaning_category import CleaningCategory
 from web_features.logistic_events.logistic_category import LogisticEventsCategory
 from web_features.Elements.elements_category import ElementsCategory
 from web_features.tech_miun.miun_category import MiunCategory
+from web_features.tech_miun_temp.miun_category import MiunCategoryTemp
 
 categories = [
-    GuardingCategory(),
-    CleaningCategory(),
     ElementsCategory(),
-    TalpiWikiCategory(),
-    GroupsCategory(),
-    TVsCategory(),
-    ShagmachCategory(),
-    LogisticEventsCategory(),
     TalpiXCategory(),
-    MiunCategory()
+    MiunCategory(),
+    MiunCategoryTemp()
 ]

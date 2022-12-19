@@ -1,2 +1,0 @@
-class MockContainer:
-    pass
