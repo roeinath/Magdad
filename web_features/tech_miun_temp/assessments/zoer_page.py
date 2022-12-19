@@ -68,7 +68,6 @@ class ZoerPage(Page):
         self.options_layout.add_component(self.cadet_combo_box, 1, 0)
         self.gp.add_component(self.options_layout, 1, 0)
 
-        # load grades for user when he opens the page
         if not (is_user_captain(self.user)) and self.selected_cadet is None:
             # self.load_cadet_combo_box(self.user.mahzor)
             self.selected_mahzor = int(self.user.mahzor)
@@ -103,7 +102,7 @@ class ZoerPage(Page):
         children = []
         titles = ["ציונים אקדמיים", "שנה א'", "שנה ב'", "שנה ג'"]
 
-        is_real_data = is_user_have_permissions(self.user, self.selected_cadet) or is_user_captain(self.user)
+        is_real_data = True #TODO: change to: is_user_have_permissions(self.user, self.selected_cadet) or is_user_captain(self.user)
 
         all_courses_grades, all_courses_average = get_courses_of_user(self.selected_cadet, "all", is_real_data)
         self.accordion_gp_first = GridPanel(row_count=3, column_count=3, bordered=True)
@@ -127,3 +126,4 @@ class ZoerPage(Page):
         self.gp.add_component(Accordion(children, titles, size=SIZE_LARGE), 2, 0)
         self.gp.add_component(Button("ציוני תרגילים סמסטר נוכחי", lambda: self.gp.add_component(
             CadetExGrades(self.user, 2022, self.selected_cadet).get_table(), 4, 0)), 3, 0, bg_color='#4DDBFF')
+

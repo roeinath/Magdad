@@ -29,6 +29,13 @@ class User(Document):
     birthday: datetime.date = DateField()
     role: List[str] = ListField(StringField(), default=["מתלם"])
     secret_code: str = StringField()
+    user_attributes: List[dict] = ListField(DictField(), default=[{
+            'identifier': 'שם מלא',
+            'type': 'text_question',
+            'category': 'מידע יבש',
+            'question': 'שם מלא:',
+            'required': False,
+            'value': None}])
 
     @staticmethod
     def get_by_telegram_id(telegram_id: int):
