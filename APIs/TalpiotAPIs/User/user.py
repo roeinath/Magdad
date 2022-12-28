@@ -4,6 +4,11 @@ from mongoengine import Document, EmailField, StringField, IntField, ReferenceFi
 from enum import Enum
 from typing import List
 
+from APIs.TalpiotAPIs.Role.role import Role
+from APIs.TalpiotSystem import TBLogger
+
+import time
+
 
 class Gender(Enum):
     male = "male"
@@ -27,7 +32,9 @@ class User(Document):
     bot_admin: bool = BooleanField()
     special_attributes: dict = DictField()
     birthday: datetime.date = DateField()
-    role: List[str] = ListField(StringField(), default=["מתלם"])
+    role: List[str] = ListField(StringField(), default=["מתלם"])  # TODO remove - left for legacy
+    role_list: List[User] = ListField(ReferenceField(Role), required=False)  # TODO new roles field
+
     secret_code: str = StringField()
     user_attributes: List[dict] = ListField(DictField(), default=[{
             'identifier': 'שם מלא',
@@ -48,6 +55,46 @@ class User(Document):
     @property
     def is_active(self):
         return True
+
+    def __contains__(self, role: Role) -> bool:
+        """
+        This method checks if a role is in a certain user.
+        Usage: if role in user: do something
+        """
+        # t0 = time.time()
+        ans = role in self.role_list
+        # t1 = time.time()
+        # t += (t1-t0)
+        # print(str(t) + " cont " + str(t1 - t0))
+        return ans
+
+    def has_role(self, role_name):
+        """
+        uses __containts__ but uses the role's name
+        can process string and a list of strings
+        """
+        if type(role_name) == str:
+            return Role.objects.get(name=role_name) in self
+
+        if type(role_name) == property:
+            TBLogger.warning('your Page or Category does not contain AUTH_ROLES list, hence will not be displayed')
+            return False
+
+        # t0 = time.time()
+        roles = Role.objects.filter(name__in=role_name)
+        # t1 = time.time()
+        # print("    Quering from Role took " + str(t1 - t0))
+
+        # t0 = time.time()
+        ans = False
+        for role in roles:
+            if role in self:
+                ans = True
+                break
+
+        # t1 = time.time()
+        # print("    looking for User roles took " + str(t1 - t0))
+        return ans
 
     def get_first_name(self) -> str:
         """
