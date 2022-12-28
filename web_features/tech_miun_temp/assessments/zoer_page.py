@@ -102,7 +102,7 @@ class ZoerPage(Page):
         children = []
         titles = ["ציונים אקדמיים", "שנה א'", "שנה ב'", "שנה ג'"]
 
-        is_real_data = True #TODO: change to: is_user_have_permissions(self.user, self.selected_cadet) or is_user_captain(self.user)
+        is_real_data = False #TODO: change to: is_user_have_permissions(self.user, self.selected_cadet) or is_user_captain(self.user)
 
         all_courses_grades, all_courses_average = get_courses_of_user(self.selected_cadet, "all", is_real_data)
         self.accordion_gp_first = GridPanel(row_count=3, column_count=3, bordered=True)

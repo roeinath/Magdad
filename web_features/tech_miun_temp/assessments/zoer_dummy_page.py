@@ -20,11 +20,11 @@ from web_framework.server_side.infastructure.components.combo_box import ComboBo
 from web_features.Elements.personal_page.modules.cadet_classes import *
 from web_features.Elements.personal_page.permissions import *
 from web_framework.server_side.infastructure.components.button import Button
+from web_framework.server_side.infastructure.components.divider import Divider
 from web_framework.server_side.infastructure.constants import *
 from web_features.tech_miun_temp.cadet_classes.utils import Data
 
-RealData = TalpiotSettings.is_master()
-
+SEMESTERS = ['סמסטר א','סמסטר ב','סמסטר ג','סמסטר ד','סמסטר ה','סמסטר ו']
 
 class DummyZoerPage(Page):
 
@@ -42,7 +42,7 @@ class DummyZoerPage(Page):
     def create_open_text_display(self, open_texts):
         sp = StackPanel([])
         for open_text in open_texts:
-            sp.add_component(Label(open_text, fg_color='White'))
+            sp.add_component(Label(open_text, fg_color='Black'))
             sp.add_component(Divider())
         return sp
 
@@ -50,7 +50,7 @@ class DummyZoerPage(Page):
         self.user = user
         self.sp = StackPanel([])
 
-        semsterial_average = [84.3,90.2,88,None,None,None]
+        semesterial_average = [84.3,90.2,88,None,None,None]
         thoughts_open_texts = ['בעל חשיבה אנליתית טובה' ,'חושב בצורה מסודרת, מבין את המשימה ופורט אותה לחלקים']
         
         group_name = "נתונים אקדמיים"
@@ -58,23 +58,27 @@ class DummyZoerPage(Page):
                 Data("thought_open", thoughts_open_texts, is_open=True),
                 Data("ממוצע אקדמי", semesterial_average, is_semesterial=True)]
 
-        label_academic_group = Label(group_name)
-        self.group_layout = GridPanel(2, len(data), bg_color=COLOR_PRIMARY_DARK)
-
+        group_layout = GridPanel(2, len(group_data), bg_color=COLOR_PRIMARY_DARK)
         for index, data in enumerate(group_data):
-            self.group_layout.add_component(Label(data.title, fg_color='White'), 0, index)
+            group_layout.add_component(Label(data.title, fg_color='White'), 0, index)
             if(data.is_semesterial):
-                pass
+                semesters_layout = GridPanel(2, 6, bg_color='Green')
+                for semester_num, semester in enumerate(SEMESTERS):
+                    semesters_layout.add_component(Label(semester, fg_color='White'), 0, semester_num)
+                    semesters_layout.add_component(Label(str(data.value[semester_num]), fg_color='White'), 1, semester_num)
+                group_layout.add_component(semesters_layout, 1, index)
             elif(data.is_open):
+                open_text_sp = StackPanel([])
                 open_text_display = self.create_open_text_display(data.value)
-                self.group_layout.add_component(Button("לחצו כאן", action=lambda p=popup: p.show()), 1, index)
-                self.group_layout.add_component(PopUp(open_text_display, is_shown=False, is_cancelable=True, title=data.title), 1, index)
+                popup = PopUp(open_text_display, is_shown=False, is_cancelable=True, title=data.title)
+                open_text_sp.add_component(Button(data.title, action=lambda p=popup: p.show()))
+                open_text_sp.add_component(popup)
+                group_layout.add_component(open_text_sp, 1, index)
             else:
-                self.group_layout.add_component(Label(str(data.value), fg_color='Green'), 1, index)
-
+                group_layout.add_component(Label(str(data.value), fg_color='White'), 1, index)
 
         label2 = Label("טקסט 2")
-        example_accordion = Accordion([label_academic_group, label2], [group_name, "Label 2"])
+        example_accordion = Accordion([group_layout, label2], [group_name, "Label 2"])
         self.sp.add_component(example_accordion)
 
         return self.sp
