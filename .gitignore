@@ -5,6 +5,9 @@
 
 *.bak
 
+run_site.bat
+env_setup.bat
+
 #in web_framework/client_side/
 ###################
 # dependencies
