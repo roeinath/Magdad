@@ -2,7 +2,7 @@ from numpy import std, mean
 from matplotlib.pyplot import hist, show, xlabel, ylabel, title, plot, scatter, legend, savefig, clf, gca
 from os import mkdir, path
 
-from helper_functions import delete_not_relevants
+from helper_functions import delete_not_relevants, open_file_and_save_graph
 
 
 # draw the average grade of talpions (dashed line), and scatter the grades given by specific evaluator
@@ -22,7 +22,7 @@ def scatter_solution_grades_of_maarih_around_the_general_mean(solution_grades, m
         frame = gca()
         frame.axes.get_xaxis().set_visible(False)
         legend(loc="upper left")
-        savefig(f'results/evaluators/{name}/grades_scattering.png')
+        open_file_and_save_graph(name, 'results/evaluators', 'grades_scattering')
         clf()
 
 
@@ -38,9 +38,7 @@ def create_histograms_of_grades(solution_grades, maarihim_names, average_grades)
         plot([grade, grade], [0, 20], linestyle="dashed", label='your average')
         plot([solution_grades_mean, solution_grades_mean], [0, 20], c="r", linestyle="dashed", label="general average")
         legend(loc="upper left")
-        if not path.exists(f'results/evaluators/{name}'):
-            mkdir(f'results/evaluators/{name}')
-        savefig(f'results/evaluators/{name}/histogram.png')
+        open_file_and_save_graph(name, 'results/evaluators', 'histogram')
         clf()
 
 
@@ -74,3 +72,5 @@ def create_graph_of_academic_average_as_function_of_miun_grade(x_values, y_value
     xlabel("ציון מסכם במיון"[::-1])
     ylabel("ממוצע אקדמי בהכשרה"[::-1])
     show()
+
+

@@ -6,6 +6,10 @@ web_features/tech_miun/
 #visual studio
 .vs/
 
+*.png
+
+
+
 #in web_framework/client_side/
 ###################
 # dependencies
