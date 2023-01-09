@@ -1,4 +1,5 @@
-﻿import webbrowser
+﻿import os
+import webbrowser
 from dataclasses import fields
 
 import web_framework.server_side.infastructure.constants as const
@@ -26,7 +27,8 @@ from web_features.tech_miun_temp.cadet_classes.utils import *
 from web_features.tech_miun_temp.cadet_classes.miun_classess import CadetMiunGrades
 import pandas as pd
 
-SEMESTERS = ['סמסטר א','סמסטר ב','סמסטר ג','סמסטר ד','סמסטר ה','סמסטר ו']
+SEMESTERS = ['סמסטר א', 'סמסטר ב', 'סמסטר ג', 'סמסטר ד', 'סמסטר ה', 'סמסטר ו']
+
 
 class DriveTestPage(Page):
 
@@ -52,11 +54,19 @@ class DriveTestPage(Page):
         self.user = user
         self.sp = StackPanel([])
 
-        group_name = "Test"
+        # the relative path of the "interviews data" csv
+        file_name = "candidate_diagnoser.csv"
+        file_path = os.path.join(os.path.dirname(__file__), "../temp_files/"+file_name)
 
-        data_frame = CadetMiunGrades.load_data_from_csv_or_excel(r"C:\Magdad\Magdad\web_features\tech_miun_temp\cadet_classes\interviews_data_test.csv")
+        # download the CSV data into ../cadet_classes
+        drive_url = "https://drive.google.com/file/d/1_bEozOQH_3dP4VaaAPs8ZqMNhw5ndBPH/view?usp=share_link"
+        CadetMiunGrades.import_data_from_drive(drive_url, file_name)
+
+        group_name = "Test"
+        data_frame = CadetMiunGrades.load_data_from_csv_or_excel(file_path)
         group_data = [Data("Raw Data", data_frame)]
 
+        # adding the grid panel with the interview data to talpix
         group_layout = GridPanel(2, len(group_data), bg_color=COLOR_PRIMARY_DARK)
         for index, data in enumerate(group_data):
             group_layout.add_component(Label(data.title, fg_color='White'), 0, index)
@@ -83,5 +93,3 @@ class DriveTestPage(Page):
         self.sp.add_component(example_accordion)
 
         return self.sp
-
-   

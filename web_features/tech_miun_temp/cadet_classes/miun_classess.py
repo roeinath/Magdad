@@ -51,6 +51,7 @@ class CadetMiunGrades:
         :return: DataFrame with the data
         """
         file_extension = os.path.splitext(path)[-1].lower()
+
         df = None
 
         if file_extension == '.xlsx':
@@ -62,6 +63,16 @@ class CadetMiunGrades:
                              skipinitialspace=True)
 
         return df
+
+    @staticmethod
+    def import_data_from_drive(url, save_path) -> None:
+        """
+        input: url - the folder in the drive witch the desired file is located
+               save_path - the relative output path to save the file into (relative to "temp_files" folder)
+        output: None
+        """
+        save_path = "./web_features/tech_miun_temp/temp_files/" + save_path
+        gd.download(url, save_path, quiet=False, fuzzy=True)
 
     def load_user_from_drive(self, user_name):
         # TODO: match mahzor to year of miyun and check 4 years back
