@@ -3,6 +3,11 @@
 #visual studio
 .vs/
 
+*.bak
+
+run_site.bat
+env_setup.bat
+
 #in web_framework/client_side/
 ###################
 # dependencies
@@ -15,13 +20,6 @@ web_framework/client_side/coverage
 
 # production
 web_framework/client_side/build
-
-# misc
-web_framework/client_side/.DS_Store
-web_framework/client_side/.env.local
-web_framework/client_side/.env.development.local
-web_framework/client_side/.env.test.local
-web_framework/client_side/.env.production.local
 
 web_framework/client_side/.eslintcache
 
@@ -105,15 +103,6 @@ APIs/secret_settings.json
 __pypackages__/
 
 
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-Virtual_Environments/
 
 web_features/tech_miun/responses_files/Behaviour Law - Responses
 web_features/tech_miun/responses_files/Behaviour Planning - Responses
