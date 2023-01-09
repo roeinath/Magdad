@@ -1,3 +1,5 @@
+import os
+
 from APIs.TalpiotAPIs.AssessmentAPI.Database.files import Files
 from web_framework.server_side.infastructure.components.button import Button
 from web_framework.server_side.infastructure.components.confirmation_button import ConfirmationButton
@@ -19,13 +21,10 @@ from APIs.TalpiotAPIs.AssessmentAPI.tsyunomat.GetDataFromDB import *
 from os import chdir
 from os.path import abspath, dirname
 from web_features.Elements.personal_page.permissions import is_user_captain
+
+from web_features.tech_miun_temp.cadet_classes.utils import *
 import pandas as pd
 
-SIZE_EXTRA_SMALL = 'xs'
-SIZE_SMALL = 'sm'
-SIZE_MEDIUM = 'md'
-SIZE_LARGE = 'lg'
-SIZE_EXTRA_LARGE = 'xl'
 
 
 class CadetMiunGrades:
@@ -51,11 +50,18 @@ class CadetMiunGrades:
         :param path: the path
         :return: DataFrame with the data
         """
-        try:
-            df = pd.read_csv(path, header=0, skip_blank_lines=True,
-                             skipinitialspace=True, encoding='latin-1')
-        finally:
+        file_extension = os.path.splitext(path)[-1].lower()
+        df = None
+
+        if file_extension == '.xlsx':
+            df = pd.read_excel(path, header=0, engine='openpyxl')
+        elif file_extension == '.xls':
             df = pd.read_excel(path, header=0)
+        elif file_extension == '.csv':
+            df = pd.read_csv(path, header=0, skip_blank_lines=True,
+                             skipinitialspace=True)
+
+        return df
 
     def load_user_from_drive(self, user_name):
         # TODO: match mahzor to year of miyun and check 4 years back
