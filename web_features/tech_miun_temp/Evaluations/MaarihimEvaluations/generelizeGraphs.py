@@ -1,5 +1,5 @@
 from os import mkdir, path
-
+'''
 from matplotlib.pyplot import scatter, xlabel, ylabel, show, savefig, clf
 
 from web_features.tech_miun_temp.Evaluations.MaarihimEvaluations.helper_functions import delete_not_relevants, \
@@ -16,5 +16,6 @@ def create_generelized_graph(x_parameters, y_parameters, x_name, y_name):
 
     open_file_and_save_graph(name, 'results/evaluators', name)
     clf()
+'''
 
 

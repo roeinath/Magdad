@@ -1,3 +1,4 @@
+'''
 from numpy import std, mean
 from matplotlib.pyplot import hist, show, xlabel, ylabel, title, plot, scatter, legend, savefig, clf, gca
 from os import mkdir, path
@@ -72,5 +73,5 @@ def create_graph_of_academic_average_as_function_of_miun_grade(x_values, y_value
     xlabel("ציון מסכם במיון"[::-1])
     ylabel("ממוצע אקדמי בהכשרה"[::-1])
     show()
-
+'''
 

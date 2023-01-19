@@ -1,1 +1,3 @@
+def roles():
+    return None
 

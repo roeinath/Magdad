@@ -1,5 +1,6 @@
 # delete "not relevant" data in academic grade and face with typos -
 # look at the data or ignore this function and understand
+'''
 from numpy import std, mean
 from matplotlib.pyplot import hist, show, xlabel, ylabel, title, plot, scatter, legend, savefig, clf, gca
 from os import mkdir, path
@@ -19,3 +20,4 @@ def open_file_and_save_graph(name,adress,test_name):
      if not path.exists(f'{adress}/{name}'):
          mkdir(f'{adress}/{name}')
      savefig(f'{adress}/{name}/{test_name}.png')
+'''

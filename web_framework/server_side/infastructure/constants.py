@@ -43,6 +43,10 @@ JSON_INITIAL_STATE = 'initial_state'
 JSON_ON_LABEL = 'on_label'
 JSON_OFF_LABEL = 'off_label'
 JSON_TITLE = 'title'
+JSON_TITLE_X = 'title_x'
+JSON_TITLE_Y = 'title_y'
+JSON_DATA_X = 'data_x'
+JSON_DATA_Y = 'data_y'
 JSON_TIME = 'time'
 
 JSON_HTML_STRING = 'html_string'
@@ -62,12 +66,16 @@ JSON_GRIDPANEL = 'GridPanel'
 JSON_BUTTON = "Button"
 JSON_TEXT_FIELD = 'TextField'
 JSON_MARKDOWN = "Markdown"
+JSON_PLOTLY_FIGURE = "PlotlyFigure"
+JSON_PLOTLY_PARAMS = "plotly_params"
 
 JSON_YNET = 'YnetComponent'
 JSON_SLIDESHOW = 'Slideshow'
 JSON_TOGGLE = 'Toggle'
 JSON_DIVIDER = 'Divider'
 JSON_ACCORDION = 'Accordion'
+JSON_TABS = 'Tabs'
+JSON_TAB = 'Tab'
 JSON_PURE_HTML = 'PureHTML'
 
 JSON_UPLOAD = 'UploadFile'
@@ -104,7 +112,7 @@ SIZE_EXTRA_LARGE = 'xl'
 # ELEMENTS CONSTS
 
 GRADES = 14
-bg_color_dict = {0: "#808080", 1: "red", 2: "#FFCCCB", 3: "#F6BE00", 4: "#90ee90", 5: "#00b400", 6: "#006700"}
+bg_color_dict = {0: "#808080", 1: "#C00000", 2: "#FF0000", 3: "#FFC000", 4: "#FFFF00", 5: "#92D050", 6: "#00B050"}
 AVG = "ממוצע סמסטריאלי"
 COUNT = "count"
 SEMESTER = "סמסטר"

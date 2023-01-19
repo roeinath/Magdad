@@ -29,9 +29,12 @@ import CountDown from "./CountDown";
 import Markdown from "./Markdown";
 import GoogleDocsDisplay from "./GoogleDocsDisplay";
 import DownloadButton from "./DownloadButton";
+
+
 import Card from './Card'
 import GridView from "./GridView";
 import Container from './Container'
+import PlotlyFigure from "./PlotlyFigure";
 // import PureHTML from "./PureHTML";
 
 
@@ -44,7 +47,7 @@ const ComponentSelector = ({type, text, action, ...props}) => {
                     return <HebrewLabel font={FONTS.RUBIK} color={props.text_color} {...props}>{text}</HebrewLabel>
                 if (type === 'Button')
                     // onClick checks if action is a function and passing data into it
-                    return <Button text={text} color={props.text_color} onClick={() => onEvent(action, {}) } {...props}/>
+                    return <Button text={text} color={props.text_color} onClick={() => onEvent(action, {})} {...props}/>
                 if (type === 'Toggle')
                     // onChange checks if action is a function and passing data into it
                     return <Toggle onChange={(data) => onEvent(action, data)} {...props}/>
@@ -56,11 +59,11 @@ const ComponentSelector = ({type, text, action, ...props}) => {
                     return <Table onSubmit={onEvent} props={props}>{text}</Table>
                 if (type === 'PopUp')
                     // turns the com
-                    return <PopUp onEvent={() => onEvent(action, {}) } props={props}/>
+                    return <PopUp onEvent={() => onEvent(action, {})} props={props}/>
                 if (type === 'GridPanel')
                     return (<GridPanel {...props}/>);
                 if (type === 'ComboBox')
-                    return <ComboBox placeHolder={text} onChoose={(body) => onEvent(action, body) } {...props} />
+                    return <ComboBox placeHolder={text} onChoose={(body) => onEvent(action, body)} {...props} />
                 if (type === 'StackPanel')
                     return <StackPanel {...props} />
                 if (type === 'ChartJsComponent')
@@ -71,13 +74,13 @@ const ComponentSelector = ({type, text, action, ...props}) => {
                     return <Scroller text={text} children={props.children} {...props}/>
                 }
                 if (type === 'YnetComponent')
-                    return <YnetComponent />
+                    return <YnetComponent/>
                 if (type === 'Slideshow')
                     return <Slideshow {...props}/>
                 if (type === 'UploadFile')
                     return <FileUpload uploadFiles={(data) => onEvent(action, data)} {...props} />
                 if (type === 'DisplayFile')
-                    return <FileDisplay {...props} onClick={() => onEvent(action, {})} />
+                    return <FileDisplay {...props} onClick={() => onEvent(action, {})}/>
                 if (type === 'HyperLink')
                     return <HyperLink {...props} >{text}</HyperLink>
                 if (type === 'Accordion')
@@ -97,7 +100,7 @@ const ComponentSelector = ({type, text, action, ...props}) => {
                 if (type === 'Markdown')
                     return <Markdown text={text} {...props} />
                 if (type === 'Divider')
-                    return <div style={{margin: '7px 0', width: '32vw',borderTop: '1px solid rgba(0, 0, 0, 0.15)'}}/>
+                    return <div style={{margin: '7px 0', width: '32vw', borderTop: '1px solid rgba(0, 0, 0, 0.15)'}}/>
                 if (type === 'GoogleDocsDisplay')
                     return <GoogleDocsDisplay {...props}/>
                 if (type === 'Card')
@@ -106,6 +109,9 @@ const ComponentSelector = ({type, text, action, ...props}) => {
                     return <GridView {...props}/>
                 if (type === 'Container')
                     return <Container {...props}/>
+                if (type == "PlotlyFigure")
+                    return <PlotlyFigure {...props}/>
+
             }
         }
     </pageContext.Consumer>);

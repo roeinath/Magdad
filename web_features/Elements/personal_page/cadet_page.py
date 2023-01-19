@@ -57,7 +57,7 @@ class CadetPage(Page):
         # load grades for user when he opens the page
         if not (is_user_captain(self.user)) and self.selected_cadet is None:
             # self.load_cadet_combo_box(self.user.mahzor)
-            self.selected_mahzor = int(self.user.mahzor)
+            self.selected_mahzor = 43 #int(self.user.mahzor)
             self.change_cadet(self.user.name)
 
         return self.gp

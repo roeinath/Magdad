@@ -1,3 +1,4 @@
+from web_features.Elements.graph_page import graph_page
 from web_framework.server_side.infastructure.category import Category
 from web_framework.server_side.infastructure.constants import *
 from web_features.Elements.personal_page.cadet_page import CadetPage
@@ -15,6 +16,7 @@ class ElementsCategory(Category):
             "file_upload": FileUpload,
             "forms_comparison": FormsComparison,
             "mental_dashboard": MentalDashboardPage,
+            "graph_page": graph_page,
         })
 
     def get_title(self):
