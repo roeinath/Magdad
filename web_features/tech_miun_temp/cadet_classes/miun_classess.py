@@ -1,5 +1,7 @@
 import os
 
+import chardet
+
 from APIs.TalpiotAPIs.AssessmentAPI.Database.files import Files
 from web_framework.server_side.infastructure.components.button import Button
 from web_framework.server_side.infastructure.components.confirmation_button import ConfirmationButton
@@ -11,6 +13,7 @@ from web_framework.server_side.infastructure.components.pop_up import PopUp
 from web_framework.server_side.infastructure.components.stack_panel import StackPanel
 from APIs.TalpiotAPIs.AssessmentAPI.Database.api.getdata.academy_grades_interface import *
 from APIs.TalpiotAPIs.AssessmentAPI.Database.api.getdata.skirot_grades_interface import *
+from APIs.ExternalAPIs.GoogleDrive.google_drive import GoogleDrive
 from web_framework.server_side.infastructure.components.chartjs_component import ChartjsComponent
 from web_features.Elements.personal_page.modules.constants import *
 import math
@@ -54,33 +57,18 @@ class CadetMiunGrades:
 
         df = None
 
+
         if file_extension == '.xlsx':
             df = pd.read_excel(path, header=0, engine='openpyxl')
         elif file_extension == '.xls':
             df = pd.read_excel(path, header=0)
         elif file_extension == '.csv':
+            with open(path, 'rb') as rawdata:
+                encoding = chardet.detect(rawdata.read(10000))["encoding"]
             df = pd.read_csv(path, header=0, skip_blank_lines=True,
-                             skipinitialspace=True)
+                             skipinitialspace=True, encoding=encoding)
 
         return df
-
-    @staticmethod
-    def import_data_from_drive(url, save_path) -> None:
-        """
-        input: url - the folder in the drive witch the desired file is located
-               save_path - the relative output path to save the file into (relative to "temp_files" folder)
-        output: None
-        """
-        save_path = "./web_features/tech_miun_temp/temp_files/" + save_path
-        gd.download(url, save_path, quiet=False, fuzzy=True)
-
-    def load_user_from_drive(self, user_name):
-        # TODO: match mahzor to year of miyun and check 4 years back
-        #      for all excels in which the cadet appear
-        #      save all the data in a list of lists
-        #      will be later shown in accordion
-        self.table_titles = ['a', 'b', 'c', 'd', 'e']
-        self.table_data = [[1, 1, 1], [2, 2, 2], [3, 3, 3], [4, 4, 4], [5, 5, 5]]
 
     def get_grades_table(self):
         """

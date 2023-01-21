@@ -59,7 +59,7 @@ class DriveTestPage(Page):
         file_path = os.path.join(os.path.dirname(__file__), "../temp_files/"+file_name)
 
         # download the CSV data into ../cadet_classes
-        drive_url = "https://drive.google.com/file/d/1_bEozOQH_3dP4VaaAPs8ZqMNhw5ndBPH/view?usp=share_link"
+        drive_url = "https://drive.google.com/file/d/1f0_YnIM5xQT09LI50c1bJh03kYxiSgI4/view?usp=share_link"
         CadetMiunGrades.import_data_from_drive(drive_url, file_name)
 
         group_name = "Test"
@@ -90,6 +90,10 @@ class DriveTestPage(Page):
                 group_layout.add_component(Label(str(data.value), fg_color='White'), 1, index)
 
         example_accordion = Accordion([group_layout], [group_name])
+
         self.sp.add_component(example_accordion)
+        print(data_frame.columns)
+        # self.sp.add_component(Label(data_frame["candidate_name"], fg_color='Black'))
+        self.sp.add_component(Label("", fg_color='Black'))
 
         return self.sp

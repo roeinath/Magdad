@@ -5,11 +5,15 @@ from web_framework.server_side.infastructure.components.grid_panel import GridPa
 from web_framework.server_side.infastructure.components.label import Label
 from web_framework.server_side.infastructure.constants import *
 
-SIZE_EXTRA_SMALL = 'xs'
-SIZE_SMALL = 'sm'
-SIZE_MEDIUM = 'md'
-SIZE_LARGE = 'lg'
-SIZE_EXTRA_LARGE = 'xl'
+
+def import_data_from_drive(url, save_path) -> None:
+    """
+    input: url - the folder in the drive witch the desired file is located
+           save_path - the relative output path to save the file into (relative to "temp_files" folder)
+    output: None
+    """
+    save_path = "./web_features/tech_miun_temp/temp_files/" + save_path
+    gd.download(url, save_path, quiet=False, fuzzy=True)
 
 
 def data_frame_to_grid_panel(df: pd.DataFrame):
