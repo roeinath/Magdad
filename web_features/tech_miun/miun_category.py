@@ -6,6 +6,7 @@ from web_features.tech_miun.master_page import MasterPage
 from web_features.tech_miun.assessments.sagab_miun_page import SagabPage
 from web_features.tech_miun_temp.assessments.zoer_page import ZoerPage
 from web_features.tech_miun_temp.assessments.zoer_dummy_page import DummyZoerPage
+from web_features.tech_miun_temp.assessments.drive_test_page import DriveTestPage
 from web_framework.server_side.infastructure.category import Category
 
 
@@ -20,6 +21,7 @@ class MiunCategory(Category):
             "master_page": MasterPage,
             "zoer_page": ZoerPage,
             "dummy_zoer_page": DummyZoerPage,
+            "drive_test_page": DriveTestPage
         })
 
     def get_title(self) -> str:
