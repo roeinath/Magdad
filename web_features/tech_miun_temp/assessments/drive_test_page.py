@@ -55,12 +55,12 @@ class DriveTestPage(Page):
         self.sp = StackPanel([])
 
         # the relative path of the "interviews data" csv
-        file_name = "candidate_diagnoser.csv"
+        file_name = "test.xls"
         file_path = os.path.join(os.path.dirname(__file__), "../temp_files/"+file_name)
 
         # download the CSV data into ../cadet_classes
-        drive_url = "https://drive.google.com/file/d/1f0_YnIM5xQT09LI50c1bJh03kYxiSgI4/view?usp=share_link"
-        CadetMiunGrades.import_data_from_drive(drive_url, file_name)
+        drive_url = "https://drive.google.com/file/d/1azdCHg0AOO8d6bKhsQ-KvjyhXahvzkNV/view?usp=share_link"
+        import_data_from_drive(drive_url, file_name)
 
         group_name = "Test"
         data_frame = CadetMiunGrades.load_data_from_csv_or_excel(file_path)

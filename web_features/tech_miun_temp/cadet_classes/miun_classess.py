@@ -1,6 +1,7 @@
 import os
 
 import chardet
+import xlrd
 
 from APIs.TalpiotAPIs.AssessmentAPI.Database.files import Files
 from web_framework.server_side.infastructure.components.button import Button
