@@ -1,0 +1,2504 @@
+oauth2client.client access_token is expired. Now: 2023-03-23 08:36:24.137043, token_expiry: 2023-03-18 21:21:20
+oauth2client.client Refreshing access_token
+googleapiclient.discovery_cache file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 33, in <module>
+    from oauth2client.contrib.locked_file import LockedFile
+ModuleNotFoundError: No module named 'oauth2client.contrib.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 37, in <module>
+    from oauth2client.locked_file import LockedFile
+ModuleNotFoundError: No module named 'oauth2client.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\__init__.py", line 44, in autodetect
+    from . import file_cache
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 41, in <module>
+    "file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth"
+ImportError: file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v2/rest
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221b9SEF2q847oMZJlR-pe_ijsvuwrif751%22+in+parents+and+mimeType%21%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221b9SEF2q847oMZJlR-pe_ijsvuwrif751%22+in+parents+and+mimeType%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221aR1B-7vT2VZ5e0hc39Bv3rSPeaf92pfF%22+in+parents+and+mimeType%21%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221aR1B-7vT2VZ5e0hc39Bv3rSPeaf92pfF%22+in+parents+and+mimeType%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+root kk.docx is updated.
+django.server "OPTIONS /get_page/?name=components_description&params=undefined HTTP/1.1" 200 0
+django.server "GET /get_page/?name=components_description&params=undefined HTTP/1.1" 200 59049
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\assessments\show_data_page.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\assessments\show_data_page.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.request Unauthorized: /get_page/
+django.server "GET /get_page/?name=ShowDataPage&params=undefined HTTP/1.1" 401 183
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+googleapiclient.discovery_cache file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 33, in <module>
+    from oauth2client.contrib.locked_file import LockedFile
+ModuleNotFoundError: No module named 'oauth2client.contrib.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 37, in <module>
+    from oauth2client.locked_file import LockedFile
+ModuleNotFoundError: No module named 'oauth2client.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\__init__.py", line 44, in autodetect
+    from . import file_cache
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 41, in <module>
+    "file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth"
+ImportError: file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v2/rest
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221b9SEF2q847oMZJlR-pe_ijsvuwrif751%22+in+parents+and+mimeType%21%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221b9SEF2q847oMZJlR-pe_ijsvuwrif751%22+in+parents+and+mimeType%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221aR1B-7vT2VZ5e0hc39Bv3rSPeaf92pfF%22+in+parents+and+mimeType%21%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221aR1B-7vT2VZ5e0hc39Bv3rSPeaf92pfF%22+in+parents+and+mimeType%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+django.server "GET /get_page/?name=ShowDataPage&params=undefined HTTP/1.1" 200 580
+django.request Internal Server Error: /run_func/
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\request_handlers.py", line 161, in run_func
+    ids_manager.action_ids[action_id](payload)  # run user func
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\components\combo_box.py", line 19, in <lambda>
+    func_id = ids_manager.gen_action_id(lambda json: on_changed_wrapper(json))
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\components\combo_box.py", line 16, in on_changed_wrapper
+    on_changed(json['chosen'])
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\assessments\show_data_page.py", line 62, in <lambda>
+    on_changed=lambda selected_file: self.on_select_combo_box(children[selected_file])))
+TypeError: list indices must be integers or slices, not str
+django.server "POST /run_func/ HTTP/1.1" 500 19659
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\assessments\show_data_page.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /get_page_list/ HTTP/1.1" 200 2084
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+googleapiclient.discovery_cache file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 33, in <module>
+    from oauth2client.contrib.locked_file import LockedFile
+ModuleNotFoundError: No module named 'oauth2client.contrib.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 37, in <module>
+    from oauth2client.locked_file import LockedFile
+ModuleNotFoundError: No module named 'oauth2client.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\__init__.py", line 44, in autodetect
+    from . import file_cache
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 41, in <module>
+    "file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth"
+ImportError: file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v2/rest
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221b9SEF2q847oMZJlR-pe_ijsvuwrif751%22+in+parents+and+mimeType%21%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221b9SEF2q847oMZJlR-pe_ijsvuwrif751%22+in+parents+and+mimeType%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221aR1B-7vT2VZ5e0hc39Bv3rSPeaf92pfF%22+in+parents+and+mimeType%21%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221aR1B-7vT2VZ5e0hc39Bv3rSPeaf92pfF%22+in+parents+and+mimeType%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+django.server "GET /get_page/?name=ShowDataPage&params=undefined HTTP/1.1" 200 580
+django.request Internal Server Error: /run_func/
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\request_handlers.py", line 161, in run_func
+    ids_manager.action_ids[action_id](payload)  # run user func
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\components\combo_box.py", line 19, in <lambda>
+    func_id = ids_manager.gen_action_id(lambda json: on_changed_wrapper(json))
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\components\combo_box.py", line 16, in on_changed_wrapper
+    on_changed(json['chosen'])
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\assessments\show_data_page.py", line 62, in <lambda>
+    on_changed=lambda selected_file: self.on_select_combo_box(children[int(selected_file)])))
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\assessments\show_data_page.py", line 50, in on_select_combo_box
+    return sp
+NameError: name 'sp' is not defined
+django.server "POST /run_func/ HTTP/1.1" 500 19778
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\assessments\show_data_page.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /get_page_list/ HTTP/1.1" 200 2084
+oauth2client.client access_token is expired. Now: 2023-03-23 09:36:36.192025, token_expiry: 2023-03-23 09:36:23
+oauth2client.client Refreshing access_token
+googleapiclient.discovery_cache file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 33, in <module>
+    from oauth2client.contrib.locked_file import LockedFile
+ModuleNotFoundError: No module named 'oauth2client.contrib.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 37, in <module>
+    from oauth2client.locked_file import LockedFile
+ModuleNotFoundError: No module named 'oauth2client.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\__init__.py", line 44, in autodetect
+    from . import file_cache
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 41, in <module>
+    "file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth"
+ImportError: file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v2/rest
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221b9SEF2q847oMZJlR-pe_ijsvuwrif751%22+in+parents+and+mimeType%21%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221b9SEF2q847oMZJlR-pe_ijsvuwrif751%22+in+parents+and+mimeType%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221aR1B-7vT2VZ5e0hc39Bv3rSPeaf92pfF%22+in+parents+and+mimeType%21%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221aR1B-7vT2VZ5e0hc39Bv3rSPeaf92pfF%22+in+parents+and+mimeType%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+django.server "GET /get_page/?name=ShowDataPage&params=undefined HTTP/1.1" 200 580
+django.server "POST /run_func/ HTTP/1.1" 200 315
+django.server "POST /run_func/ HTTP/1.1" 200 15
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\APIs\ExternalAPIs\MiunDrive\MiunDriveAPI.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\APIs\ExternalAPIs\MiunDrive\MiunDriveAPI.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun\miun_category.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.request Unauthorized: /get_page/
+django.server "GET /get_page/?name=components_description&params=undefined HTTP/1.1" 401 183
+django.server "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "OPTIONS /api/token/user/get/ HTTP/1.1" 200 0
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+django.server "GET /get_page/?name=components_description&params=undefined HTTP/1.1" 200 59049
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\custom_page.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.server "OPTIONS /get_page_list/ HTTP/1.1" 200 0
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /get_page/?name=components_description&params=undefined HTTP/1.1" 200 59049
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+django.server "OPTIONS /get_page/?name=CustomPage&params=undefined HTTP/1.1" 200 0
+django.request Internal Server Error: /get_page/
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\request_handlers.py", line 117, in get_page
+    root = page.get_initial_ui(request.user)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\page.py", line 30, in get_initial_ui
+    ui = self.get_page_ui(user)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\custom_page.py", line 46, in get_page_ui
+    with open('custom.json','r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'custom.json'
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 500 19460
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\custom_page.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+django.request Internal Server Error: /get_page/
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\request_handlers.py", line 117, in get_page
+    root = page.get_initial_ui(request.user)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\page.py", line 30, in get_initial_ui
+    ui = self.get_page_ui(user)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\custom_page.py", line 47, in get_page_ui
+    with open(os.path.join(path.abspath(__file__), '..','custom.json'),'r') as f:
+NameError: name 'path' is not defined
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 500 19439
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\custom_page.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 200 1854
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\custom_page.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.request Unauthorized: /get_page_list/
+django.request Unauthorized: /get_page/
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 401 183
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+django.request Unauthorized: /get_page/
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 401 183
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 200 2440
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\custom_page.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 200 3622
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\custom_page.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 200 3622
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+asyncio Using selector: SelectSelector
+django.server "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+django.server "OPTIONS /get_page_list/ HTTP/1.1" 200 0
+django.server "OPTIONS /get_page/?name=CustomPage&params=undefined HTTP/1.1" 200 0
+django.request Unauthorized: /get_page_list/
+django.request Unauthorized: /get_page/
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 401 183
+django.server "OPTIONS /api/token/user/get/ HTTP/1.1" 200 0
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+django.request Unauthorized: /get_page/
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 401 183
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+django.request Internal Server Error: /get_page/
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\request_handlers.py", line 117, in get_page
+    root = page.get_initial_ui(request.user)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\page.py", line 30, in get_initial_ui
+    ui = self.get_page_ui(user)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\custom_page.py", line 49, in get_page_ui
+    fetch_data_dict(groups_dict)
+NameError: name 'fetch_data_dict' is not defined
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 500 19412
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\custom_page.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 200 3622
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\utils.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\utils.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\custom_page.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\custom_page.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.request Unauthorized: /get_page_list/
+django.request Unauthorized: /get_page/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 401 183
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.request Internal Server Error: /api/token/user/get/
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 324, in perform_authentication
+    request.user
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\request.py", line 227, in user
+    self._authenticate()
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework_simplejwt\authentication.py", line 42, in authenticate
+    return self.get_user(validated_token), validated_token
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\auth\talpiot_jwt_authentication.py", line 22, in get_user
+    user = User.objects.get(**{api_settings.USER_ID_FIELD: user_id})
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\mongoengine\queryset\base.py", line 267, in get
+    result = next(queryset)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\mongoengine\queryset\base.py", line 1572, in __next__
+    _auto_dereference=self._auto_dereference,
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\mongoengine\base\document.py", line 804, in _from_son
+    obj = cls(__auto_convert=False, _created=created, **data)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\mongoengine\base\document.py", line 93, in __init__
+    raise FieldDoesNotExist(msg)
+mongoengine.errors.FieldDoesNotExist: The fields "{'click_email'}" do not exist on the document "User"
+django.server "GET /api/token/user/get/ HTTP/1.1" 500 20568
+django.request Internal Server Error: /api/token/user/get/
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 324, in perform_authentication
+    request.user
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\request.py", line 227, in user
+    self._authenticate()
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework_simplejwt\authentication.py", line 42, in authenticate
+    return self.get_user(validated_token), validated_token
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\auth\talpiot_jwt_authentication.py", line 22, in get_user
+    user = User.objects.get(**{api_settings.USER_ID_FIELD: user_id})
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\mongoengine\queryset\base.py", line 267, in get
+    result = next(queryset)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\mongoengine\queryset\base.py", line 1572, in __next__
+    _auto_dereference=self._auto_dereference,
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\mongoengine\base\document.py", line 804, in _from_son
+    obj = cls(__auto_convert=False, _created=created, **data)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\mongoengine\base\document.py", line 93, in __init__
+    raise FieldDoesNotExist(msg)
+mongoengine.errors.FieldDoesNotExist: The fields "{'click_email'}" do not exist on the document "User"
+django.server "GET /api/token/user/get/ HTTP/1.1" 500 20568
+django.request Unauthorized: /get_page_list/
+django.request Unauthorized: /get_page/
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 401 183
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Bad Request: /api/token/refresh/
+django.server "POST /api/token/refresh/ HTTP/1.1" 400 39
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page/
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.request Unauthorized: /get_page/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Bad Request: /api/token/refresh/
+django.server "POST /api/token/refresh/ HTTP/1.1" 400 39
+django.server "OPTIONS /api/token/ HTTP/1.1" 200 0
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.request Bad Request: /api/token/refresh/
+django.server "POST /api/token/refresh/ HTTP/1.1" 400 39
+django.request Unauthorized: /get_page_list/
+django.request Unauthorized: /get_page/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.request Unauthorized: /get_page/
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 401 183
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Bad Request: /api/token/refresh/
+django.server "POST /api/token/refresh/ HTTP/1.1" 400 39
+django.server "OPTIONS /quick_access_pages/ HTTP/1.1" 200 0
+django.request Unauthorized: /get_page_list/
+django.request Unauthorized: /quick_access_pages/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.server "GET /quick_access_pages/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /quick_access_pages/
+django.server "GET /quick_access_pages/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.request Unauthorized: /quick_access_pages/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.server "GET /quick_access_pages/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /quick_access_pages/
+django.server "GET /quick_access_pages/ HTTP/1.1" 401 183
+django.request Bad Request: /api/token/refresh/
+django.server "POST /api/token/refresh/ HTTP/1.1" 400 39
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+django.server "POST /api/token/ HTTP/1.1" 200 2
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+django.request Unauthorized: /api/token/user/get/
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+django.server "POST /api/token/ HTTP/1.1" 200 2
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+django.request Unauthorized: /api/token/user/get/
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+django.request Unauthorized: /api/token/user/get/
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+django.server "POST /api/token/ HTTP/1.1" 200 2
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+django.request Unauthorized: /api/token/user/get/
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+django.request Unauthorized: /api/token/user/get/
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+django.request Unauthorized: /api/token/user/get/
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+django.server "POST /api/token/ HTTP/1.1" 200 2
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+django.request Unauthorized: /api/token/user/get/
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+django.server "POST /api/token/ HTTP/1.1" 200 2
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+django.request Unauthorized: /api/token/user/get/
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+django.server "POST /api/token/ HTTP/1.1" 200 2
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+django.request Unauthorized: /api/token/user/get/
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+asyncio Using selector: SelectSelector
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+django.server "POST /api/token/ HTTP/1.1" 200 2
+django.request Unauthorized: /api/token/user/get/
+django.server "GET /api/token/user/get/ HTTP/1.1" 401 183
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2364
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+google.auth.transport.requests Making request: GET https://www.googleapis.com/oauth2/v1/certs
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+urllib3.connectionpool https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 2366
+django.server "POST /api/token/ HTTP/1.1" 200 505
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+django.server "POST /api/token/ HTTP/1.1" 200 505
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+django.server "GET /quick_access_pages/ HTTP/1.1" 200 13
+django.server "GET /quick_access_pages/ HTTP/1.1" 200 13
+django.request Internal Server Error: /get_page/
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\request_handlers.py", line 117, in get_page
+    root = page.get_initial_ui(request.user)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\page.py", line 30, in get_initial_ui
+    ui = self.get_page_ui(user)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\custom_page.py", line 51, in get_page_ui
+    fetch_fields_dict(groups_dict)
+TypeError: fetch_fields_dict() missing 1 required positional argument: 'json_dict'
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 500 19482
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\custom_page.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+oauth2client.client access_token is expired. Now: 2023-03-23 16:00:33.367258, token_expiry: 2023-03-23 10:36:35
+oauth2client.client Refreshing access_token
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+googleapiclient.discovery_cache file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 33, in <module>
+    from oauth2client.contrib.locked_file import LockedFile
+ModuleNotFoundError: No module named 'oauth2client.contrib.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 37, in <module>
+    from oauth2client.locked_file import LockedFile
+ModuleNotFoundError: No module named 'oauth2client.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\__init__.py", line 44, in autodetect
+    from . import file_cache
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 41, in <module>
+    "file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth"
+ImportError: file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v2/rest
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221b9SEF2q847oMZJlR-pe_ijsvuwrif751%22+in+parents+and+mimeType%21%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221b9SEF2q847oMZJlR-pe_ijsvuwrif751%22+in+parents+and+mimeType%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221aR1B-7vT2VZ5e0hc39Bv3rSPeaf92pfF%22+in+parents+and+mimeType%21%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221aR1B-7vT2VZ5e0hc39Bv3rSPeaf92pfF%22+in+parents+and+mimeType%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+root candidate_diagnoser.csv is not updated. Redownloading file...
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files/1f0_YnIM5xQT09LI50c1bJh03kYxiSgI4?alt=json
+root Downloaded file successfully. Updating metadata...
+django.request Internal Server Error: /get_page/
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\request_handlers.py", line 117, in get_page
+    root = page.get_initial_ui(request.user)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\page.py", line 30, in get_initial_ui
+    ui = self.get_page_ui(user)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\custom_page.py", line 52, in get_page_ui
+    fetch_fields_dict(root, groups_dict)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\utils.py", line 15, in fetch_fields_dict
+    file_df = open_file(file_obj)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\APIs\ExternalAPIs\MiunDrive\MiunDriveAPI.py", line 96, in in_context_func
+    ret_val = function(*args, **kwargs)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\APIs\ExternalAPIs\MiunDrive\MiunDriveAPI.py", line 186, in open_file
+    if('spreadsheet' in file['mimeType']):
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\APIs\ExternalAPIs\MiunDrive\MiunDriveAPI.py", line 79, in __getitem__
+    return self.content[key]
+KeyError: 'mimeType'
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 500 20035
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\APIs\ExternalAPIs\MiunDrive\MiunDriveAPI.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.server "POST /api/token/refresh/ HTTP/1.1" 200 252
+django.server "GET /get_page_list/ HTTP/1.1" 200 2192
+django.server "GET /api/token/user/get/ HTTP/1.1" 200 91
+googleapiclient.discovery_cache file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 33, in <module>
+    from oauth2client.contrib.locked_file import LockedFile
+ModuleNotFoundError: No module named 'oauth2client.contrib.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 37, in <module>
+    from oauth2client.locked_file import LockedFile
+ModuleNotFoundError: No module named 'oauth2client.locked_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\__init__.py", line 44, in autodetect
+    from . import file_cache
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\googleapiclient\discovery_cache\file_cache.py", line 41, in <module>
+    "file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth"
+ImportError: file_cache is unavailable when using oauth2client >= 4.0.0 or google-auth
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/discovery/v1/apis/drive/v2/rest
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221b9SEF2q847oMZJlR-pe_ijsvuwrif751%22+in+parents+and+mimeType%21%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221b9SEF2q847oMZJlR-pe_ijsvuwrif751%22+in+parents+and+mimeType%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221aR1B-7vT2VZ5e0hc39Bv3rSPeaf92pfF%22+in+parents+and+mimeType%21%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+googleapiclient.discovery URL being requested: GET https://www.googleapis.com/drive/v2/files?q=%221aR1B-7vT2VZ5e0hc39Bv3rSPeaf92pfF%22+in+parents+and+mimeType%3D%22application%2Fvnd.google-apps.folder%22+and+trashed%3Dfalse&maxResults=1000&alt=json
+root candidate_diagnoser.csv is updated.
+django.request Internal Server Error: /get_page/
+Traceback (most recent call last):
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\request_handlers.py", line 117, in get_page
+    root = page.get_initial_ui(request.user)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_framework\server_side\infastructure\page.py", line 30, in get_initial_ui
+    ui = self.get_page_ui(user)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\custom_page.py", line 52, in get_page_ui
+    fetch_fields_dict(root, groups_dict)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\web_features\tech_miun_temp\custom_assessments\utils.py", line 15, in fetch_fields_dict
+    file_df = open_file(file_obj)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\APIs\ExternalAPIs\MiunDrive\MiunDriveAPI.py", line 96, in in_context_func
+    ret_val = function(*args, **kwargs)
+  File "C:\Users\t9079575\Desktop\academy\magdad\Magdad\APIs\ExternalAPIs\MiunDrive\MiunDriveAPI.py", line 189, in open_file
+    df = pd.read_csv(MIUN_FOLDER_NAME + '/' + file.get_full_path())
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\pandas\util\_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\pandas\io\parsers\readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\pandas\io\parsers\readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\pandas\io\parsers\readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\pandas\io\parsers\readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "C:\Users\t9079575\AppData\Local\Programs\Python\Python37-32\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas\_libs\parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas\_libs\parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas\_libs\parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas\_libs\parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 500 21706
+django.utils.autoreload C:\Users\t9079575\Desktop\academy\magdad\Magdad\APIs\ExternalAPIs\MiunDrive\MiunDriveAPI.py changed, reloading.
+asyncio Using selector: SelectSelector
+django.request Bad Request: /api/token/refresh/
+django.server "POST /api/token/refresh/ HTTP/1.1" 400 39
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page/
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page/
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Bad Request: /api/token/refresh/
+django.request Unauthorized: /get_page_list/
+django.server "POST /api/token/refresh/ HTTP/1.1" 400 39
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page/
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.request Unauthorized: /get_page/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.server "GET /get_page/?name=CustomPage&params=undefined HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.request Unauthorized: /quick_access_pages/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.server "GET /quick_access_pages/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.request Unauthorized: /quick_access_pages/
+django.server "GET /quick_access_pages/ HTTP/1.1" 401 183
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Bad Request: /api/token/refresh/
+django.server "POST /api/token/refresh/ HTTP/1.1" 400 39
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /quick_access_pages/
+django.server "GET /quick_access_pages/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /quick_access_pages/
+django.server "GET /quick_access_pages/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.request Unauthorized: /quick_access_pages/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.server "GET /quick_access_pages/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.request Unauthorized: /quick_access_pages/
+django.server "GET /quick_access_pages/ HTTP/1.1" 401 183
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Bad Request: /api/token/refresh/
+django.server "POST /api/token/refresh/ HTTP/1.1" 400 39
+django.request Unauthorized: /get_page_list/
+django.request Unauthorized: /quick_access_pages/
+django.server "GET /quick_access_pages/ HTTP/1.1" 401 183
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.request Unauthorized: /quick_access_pages/
+django.request Unauthorized: /get_page_list/
+django.server "GET /quick_access_pages/ HTTP/1.1" 401 183
+django.request Unauthorized: /quick_access_pages/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.server "GET /quick_access_pages/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.request Unauthorized: /quick_access_pages/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183
+django.server "GET /quick_access_pages/ HTTP/1.1" 401 183
+django.request Unauthorized: /get_page_list/
+django.server "GET /get_page_list/ HTTP/1.1" 401 183

@@ -19,7 +19,8 @@ class Gender(Enum):
 class User(Document):
     meta = {'collection': 'users_info'}
 
-    email: str = EmailField(required=True)
+    email: str = EmailField(required=False)
+    click_email: str = EmailField(required=False)
     name: str = StringField(max_length=100)
     mahzor: int = IntField()
     gender: str = StringField(max_length=10)
