@@ -156,6 +156,8 @@ def is_file_updated(file_tree_obj):
         return False
     with open(METADATA_FILE,'r') as metadata_file:
          metadata_dict = json.load(metadata_file)
+         if path_inside not in metadata_dict:
+             return False
          metadata_last_update_time = parser.parse(metadata_dict[path_inside])
          #metadata_last_update_time = datetime.strptime(metadata_dict[path_inside], '%Y-%m-%d %H:%M:%S')
          return path_inside in metadata_dict and metadata_last_update_time >= file_tree_obj['last_update_time']
@@ -185,9 +187,9 @@ def get_file_object(root: FileTree, path: str) -> FileTree:
 def open_file(file: FileTree):
     print(MIUN_FOLDER_NAME + '/' + file.get_full_path())
     if('spreadsheet' in file['mimetype']):
-        df = pd.read_excel(MIUN_FOLDER_NAME + '/' + file.get_full_path(), encoding = "ISO-8859-8")
+        df = pd.read_excel(MIUN_FOLDER_NAME + '/' + file.get_full_path())
     elif('csv' in file['mimetype']):
-        df = pd.read_csv(MIUN_FOLDER_NAME + '/' + file.get_full_path(), encoding = "ISO-8859-8")
+        df = pd.read_csv(MIUN_FOLDER_NAME + '/' + file.get_full_path())
     else:
         raise ValueError(f"File type is not supported: {file['mimetype']}")
     return df
