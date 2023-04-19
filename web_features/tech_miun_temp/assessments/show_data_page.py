@@ -33,7 +33,7 @@ class ShowDataPage(Page):
     @staticmethod
     def get_title() -> str:
         return "דף מציאת מידע"
-
+    
     @staticmethod
     def is_authorized(user) -> bool:
         return permissions.is_estimator_miun(user)
