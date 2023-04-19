@@ -26,7 +26,7 @@ from web_features.tech_miun_temp.cadet_classes.utils import Data
 from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, update_file , open_file
 
 class ShowDataPage(Page):
-    
+                
     def __init__(self, params):
         super().__init__(params)
 
