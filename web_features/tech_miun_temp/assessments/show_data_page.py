@@ -58,6 +58,7 @@ class ShowDataPage(Page):
         row_data = self.df.iloc[self.df.loc[filtered_df].index[0]]
         print(row_data)
         print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
+        self.sp.add_component(Label(text=str(row_data)))
 
     def on_field_selected(self, field_name, field_val):
         option_list = self.df[str(self.df.columns[int(field_name)])].apply(str).tolist()
