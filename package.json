@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "my-app": "file:web_framework/client_side"
+  }
+}
