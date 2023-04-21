@@ -9,6 +9,7 @@ from web_features.tech_miun_temp.assessments.zoer_dummy_page import DummyZoerPag
 from web_features.tech_miun_temp.assessments.show_data_page import ShowDataPage
 from web_features.tech_miun_temp.custom_assessments.custom_page import CustomPage
 from web_framework.server_side.infastructure.category import Category
+from web_features.tech_miun_temp.report_creation.create_report_page import CreateReportPage
 
 
 # TODO: add documentation to class and methods
@@ -22,8 +23,9 @@ class MiunCategory(Category):
             "master_page": MasterPage,
             "zoer_page": ZoerPage,
             "dummy_zoer_page": DummyZoerPage,
-            "ShowDataPage": ShowDataPage,
-            "CustomPage": CustomPage,
+            "show_data_page": ShowDataPage,
+            "custom_page": CustomPage,
+            "create_report_page": CreateReportPage,
         })
 
     def get_title(self) -> str:

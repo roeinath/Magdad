@@ -31,6 +31,7 @@ is_in_drive_context = False
 MIUN_FOLDER_NAME = 'Miun_Data'
 MIUN_FOLDER_DRIVE_ID = '1b9SEF2q847oMZJlR-pe_ijsvuwrif751'
 METADATA_FILE = 'Metadata'
+CREDENTIALS_FILE = 'credentials.json'
 metadata_dict = {}
 
 
@@ -103,7 +104,13 @@ def miun_drive_context(function):
 @miun_drive_context
 def get_list_of_all_data_files():
     root_tree = FileTree('')
-    recursive_list_all_files(MIUN_FOLDER_DRIVE_ID, root_tree)
+    try:
+        recursive_list_all_files(MIUN_FOLDER_DRIVE_ID, root_tree)
+    except Exception as e:
+        logger.warning('Exception occurred during get_list_of_all_data_files():\n' + str(e))
+        print('gg')
+        os.remove(CREDENTIALS_FILE)
+        #recursive_list_all_files(MIUN_FOLDER_DRIVE_ID, root_tree)
     return root_tree
 
 @miun_drive_context
@@ -156,7 +163,7 @@ def is_file_updated(file_tree_obj):
         return False
     with open(METADATA_FILE,'r') as metadata_file:
          metadata_dict = json.load(metadata_file)
-         if path_inside not in metadata_dict:
+         if(not path_inside in metadata_dict):
              return False
          metadata_last_update_time = parser.parse(metadata_dict[path_inside])
          #metadata_last_update_time = datetime.strptime(metadata_dict[path_inside], '%Y-%m-%d %H:%M:%S')
@@ -189,7 +196,10 @@ def open_file(file: FileTree):
     if('spreadsheet' in file['mimetype']):
         df = pd.read_excel(MIUN_FOLDER_NAME + '/' + file.get_full_path())
     elif('csv' in file['mimetype']):
-        df = pd.read_csv(MIUN_FOLDER_NAME + '/' + file.get_full_path())
+        try:
+            df = pd.read_csv(MIUN_FOLDER_NAME + '/' + file.get_full_path(), encoding='utf-16le')
+        except Exception:
+            df = pd.read_csv(MIUN_FOLDER_NAME + '/' + file.get_full_path(), encoding='utf-8')
     else:
         raise ValueError(f"File type is not supported: {file['mimetype']}")
     return df
