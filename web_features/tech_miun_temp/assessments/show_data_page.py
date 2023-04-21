@@ -62,7 +62,7 @@ class ShowDataPage(Page):
         else:
             #print an error
             pass
-        
+
         self.sp.add_component(self.file_combos[0])
 
         return self.sp
