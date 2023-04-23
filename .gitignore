@@ -8,6 +8,10 @@
 run_site.bat
 env_setup.bat
 
+APIs/ExternalAPIs/MiunDrive/DriveAPI.log
+APIs/ExternalAPIs/MiunDrive/Metadata
+APIs/ExternalAPIs/MiunDrive/credentials.json
+
 #in web_framework/client_side/
 ###################
 # dependencies

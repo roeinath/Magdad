@@ -57,7 +57,7 @@ class CustomPage(Page):
                 group_layout = GridPanel(2, len(fields_list), bg_color=COLOR_PRIMARY_DARK)
                 for index, field in enumerate(fields_list):
                     group_layout.add_component(Label(field, fg_color='White'), 0, index)
-                    group_layout.add_component(Label('gg', fg_color='White'), 0, index)
+                    group_layout.add_component(Label("GG", fg_color='White'), 1, index)
                 group_layouts.append(group_layout)
 
             accordion = Accordion(group_layouts, group_names)
