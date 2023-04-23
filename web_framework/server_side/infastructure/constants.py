@@ -5,6 +5,8 @@ JSON_CHILDREN = 'children'
 JSON_CHILD = 'child'
 JSON_COMPONENT = 'component'
 
+JSON_INITIAL_STATE = 'initial_state'
+
 JSON_ACTION = 'action'
 JSON_ADD = 'add'
 JSON_CHANGE = 'change'
@@ -18,6 +20,7 @@ JSON_OPTIONS = 'options'
 JSON_POSITION = 'position'
 JSON_DEFAULT_VALUE = 'default_value'
 
+JSON_VALUE = 'value'
 JSON_NONE = 'none'
 JSON_TEXT = 'text'
 JSON_BG_COLOR = 'background_color'

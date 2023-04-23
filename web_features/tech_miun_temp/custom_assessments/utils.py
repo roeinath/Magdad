@@ -27,7 +27,7 @@ def fetch_fields_dict(root: FileTree, json_dict: dict, candidate_id: int) -> dic
     return field_dict
 
 
- def fetch_data_from_list(id: int, all_data_needed_list: list):
+def fetch_data_from_list(id: int, all_data_needed_list: list):
     '''
     Example:
     all_data_needed_list = ["interviews_data.csv:candidate_name", "interviews_data.csv:maturity", "pen_and_paper.xlsx:\u05e1\u05d8\u05d8\u05d5\u05e1 \u05de\u05d1\u05d7\u05e0\u05d9 \u05d9\u05d3\u05e2"]

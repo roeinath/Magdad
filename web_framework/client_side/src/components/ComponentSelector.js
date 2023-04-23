@@ -32,6 +32,8 @@ import DownloadButton from "./DownloadButton";
 import Card from './Card'
 import GridView from "./GridView";
 import Container from './Container'
+import RichTextEditor from './RichTextEditor'
+import TextInput from './TextInput'
 // import PureHTML from "./PureHTML";
 
 
@@ -106,6 +108,10 @@ const ComponentSelector = ({type, text, action, ...props}) => {
                     return <GridView {...props}/>
                 if (type === 'Container')
                     return <Container {...props}/>
+                if (type === 'RichTextEditor')
+                    return <RichTextEditor onSave={(data) => onEvent(action, data)} {...props} />
+                if (type === 'TextInput')
+                    return <TextInput placeholder={text} font={FONTS.RUBIK} color={props.text_color} onChange={(data) => onEvent(action, data)} {...props}></TextInput>
             }
         }
     </pageContext.Consumer>);
