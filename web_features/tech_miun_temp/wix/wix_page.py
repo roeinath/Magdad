@@ -23,46 +23,55 @@ from web_features.Elements.personal_page.modules.cadet_classes import *
 from web_features.Elements.personal_page.permissions import *
 from web_framework.server_side.infastructure.components.button import Button
 from web_framework.server_side.infastructure.components.divider import Divider
+from web_framework.server_side.infastructure.components.text_input import TextInput
 from web_framework.server_side.infastructure.constants import *
 from web_features.tech_miun_temp.cadet_classes.utils import Data
-from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, update_file
-from web_features.tech_miun_temp.custom_assessments.utils import fetch_fields_dict
+from web_features.tech_miun_temp.custom_components import FileChoosePopUp
+from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, update_file, open_file
 
 
-class CustomPage(Page):
+
+class WixPage(Page):
 
     def __init__(self, params):
         super().__init__(params)
 
     @staticmethod
     def get_title() -> str:
-        return "עיצוב חופשי"
+        return "Wix מיון"
 
     @staticmethod
     def is_authorized(user) -> bool:
         return permissions.is_estimator_miun(user)
 
+    def create_group(self):
+        sp = StackPanel([])
+        label1 = Label("טקסט 1")
+        label2 = Label("טקסט 2")
+        example_gridpanel = GridPanel(1, 2, bg_color=COLOR_PRIMARY_LIGHT, bordered=True)
+        example_gridpanel.add_component(label1, 0, 0)
+        example_gridpanel.add_component(label2, 0, 1)
+        sp.add_component(example_gridpanel)
+        self.group_num += 1
+        pass
+
     def get_page_ui(self, user: User):
         self.user = user
         self.sp = StackPanel([])
         
-        with open(os.path.join(os.path.abspath(__file__), '..','custom.json'),'r') as f:
-            groups_dict = json.load(f)
-            root = get_list_of_all_data_files()
-            #print('Now\n',fetch_fields_dict(root, groups_dict, 12),'\nEND')
-            group_names = []
-            group_layouts = []
-            for group_name, fields_list in groups_dict.items():
-                group_names.append(group_name)
-                group_layout = GridPanel(2, len(fields_list), bg_color=COLOR_PRIMARY_DARK)
-                for index, field in enumerate(fields_list):
-                    group_layout.add_component(Label(field, fg_color='White'), 0, index)
-                    group_layout.add_component(Label("GG", fg_color='White'), 1, index)
-                group_layouts.append(group_layout)
+        popup = FileChoosePopUp(on_file_chosen=lambda f: print(f), is_shown=False, is_cancelable=True, title="כותרת")
+        button = Button("בחר\י קובץ", action=lambda p=popup: p.show())
 
-            accordion = Accordion(group_layouts, group_names)
-            self.sp.add_component(accordion)
+        ti = TextInput(text_holder='gg')
 
+        self.sp.add_component(popup)
+        self.sp.add_component(button)
+        self.sp.add_component(ti)
+        self.sp.add_component(Button("צור קבוצה", action=lambda: print(ti.text)))
+
+        self.group_num = 0
+        button = Button("צור קבוצה", action=lambda: self.create_group())
+        
         return self.sp
 
    

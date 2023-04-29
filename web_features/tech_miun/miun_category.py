@@ -10,7 +10,7 @@ from web_features.tech_miun_temp.assessments.show_data_page import ShowDataPage
 from web_features.tech_miun_temp.custom_assessments.custom_page import CustomPage
 from web_framework.server_side.infastructure.category import Category
 from web_features.tech_miun_temp.report_creation.create_report_page import CreateReportPage
-
+from web_features.tech_miun_temp.wix.wix_page import WixPage
 
 # TODO: add documentation to class and methods
 class MiunCategory(Category):
@@ -26,6 +26,7 @@ class MiunCategory(Category):
             "show_data_page": ShowDataPage,
             "custom_page": CustomPage,
             "create_report_page": CreateReportPage,
+            "wix_page": WixPage,
         })
 
     def get_title(self) -> str:

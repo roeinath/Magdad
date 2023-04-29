@@ -25,44 +25,42 @@ from web_framework.server_side.infastructure.components.button import Button
 from web_framework.server_side.infastructure.components.divider import Divider
 from web_framework.server_side.infastructure.constants import *
 from web_features.tech_miun_temp.cadet_classes.utils import Data
-from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, update_file
-from web_features.tech_miun_temp.custom_assessments.utils import fetch_fields_dict
+from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, update_file, open_file
 
+class FileChoosePopUp(PopUp):
+    def __init__(self, on_file_chosen, *params, **kargs):
+        sp = self.initialize()
+        self.on_file_chosen = on_file_chosen
+        super().__init__(sp, *params, **kargs)
 
-class CustomPage(Page):
+    def on_select_combo_box(self, selected_file):
+        self.current_file = self.current_file.get_child(selected_file)
+        children = self.current_file.get_all_children()
+        if(children):
+            self.file_combos.append(ComboBox(children,
+                                            on_changed=lambda selected_file: self.on_select_combo_box(children[int(selected_file)])))
+            self.sp.add_component(self.file_combos[-1])
+        else:
+            print("found file")
+            button = Button("בחר\י קובץ", action=lambda: self.on_file_chosen(self.current_file))
+            self.sp.add_component(button)
 
-    def __init__(self, params):
-        super().__init__(params)
-
-    @staticmethod
-    def get_title() -> str:
-        return "עיצוב חופשי"
-
-    @staticmethod
-    def is_authorized(user) -> bool:
-        return permissions.is_estimator_miun(user)
-
-    def get_page_ui(self, user: User):
-        self.user = user
+    def initialize(self):
         self.sp = StackPanel([])
+        self.file_combos = []
+
+        root = get_list_of_all_data_files()
+        self.current_file = root
+        children = root.get_all_children()
+        if(children):
+            self.file_combos.append(ComboBox(children,
+                                        on_changed=lambda selected_file: self.on_select_combo_box(children[int(selected_file)])))
+        else:
+            #print an error
+            pass
+
+        self.sp.add_component(self.file_combos[0])
         
-        with open(os.path.join(os.path.abspath(__file__), '..','custom.json'),'r') as f:
-            groups_dict = json.load(f)
-            root = get_list_of_all_data_files()
-            #print('Now\n',fetch_fields_dict(root, groups_dict, 12),'\nEND')
-            group_names = []
-            group_layouts = []
-            for group_name, fields_list in groups_dict.items():
-                group_names.append(group_name)
-                group_layout = GridPanel(2, len(fields_list), bg_color=COLOR_PRIMARY_DARK)
-                for index, field in enumerate(fields_list):
-                    group_layout.add_component(Label(field, fg_color='White'), 0, index)
-                    group_layout.add_component(Label("GG", fg_color='White'), 1, index)
-                group_layouts.append(group_layout)
-
-            accordion = Accordion(group_layouts, group_names)
-            self.sp.add_component(accordion)
-
         return self.sp
 
-   
+
