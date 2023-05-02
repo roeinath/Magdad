@@ -62,6 +62,9 @@ class ShowDataPage(Page):
 
     def on_field_selected(self, field_name, field_val):
         option_list = self.df[str(self.df.columns[int(field_name)])].apply(str).tolist()
+        print('#################')
+        print(field_name)
+        print('##################')
         self.sp.add_component(ComboBox(option_list, on_changed=lambda selected_value: self.on_option_selected(selected_value, field_name)))
 
     def on_select_combo_box(self, selected_file, combobox_id):

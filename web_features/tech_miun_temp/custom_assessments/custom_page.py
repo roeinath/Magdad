@@ -25,11 +25,12 @@ from web_framework.server_side.infastructure.components.button import Button
 from web_framework.server_side.infastructure.components.divider import Divider
 from web_framework.server_side.infastructure.constants import *
 from web_features.tech_miun_temp.cadet_classes.utils import Data
-from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, update_file
-from web_features.tech_miun_temp.custom_assessments.utils import fetch_fields_dict
+from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, update_file, open_file, get_file_object
+from web_features.tech_miun_temp.custom_assessments.utils import fetch_fields_dict, ID_names
 
 
 class CustomPage(Page):
+    person_id=0
 
     def __init__(self, params):
         super().__init__(params)
@@ -42,22 +43,95 @@ class CustomPage(Page):
     def is_authorized(user) -> bool:
         return permissions.is_estimator_miun(user)
 
-    def get_page_ui(self, user: User):
+    def fetch_field_values(self,user,root,person_id,field):
+        print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
+        print(self.person_id)
+        print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
+        name_file=field.split(':')[0]
+        name_column=field.split(':')[1]
+        self.user = user
+        self.file_combos = []
+        self.current_file = root
+        self.files = [root]
+        print('##################################')
+        children = root.get_all_children()
+        self.current_file = get_file_object(root,name_file)
+        print('##################################')
+        update_file(self.current_file)
+        self.df = open_file(self.current_file)  # opens file as pandas dataframe
+        for id_name in ID_names:
+            if(id_name in self.df):
+                print(self.df[self.df[id_name] == person_id])
+                value = self.df.loc[self.df[id_name] == person_id, name_column].iloc[0]
+                print('##################################')
+                print(value)
+                return value
+        raise Exception('No ID Field')
+
+
+    '''
+    def get_id(self,user: User):
         self.user = user
         self.sp = StackPanel([])
-        
+        self.file_combos = []
+        root = get_list_of_all_data_files()
+        self.current_file = root
+        self.files = [root]
+        children = root.get_all_children()
+        self.current_file = self.files[0].get_child('all_id')
+        self.df = open_file(self.current_file)  # opens file as pandas dataframe
+        id_values = self.df['id'].tolist()
+        self.sp.add_component(ComboBox(id_values,on_changed=lambda person_id: person_id),index=0)
+    '''
+
+    def return_id(self,number,user):
+        self.person_id=int(number)
+        print('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
+        print(self.person_id)
+        print(number)
+        self.update_page(user)
+
+    def update_page(self,user):
+        with open(os.path.join(os.path.abspath(__file__), '..','custom.json'),'r') as f:
+            groups_dict = json.load(f)
+            root = get_list_of_all_data_files()
+            #print('Now\n',fetch_fields_dict(root, groups_dict, 12),'\nEND')
+            group_names = []
+            for group_name, fields_list in groups_dict.items():
+                group_names.append(group_name)
+                for index, field in enumerate(fields_list):
+                    real_value = self.fetch_field_values(user, root, self.person_id, field)
+                    self.labels[field].update_text(real_value)
+
+
+    def get_page_ui(self, user: User):
+        self.user = user
+        self.sp = StackPanel([])  
+
+        #self.cadet_id=self.get_id(user)
+
+        id_utils = [str(u.click_email).split('@')[0] for u in User.objects()]
+        name_utils= [str(u.name) for u in User.objects()]
+        self.sp.add_component(
+            ComboBox(name_utils, on_changed=lambda person_id: self.return_id(id_utils[int(person_id)],self.user)), index=0)
+
+        #fetch_fields_dict(root: FileTree, json_dict: dict, candidate_id: int)
         with open(os.path.join(os.path.abspath(__file__), '..','custom.json'),'r') as f:
             groups_dict = json.load(f)
             root = get_list_of_all_data_files()
             #print('Now\n',fetch_fields_dict(root, groups_dict, 12),'\nEND')
             group_names = []
             group_layouts = []
+            self.labels={}
             for group_name, fields_list in groups_dict.items():
                 group_names.append(group_name)
                 group_layout = GridPanel(2, len(fields_list), bg_color=COLOR_PRIMARY_DARK)
                 for index, field in enumerate(fields_list):
                     group_layout.add_component(Label(field, fg_color='White'), 0, index)
-                    group_layout.add_component(Label("GG", fg_color='White'), 1, index)
+                    real_value = self.fetch_field_values(user, root, self.person_id, field)
+                    self.labels[field]=Label(real_value, fg_color='White')
+                    print('##########################')
+                    group_layout.add_component(self.labels[field], 1, index)   #real_value_dict[field]
                 group_layouts.append(group_layout)
 
             accordion = Accordion(group_layouts, group_names)
