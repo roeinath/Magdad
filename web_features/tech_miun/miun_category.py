@@ -7,7 +7,7 @@ from web_features.tech_miun.assessments.sagab_miun_page import SagabPage
 from web_features.tech_miun_temp.assessments.zoer_page import ZoerPage
 from web_features.tech_miun_temp.assessments.zoer_dummy_page import DummyZoerPage
 from web_features.tech_miun_temp.assessments.show_data_page import ShowDataPage
-from web_features.tech_miun_temp.custom_assessments.custom_page import CustomPage
+from web_features.tech_miun_temp.wix.custom_page import CustomPage
 from web_framework.server_side.infastructure.category import Category
 from web_features.tech_miun_temp.report_creation.create_report_page import CreateReportPage
 from web_features.tech_miun_temp.wix.wix_page import WixPage
