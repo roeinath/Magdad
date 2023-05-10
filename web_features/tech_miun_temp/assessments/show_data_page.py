@@ -39,35 +39,34 @@ class ShowDataPage(Page):
         return permissions.is_estimator_miun(user)
 
     def on_option_selected(self, value, field_name):
-        print('+++++++++++++++++++++++++++++++++')
+        ''''
+        this combox finally opens the information needed
+        it takes the information in the file that was selected and that fits the data was chose
+        for example: certain id, all the persons that live in haifa
+        and then prints all the information that fits
+        '''
         selected_column = self.df[str(self.df.columns[int(field_name)])]
         column_list = selected_column.to_list()
-        print(column_list)
-        print(value)
-        print('%%%%%%%%%%%%%%%%%%%%%%%%%%%5')
-        print(self.df[str(self.df.columns[int(field_name)])])
-        print('!!!!!!!!!!!!!!!!!!!!!!')
-        print(self.df.columns)
-        print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-        print(column_list[int(value)])
         filtered_df = self.df[str(self.df.columns[int(field_name)])] == column_list[int(value)]
-        print(filtered_df)
-        print('@@@@@@@@@@@@@@@@@@@@@@@@')
-        print(str(filtered_df.iloc))
-        print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
         row_data = self.df.iloc[self.df.loc[filtered_df].index[0]]
-        print(row_data)
-        print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
         self.sp.add_component(Label(text=str(row_data)))
 
     def on_field_selected(self, field_name, field_val):
+        '''
+        this func opens a combo box with all the options in the field column that was selected
+
+        '''
         option_list = self.df[str(self.df.columns[int(field_name)])].apply(str).tolist()
-        print('#################')
         print(field_name)
-        print('##################')
         self.sp.add_component(ComboBox(option_list, on_changed=lambda selected_value: self.on_option_selected(selected_value, field_name)))
 
     def on_select_combo_box(self, selected_file, combobox_id):
+        '''
+        there is work to do here so it will show the information right and will erase combo boxes
+        but it bassicaly opens a combobox of all the files in a folder if there are any
+        and else, it opens a combobox with all fields of a certain file
+
+        '''
         self.current_file = self.files[combobox_id].get_child(selected_file)
         children = self.current_file.get_all_children()
 
@@ -91,6 +90,10 @@ class ShowDataPage(Page):
             self.sp.add_component(ComboBox(options_list,on_changed=lambda selected_option: self.on_field_selected(selected_option,0)))
 
     def get_page_ui(self, user: User):
+        '''
+        opens the page
+        with a combox to choose files and data
+        '''
         self.user = user
         self.sp = StackPanel([])
         self.file_combos = []
