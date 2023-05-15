@@ -26,11 +26,11 @@ from web_framework.server_side.infastructure.components.divider import Divider
 from web_framework.server_side.infastructure.constants import *
 from web_features.tech_miun_temp.cadet_classes.utils import Data
 from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, update_file, open_file, get_file_object
-from web_features.tech_miun_temp.wix.utils import fetch_fields_dict, ID_names
+from web_features.tech_miun_temp.wix.utils import fetch_fields_dict, ID_names, CUSTOM_PAGES_DIR
 
 
 class CustomPage(Page):
-    person_id=0
+    person_id = 0
 
     def __init__(self, params):
         super().__init__(params)
@@ -43,44 +43,40 @@ class CustomPage(Page):
     def is_authorized(user) -> bool:
         return permissions.is_estimator_miun(user)
 
-    def fetch_field_values(self,user,root,person_id,field):
-        '''
-        This func gets the id of the relevant person, and the neccecery field in the wanted file
-        and then fetch the value that fits tin the file
-        return the value that should appear in the table
-        '''
+    def fetch_field_values(self, user, root, person_id, field):
+        print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
         print(self.person_id)
-        name_file=field.split(':')[0]
-        name_column=field.split(':')[1]
+        print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
+        name_file = field.split(':')[0]
+        name_column = field.split(':')[1]
         self.user = user
         self.file_combos = []
         self.current_file = root
         self.files = [root]
+        print('##################################')
         children = root.get_all_children()
-        self.current_file = get_file_object(root,name_file)
+        self.current_file = get_file_object(root, name_file)
+        print('##################################')
         update_file(self.current_file)
         self.df = open_file(self.current_file)  # opens file as pandas dataframe
-        for id_name in ID_names:                 #there are alot of ways to wright ID
-            if(id_name in self.df):
-                value = self.df.loc[self.df[id_name] == person_id, name_column].iloc[0]  #value that fits the id and name of column
+        for id_name in ID_names:
+            if (id_name in self.df):
+                print(self.df[self.df[id_name] == person_id])
+                value = self.df.loc[self.df[id_name] == person_id, name_column].iloc[0]
+                print('##################################')
                 print(value)
                 return value
         raise Exception('No ID Field')
 
-    def return_id(self,number,user):
-        '''
-        changes the id of the person when id is inserted to the combo box and updates the page accordingly
-
-        '''
-        self.person_id=int(number)
+    def return_id(self, number, user):
+        self.person_id = int(number)
+        print('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
+        print(self.person_id)
+        print(number)
         self.update_page(user)
 
-    def update_page(self,user):
-        '''
-        updates the page when ever there is a new_id in the combo-box, meaning there's a need in other information
-
-        '''
-        with open(os.path.join(os.path.abspath(__file__), '..','custom.json'),'r') as f:
+    def update_page(self, user):
+        with open(os.path.join(CUSTOM_PAGES_DIR, self.selected_page_name), 'r') as f:
             groups_dict = json.load(f)
             root = get_list_of_all_data_files()
             group_names = []
@@ -90,46 +86,58 @@ class CustomPage(Page):
                     real_value = self.fetch_field_values(user, root, self.person_id, field)
                     self.labels[field].update_text(real_value)
 
+    def update_custom_page_opened(self, page_name):
+        self.custom_stack.clear()
+        self.selected_page_name = page_name
+        # self.cadet_id=self.get_id(user)
 
-    def get_page_ui(self, user: User):
-        '''
-        the function activates the page, those are the steps:
-        1. finds all the ids and names of talpiot's members
-        2. open combobox to insert a wanted person- the combox will update the page each time a person was chosen
-        3. initiates the table of information according to the json dictionary that was chosen
+        id_utils = [str(u.click_email).split('@')[0] for u in User.objects()]
+        name_utils = [str(u.name) for u in User.objects()]
+        self.custom_stack.add_component(
+            ComboBox(name_utils, on_changed=lambda person_id: self.return_id(id_utils[int(person_id)], self.user)),
+            index=0)
 
-        '''
-        self.user = user
-        self.sp = StackPanel([])  
-
-        #self.cadet_id=self.get_id(user)
-
-        id_utils = [str(u.click_email).split('@')[0] for u in User.objects()]   #all the ids
-        name_utils= [str(u.name) for u in User.objects()]
-        self.sp.add_component(
-            ComboBox(name_utils, on_changed=lambda person_id: self.return_id(id_utils[int(person_id)],self.user)), index=0)
-
-        with open(os.path.join(os.path.abspath(__file__), '..','custom_pages','ruth.json'),'r') as f:
-            groups_dict = json.load(f)                    #opens the relevant json dict
+        # fetch_fields_dict(root: FileTree, json_dict: dict, candidate_id: int)
+        with open(os.path.join(CUSTOM_PAGES_DIR, page_name), 'r') as f:
+            groups_dict = json.load(f)
             root = get_list_of_all_data_files()
+            # print('Now\n',fetch_fields_dict(root, groups_dict, 12),'\nEND')
             group_names = []
             group_layouts = []
-            self.labels={}
+            self.labels = {}
             for group_name, fields_dict in groups_dict.items():
                 group_names.append(group_name)
                 group_layout = GridPanel(2, len(list(fields_dict.values())), bg_color=COLOR_PRIMARY_DARK)
                 index = 0
                 for field_name, field in fields_dict.items():
                     group_layout.add_component(Label(field_name, fg_color='White'), 0, index)
-                    real_value = self.fetch_field_values(user, root, self.person_id, field)   #no real information at first
-                    self.labels[field]=Label(real_value, fg_color='White')
-                    group_layout.add_component(self.labels[field], 1, index)   #real_value_dict[field]
+                    real_value = self.fetch_field_values(self.user, root, self.person_id, field)
+                    self.labels[field] = Label(real_value, fg_color='White')
+                    print('##########################')
+                    group_layout.add_component(self.labels[field], 1, index)  # real_value_dict[field]
                     index += 1
                 group_layouts.append(group_layout)
 
             accordion = Accordion(group_layouts, group_names)
-            self.sp.add_component(accordion)
+            self.custom_stack.add_component(accordion)
+            # self.sp.add_component(self.custom_stack)
+
+    def get_page_ui(self, user: User):
+        self.user = user
+        self.sp = StackPanel([])
+        self.custom_stack = StackPanel([])
+
+        custom_pages_files = []
+        for file in os.listdir(CUSTOM_PAGES_DIR):
+            if file.endswith('.json'):
+                custom_pages_files.append(file)
+
+        self.sp.add_component(
+            ComboBox(custom_pages_files,
+                     on_changed=lambda chosen_ind: self.update_custom_page_opened(custom_pages_files[int(chosen_ind)]))
+        )
+
+        self.sp.add_component(self.custom_stack)
 
         return self.sp
 
-   

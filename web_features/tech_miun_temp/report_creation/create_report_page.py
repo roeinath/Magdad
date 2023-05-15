@@ -28,12 +28,12 @@ from web_framework.server_side.infastructure.components.json_schema_form import 
 from web_framework.server_side.infastructure.components.pop_up import PopUp
 from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, open_file, FileTree, get_file_object, update_file
 from APIs.TalpiotAPIs.User.user import User
+from web_features.tech_miun_temp.wix.utils import ID_NAMES
 
 from typing import *
 import docx
 import pandas as pd
 
-ID_NAMES = ['id', 'ID', 'תעודת זהות', 'מספר זהות']
 
 
 class CreateReportPage(Page):
