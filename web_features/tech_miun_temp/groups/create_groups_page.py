@@ -28,7 +28,7 @@ from web_framework.server_side.infastructure.components.json_schema_form import 
 from web_framework.server_side.infastructure.components.pop_up import PopUp
 from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, open_file, FileTree, get_file_object, update_file
 from APIs.TalpiotAPIs.User.user import User
-from web_features.tech_miun_temp.wix.utils import ID_NAMES
+from web_features.tech_miun_temp.wix.utils import ID_names
 
 from typing import *
 import docx
@@ -121,7 +121,7 @@ class CreateReportPage(Page):
 
             id_field_name: str = ''
             # Get field name of id 
-            for field in ID_NAMES:
+            for field in ID_names:
                 if field not in df:
                     continue
                 id_field_name: str = field
