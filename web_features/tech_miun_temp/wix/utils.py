@@ -1,6 +1,9 @@
 from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, update_file, open_file, get_file_object, FileTree
+import os
+from os import path
 
 ID_names = ['id','ID','תעודת זהות','מספר זהות']
+CUSTOM_PAGES_DIR = os.path.join(path.abspath(__file__), '..', 'custom_pages')
 
 def fetch_fields_dict(root: FileTree, json_dict: dict, candidate_id: int) -> dict:
     all_field_to_fetch = [item for sublist in json_dict.values() for item in sublist] #flatten the list of lists

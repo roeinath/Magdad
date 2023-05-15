@@ -26,7 +26,7 @@ from web_framework.server_side.infastructure.components.divider import Divider
 from web_framework.server_side.infastructure.constants import *
 from web_features.tech_miun_temp.cadet_classes.utils import Data
 from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, update_file, open_file, get_file_object
-from web_features.tech_miun_temp.wix.utils import fetch_fields_dict, ID_names
+from web_features.tech_miun_temp.wix.utils import fetch_fields_dict, ID_names, CUSTOM_PAGES_DIR
 
 
 class CustomPage(Page):
@@ -76,7 +76,7 @@ class CustomPage(Page):
         self.update_page(user)
 
     def update_page(self,user):
-        with open(os.path.join(os.path.abspath(__file__), '..','custom.json'),'r') as f:
+        with open(os.path.join(CUSTOM_PAGES_DIR,self.selected_page_name),'r') as f:
             groups_dict = json.load(f)
             root = get_list_of_all_data_files()
             group_names = []
@@ -86,20 +86,18 @@ class CustomPage(Page):
                     real_value = self.fetch_field_values(user, root, self.person_id, field)
                     self.labels[field].update_text(real_value)
 
-
-    def get_page_ui(self, user: User):
-        self.user = user
-        self.sp = StackPanel([])  
-
+    def update_custom_page_opened(self, page_name):
+        self.custom_stack.clear()
+        self.selected_page_name = page_name
         #self.cadet_id=self.get_id(user)
 
         id_utils = [str(u.click_email).split('@')[0] for u in User.objects()]
         name_utils= [str(u.name) for u in User.objects()]
-        self.sp.add_component(
+        self.custom_stack.add_component(
             ComboBox(name_utils, on_changed=lambda person_id: self.return_id(id_utils[int(person_id)],self.user)), index=0)
 
         #fetch_fields_dict(root: FileTree, json_dict: dict, candidate_id: int)
-        with open(os.path.join(os.path.abspath(__file__), '..','custom_pages','ruth.json'),'r') as f:
+        with open(os.path.join(CUSTOM_PAGES_DIR, page_name),'r') as f:
             groups_dict = json.load(f)
             root = get_list_of_all_data_files()
             #print('Now\n',fetch_fields_dict(root, groups_dict, 12),'\nEND')
@@ -112,8 +110,7 @@ class CustomPage(Page):
                 index = 0
                 for field_name, field in fields_dict.items():
                     group_layout.add_component(Label(field_name, fg_color='White'), 0, index)
-                    print(field_name,field)
-                    real_value = self.fetch_field_values(user, root, self.person_id, field)
+                    real_value = self.fetch_field_values(self.user, root, self.person_id, field)
                     self.labels[field]=Label(real_value, fg_color='White')
                     print('##########################')
                     group_layout.add_component(self.labels[field], 1, index)   #real_value_dict[field]
@@ -121,7 +118,24 @@ class CustomPage(Page):
                 group_layouts.append(group_layout)
 
             accordion = Accordion(group_layouts, group_names)
-            self.sp.add_component(accordion)
+            self.custom_stack.add_component(accordion)
+            #self.sp.add_component(self.custom_stack)
+
+    def get_page_ui(self, user: User):
+        self.user = user
+        self.sp = StackPanel([]) 
+        self.custom_stack = StackPanel([]) 
+
+        custom_pages_files = []
+        for file in os.listdir(CUSTOM_PAGES_DIR):
+            if file.endswith('.json'):
+                custom_pages_files.append(file)
+
+        self.sp.add_component(
+            ComboBox(custom_pages_files, on_changed=lambda chosen_ind: self.update_custom_page_opened(custom_pages_files[int(chosen_ind)]))
+            )
+
+        self.sp.add_component(self.custom_stack)
 
         return self.sp
 
