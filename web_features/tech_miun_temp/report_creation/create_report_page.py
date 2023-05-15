@@ -28,7 +28,7 @@ from web_framework.server_side.infastructure.components.json_schema_form import 
 from web_framework.server_side.infastructure.components.pop_up import PopUp
 from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, open_file, FileTree, get_file_object, update_file
 from APIs.TalpiotAPIs.User.user import User
-from web_features.tech_miun_temp.wix.utils import ID_NAMES
+from web_features.tech_miun_temp.wix.utils import ID_names
 
 from typing import *
 import docx
@@ -141,7 +141,7 @@ class CreateReportPage(Page):
             cadet_id: str = self.ti_cadet_id.text
             # Retrieve the cell value based on the column name and row value
             value: str = "אין ערך תקין"
-            for field in ID_NAMES:
+            for field in ID_names:
                 if field not in df:
                     continue
                 row = df[df[field].astype(int).astype(str) == cadet_id]
