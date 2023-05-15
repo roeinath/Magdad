@@ -59,7 +59,7 @@ class CustomPage(Page):
         print('##################################')
         update_file(self.current_file)
         self.df = open_file(self.current_file)  # opens file as pandas dataframe
-        for e in ID_names:
+        for id_name in ID_names:
             if(id_name in self.df):
                 print(self.df[self.df[id_name] == person_id])
                 value = self.df.loc[self.df[id_name] == person_id, name_column].iloc[0]
