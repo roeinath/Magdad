@@ -1,10 +1,13 @@
 import pandas as pd
 import numpy as np
-def no_func(data: pd.Series, row: int):
+def show_row(data: pd.Series, row: int):
     '''
     returns the content in certain row in data array
     '''
     return data[row]
+
+def no_func(data: pd.Series):
+    return data
 
 def mean(data: pd.Series):
     return data.mean()

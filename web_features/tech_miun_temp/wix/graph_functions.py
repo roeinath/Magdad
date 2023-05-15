@@ -1,5 +1,6 @@
 def plot(chartJsComponent, x, y, title):
-    chartJsComponent.plot(x, y)
+    indexes = x.astype(int).argsort()
+    chartJsComponent.plot(list(x.astype(int)[indexes]), list(y.astype(int)[indexes]))
     chartJsComponent.title(title, size=30)
 
 
