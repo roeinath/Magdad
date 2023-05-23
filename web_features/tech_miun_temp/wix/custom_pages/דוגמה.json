@@ -1,5 +1,7 @@
 {
-    "Data": {},
+    "Data": {"Mahzor": {"name": "pen_and_paper.xlsx:\u05e9\u05dd \u05e4\u05e8\u05d8\u05d9",
+  "\u05ea\u05d6 \u05d4\u05de\u05e9\u05ea\u05de\u05e9": "pen_and_paper.xlsx:\u05de\u05e1\u05e4\u05e8 \u05d6\u05d4\u05d5\u05ea"}
+    },
 
     "Graphs": {"Random Plot":
         ["plot",

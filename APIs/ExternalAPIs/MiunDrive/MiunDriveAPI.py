@@ -82,6 +82,9 @@ class FileTree():
     def __repr__(self):
       return str(self.content)
 
+def open_not_drive_file(file_name):
+    return pd.read_excel(file_name)
+
 
 def miun_drive_context(function):
     '''Decorator that makes function run with MiunDrive folder as its working directory'''
