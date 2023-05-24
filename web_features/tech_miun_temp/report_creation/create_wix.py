@@ -1,4 +1,4 @@
-﻿import webbrowser
+import webbrowser
 from dataclasses import fields
 
 import web_framework.server_side.infastructure.constants as const
@@ -23,29 +23,30 @@ from web_framework.server_side.infastructure.components.button import Button
 from web_framework.server_side.infastructure.components.divider import Divider
 from web_framework.server_side.infastructure.constants import *
 from web_features.tech_miun_temp.cadet_classes.utils import Data
-from web_features.tech_miun_temp.custom_components import FileChoosePopUpCreateReport
+from web_features.tech_miun_temp.custom_components import DataChoosePopUp
 from web_framework.server_side.infastructure.components.json_schema_form import JsonSchemaForm
 from web_framework.server_side.infastructure.components.pop_up import PopUp
 from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, open_file, FileTree, get_file_object, update_file
 from APIs.TalpiotAPIs.User.user import User
-from web_features.tech_miun_temp.wix.utils import ID_names
 
 from typing import *
 import docx
 import pandas as pd
 
+ID_NAMES = ['id', 'ID', 'תעודת זהות', 'מספר זהות']
 
-StatisticFunction = Callable[[], int]
-GraphFunction = Callable[[List[StatisticFunction]], None]
+StatisticFunction = Callable[[List[pd.DataFrame], str], Any]
+GraphFunction = Callable[[List[float]], None]
 FunctionsDict = Dict[str, GraphFunction]
 
-class CreateReportPage(Page):
+class CreateWixPage(Page):
 
     def __init__(self, params):
         super().__init__(params)
         self.ti_input_path: TextInput = None  # TextInput with path to input template file for the report
         self.ti_cadet_id: TextInput = None  # TextInput with the cadet id
         self.ti_keys: List[TextInput] = []  # List of all TextInputs in the grid
+        self.json_strings: List[str] = [] # List of json strings generated
         self.files: List[FileTree] = []  # List of all file paths chosen by user
         self.fields: List[str] = []  # List of all fields chosen by user
         self.rows_created: int = 0  # Number of rows created in the grid
@@ -53,7 +54,7 @@ class CreateReportPage(Page):
 
     @staticmethod
     def get_title() -> str:
-        return "יצירת דוח"
+        return "יצירת וויקס"
 
     @staticmethod
     def is_authorized(user) -> bool:
@@ -79,7 +80,7 @@ class CreateReportPage(Page):
         self.sp.add_component(self.ti_cadet_id)
 
         # Horizontal StackPanel
-        grid = GridPanel(100, 3, bordered=True)
+        grid = GridPanel(100, 2, bordered=True)
         self.sp.add_component(grid)
         self.add_row(grid)
 
@@ -95,7 +96,7 @@ class CreateReportPage(Page):
         # Submit button
         btn_submit: Button = Button("עשה את הקסם!")
         btn_submit.set_action(
-            action=lambda: CreateReportPage.create_single_report(self.ti_input_path.text,
+            action=lambda: CreateWixPage.create_single_report(self.ti_input_path.text,
                                                                  self.ti_output_path.text,
                                                                  self.generate_key_value_dictionary()))
         self.sp.add_component(btn_submit)
@@ -110,8 +111,8 @@ class CreateReportPage(Page):
         self.ti_keys.append(ti_key)
 
         # File Button
-        btn_file: Button = Button("בחר קובץ")
-        btn_file.set_action(action=lambda: self.open_file_choice_form(num_row, grid))
+        btn_file: Button = Button("בחר/י הצגה")
+        btn_file.set_action(action=lambda: self.open_data_choice_form(num_row, grid))
         self.files.append(None)
 
         # Field Combobox
@@ -144,7 +145,7 @@ class CreateReportPage(Page):
             cadet_id: str = self.ti_cadet_id.text
             # Retrieve the cell value based on the column name and row value
             value: str = "אין ערך תקין"
-            for field in ID_names:
+            for field in ID_NAMES:
                 if field not in df:
                     continue
                 row = df[df[field].astype(int).astype(str) == cadet_id]
@@ -155,18 +156,18 @@ class CreateReportPage(Page):
             key_value_dict[key] = value
         return key_value_dict
 
-    def open_file_choice_form(self, num_row: int, grid: GridPanel) -> None:
+    def open_data_choice_form(self, num_row: int, grid: GridPanel) -> None:
         """
         Opens a popup in which user chooses a certain file from the MuinDrive file tree.
         @param num_row: The number of row that called the function.
                         Used to enter the file path into the array in the proper location.
         @param grid: Grid to add pass on to handle_file_chosen
         """
-        popup = FileChoosePopUpCreateReport(
+        popup = DataChoosePopUp(
             on_file_chosen=lambda file: self.handle_file_chosen(file, num_row, grid),
             is_shown=False,
             is_cancelable=True,
-            title="בחר/י קובץ")
+            title="בחר/י הצגת נתונים")
         self.sp.add_component(popup)
         popup.show()
 
@@ -175,7 +176,7 @@ class CreateReportPage(Page):
         self.files[num_row] = file
 
         # Open fields combobox
-        field_list: List[str] = CreateReportPage.get_field_list(file)
+        field_list: List[str] = CreateWixPage.get_field_list(file)
         cb_field: ComboBox = ComboBox(field_list,
                                       on_changed=lambda ind: self.update_list_fields(field_list[int(ind)], num_row))
 

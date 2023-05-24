@@ -10,6 +10,7 @@ from web_features.tech_miun_temp.assessments.show_data_page import ShowDataPage
 from web_features.tech_miun_temp.wix.custom_page import CustomPage
 from web_framework.server_side.infastructure.category import Category
 from web_features.tech_miun_temp.report_creation.create_report_page import CreateReportPage
+from web_features.tech_miun_temp.report_creation.create_wix import CreateWixPage
 from web_features.tech_miun_temp.wix.wix_page import WixPage
 
 # TODO: add documentation to class and methods
@@ -26,6 +27,7 @@ class MiunCategory(Category):
             "show_data_page": ShowDataPage,
             "custom_page": CustomPage,
             "create_report_page": CreateReportPage,
+            "create_wix_page": CreateWixPage,
             "wix_page": WixPage,
         })
 
