@@ -17,12 +17,10 @@ from web_framework.server_side.infastructure.page import Page
 from web_framework.server_side.infastructure.page import Page
 from web_framework.server_side.infastructure.components.combo_box import ComboBox
 from web_framework.server_side.infastructure.components.text_input import TextInput
-from web_features.Elements.personal_page.modules.cadet_classes import *
 from web_features.Elements.personal_page.permissions import *
 from web_framework.server_side.infastructure.components.button import Button
 from web_framework.server_side.infastructure.components.divider import Divider
 from web_framework.server_side.infastructure.constants import *
-from web_features.tech_miun_temp.cadet_classes.utils import Data
 from web_features.tech_miun_temp.custom_components import FileChoosePopUpCreateReport
 from web_framework.server_side.infastructure.components.json_schema_form import JsonSchemaForm
 from web_framework.server_side.infastructure.components.pop_up import PopUp

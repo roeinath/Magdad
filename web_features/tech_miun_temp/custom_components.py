@@ -20,14 +20,12 @@ from web_framework.server_side.infastructure.page import Page
 from web_framework.server_side.infastructure.page import Page
 # standard Talpix page class to inherit from.
 from web_framework.server_side.infastructure.components.combo_box import ComboBox
-from web_features.Elements.personal_page.modules.cadet_classes import *
 from web_features.Elements.personal_page.permissions import *
 from web_framework.server_side.infastructure.components.button import Button
 from web_framework.server_side.infastructure.components.divider import Divider
 from web_framework.server_side.infastructure.constants import *
-from web_features.tech_miun_temp.cadet_classes.utils import Data
 from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, update_file, open_file, FileTree
-
+from web_framework.server_side.infastructure.components.pop_up import PopUp
 
 class FileChoosePopUp(PopUp):
     def __init__(self, on_file_chosen, *params, **kargs):
