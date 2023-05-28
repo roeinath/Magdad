@@ -33,7 +33,7 @@ from typing import *
 
 
 class CustomPage(Page):
-    person_id=0
+    person_id=1
 
     def __init__(self, params):
         super().__init__(params)
@@ -70,9 +70,7 @@ class CustomPage(Page):
         self.df = open_file(self.current_file)  # opens file as pandas dataframe
         for id_name in ID_names:
             if(id_name in self.df):
-                print(self.df[self.df[id_name] == person_id])
                 value = self.df.loc[self.df[id_name] == person_id, name_column].iloc[0]
-                print(value)
                 return value
         raise Exception('No ID Field')
 
@@ -101,15 +99,15 @@ class CustomPage(Page):
         plot_function(chartJsComponent, x_value, y_value, graph_name)
 
     def update_page(self,user):
-        with open(os.path.join(CUSTOM_PAGES_DIR,self.selected_page_name),'r') as f:
+        with open(os.path.join(CUSTOM_PAGES_DIR, self.selected_page_name),'r') as f:
             groups_dict = json.load(f)
-            root = get_list_of_all_data_files()
-            group_names = []
-            for group_name, fields_list in groups_dict.items():
-                group_names.append(group_name)
-                for index, field in enumerate(fields_list):
-                    real_value = self.fetch_field_values(user, root, self.person_id, field)
-                    self.labels[field].update_text(real_value)
+            self.update_data(groups_dict)
+            '''
+            for i in json:
+                graph= ChartjsComponent()
+                group_layout.add_component(graph_i)
+            '''
+            self.update_graphs(groups_dict)
 
     def update_data(self, groups_dict): #TODO fix
         self.root = get_list_of_all_data_files()
@@ -154,7 +152,8 @@ class CustomPage(Page):
         self.selected_page_name = page_name
         #self.cadet_id=self.get_id(user)
 
-        id_utils = [str(u.click_email).split('@')[0] for u in User.objects()]
+        #id_utils = [str(u.click_email).split('@')[0] for u in User.objects()]
+        id_utils = [i for i in range(1, 21)]
         name_utils= [str(u.name) for u in User.objects()]
         self.custom_stack.add_component(
             ComboBox(name_utils, on_changed=lambda person_id: self.return_id(id_utils[int(person_id)],self.user)), index=0)
@@ -169,7 +168,6 @@ class CustomPage(Page):
                 group_layout.add_component(graph_i)
             '''
             self.update_graphs(groups_dict)
-
 
     def get_page_ui(self, user: User):
         self.user = user
