@@ -20,7 +20,6 @@ from web_framework.server_side.infastructure.page import Page
 from web_framework.server_side.infastructure.page import Page
 # standard Talpix page class to inherit from.
 from web_framework.server_side.infastructure.components.combo_box import ComboBox
-from web_features.Elements.personal_page.permissions import *
 from web_framework.server_side.infastructure.components.button import Button
 from web_framework.server_side.infastructure.components.divider import Divider
 from web_framework.server_side.infastructure.constants import *

@@ -20,13 +20,13 @@ from web_framework.server_side.infastructure.components.label import Label
 from web_framework.server_side.infastructure.components.stack_panel import StackPanel
 from web_framework.server_side.infastructure.components.accordion import Accordion
 from web_framework.server_side.infastructure.page import Page
-
+from web_features.Elements.personal_page.permissions import *
 from web_framework.server_side.infastructure.page import Page
 # standard Talpix page class to inherit from.
 from web_framework.server_side.infastructure.components.combo_box import ComboBox
-from web_features.Elements.personal_page.permissions import *
 from web_framework.server_side.infastructure.components.button import Button
 from web_framework.server_side.infastructure.components.divider import Divider
+from web_framework.server_side.infastructure.components.chartjs_component import ChartjsComponent
 from web_framework.server_side.infastructure.constants import *
 from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, update_file, open_file, \
     get_file_object, open_not_drive_file
@@ -34,6 +34,7 @@ from web_features.tech_miun_temp.wix.utils import fetch_fields_dict, ID_names, C
 from web_features.tech_miun_temp.wix.graph_functions import GRAPH_FUNCTIONS
 from web_features.tech_miun_temp.wix.statistics_functions import STATISTICS_FUNCTIONS
 from typing import *
+from APIs.TalpiotAPIs.User.user import User
 
 CUSTOM_PAGES = os.path.join(path.abspath(__file__), '..', 'כל הכתובות של תלפיות.xlsx')
 
