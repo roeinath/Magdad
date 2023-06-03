@@ -1,3 +1,5 @@
+import copy
+import json
 import webbrowser
 from dataclasses import fields
 
@@ -33,24 +35,32 @@ from typing import *
 import docx
 import pandas as pd
 
+from web_features.tech_miun_temp.custom_components import MODE_DATA, MODE_GRAPH
+from web_features.tech_miun_temp.wix.utils import CUSTOM_PAGES_DIR
+import os
+
 ID_NAMES = ['id', 'ID', 'תעודת זהות', 'מספר זהות']
 
-StatisticFunction = Callable[[List[pd.DataFrame], str], Any]
-GraphFunction = Callable[[List[float]], None]
-FunctionsDict = Dict[str, GraphFunction]
+# Result dict keys
+GRAPHS = "Graphs"
+DATAS = "Datas"
+NAME_OF_GROUP = "Name Of Group"
 
 class CreateWixPage(Page):
 
     def __init__(self, params):
         super().__init__(params)
-        self.ti_input_path: TextInput = None  # TextInput with path to input template file for the report
-        self.ti_cadet_id: TextInput = None  # TextInput with the cadet id
+        self.ti_page_name: TextInput = None  # TextInput with path to output destination
+
         self.ti_keys: List[TextInput] = []  # List of all TextInputs in the grid
-        self.json_strings: List[str] = [] # List of json strings generated
         self.files: List[FileTree] = []  # List of all file paths chosen by user
         self.fields: List[str] = []  # List of all fields chosen by user
         self.rows_created: int = 0  # Number of rows created in the grid
-        self.ti_output_path: TextInput = None  # TextInput with path to output destination
+        self.grid: GridPanel = None # Main grid
+
+        self.res_dict: Dict[str, Dict[str, Any]] = {} # Dict of json strings generated
+        self.init_res_dict()
+
 
     @staticmethod
     def get_title() -> str:
@@ -66,97 +76,60 @@ class CreateWixPage(Page):
     def on_path_selected(self, path):
         print(path)
 
+    def init_res_dict(self) -> None:
+        self.res_dict[GRAPHS] = {}
+        self.res_dict[DATAS] = {}
+        self.res_dict[DATAS][NAME_OF_GROUP] = {}
+
     def get_page_ui(self, user: User):
         # Initialize user and StackPanel
         self.user = user
         self.sp = StackPanel([])
 
         # Input path TextInput
-        self.ti_input_path = TextInput(text_holder='נתיב קובץ תבנית הדו"ח')
-        self.sp.add_component(self.ti_input_path)
-
-        # Cadet id TextInput
-        self.ti_cadet_id = TextInput(text_holder='ת"ז של הצוער')
-        self.sp.add_component(self.ti_cadet_id)
+        self.ti_page_name = TextInput(text_holder='שם העמוד')
+        self.sp.add_component(self.ti_page_name)
 
         # Horizontal StackPanel
-        grid = GridPanel(100, 2, bordered=True)
-        self.sp.add_component(grid)
-        self.add_row(grid)
+        self.grid = GridPanel(100, 2, bordered=True)
+        self.sp.add_component(self.grid)
+        self.add_row()
 
         # Add rows Button
         btn_add_row: Button = Button("הוסף שורה")
-        btn_add_row.set_action(action=lambda: self.add_row(grid))
+        btn_add_row.set_action(action=lambda: self.add_row())
         self.sp.add_component(btn_add_row)
 
-        # Output directory TextInput
-        self.ti_output_path = TextInput(text_holder='נתיב הפלט')
-        self.sp.add_component(self.ti_output_path)
-
         # Submit button
-        btn_submit: Button = Button("עשה את הקסם!")
+        btn_submit: Button = Button("צור עמוד")
         btn_submit.set_action(
-            action=lambda: CreateWixPage.create_single_report(self.ti_input_path.text,
-                                                                 self.ti_output_path.text,
-                                                                 self.generate_key_value_dictionary()))
+            action=lambda: self.on_submit())
         self.sp.add_component(btn_submit)
 
         return self.sp
 
-    def add_row(self, grid: GridPanel) -> None:
+    def add_row(self) -> None:
         num_row: int = self.rows_created
 
         # Key TextInput
-        ti_key: TextInput = TextInput(text_holder='שם קוד')
+        ti_key: TextInput = TextInput(text_holder='כותרת')
         self.ti_keys.append(ti_key)
 
         # File Button
         btn_file: Button = Button("בחר/י הצגה")
-        btn_file.set_action(action=lambda: self.open_data_choice_form(num_row, grid))
+        btn_file.set_action(action=lambda: self.open_data_choice_form(num_row))
         self.files.append(None)
 
         # Field Combobox
         self.fields.append("")
 
         # Add to grid
-        grid.add_component(ti_key, num_row, 0)
-        grid.add_component(btn_file, num_row, 1)
+        self.grid.add_component(ti_key, num_row, 0)
+        self.grid.add_component(btn_file, num_row, 1)
 
         self.rows_created += 1
 
-    def generate_key_value_dictionary(self) -> Dict[str, str]:
-        """
-        Use data accumulated in pages attributes to generate a dictionary that matches each key
-        to the value it needs to be replaces by.
-        """
-        key_value_dict: Dict[str, str] = {}
-
-        for i in range(len(self.ti_keys)):
-            # Get key for the dictionary
-            key: str = self.ti_keys[i].text
-
-            # Get file in df format
-            file: FileTree = self.files[i]
-            update_file(file)
-            df: pd.DataFrame = open_file(file)
-
-            # Get specific value from df
-            field_name: str = self.fields[i]
-            cadet_id: str = self.ti_cadet_id.text
-            # Retrieve the cell value based on the column name and row value
-            value: str = "אין ערך תקין"
-            for field in ID_NAMES:
-                if field not in df:
-                    continue
-                row = df[df[field].astype(int).astype(str) == cadet_id]
-                if len(row) > 0:
-                    value = str(row[field_name].iloc[0])
-
-            # Add pair to the dictionary
-            key_value_dict[key] = value
-        return key_value_dict
-
-    def open_data_choice_form(self, num_row: int, grid: GridPanel) -> None:
+    def open_data_choice_form(self, num_row: int) -> None:
         """
         Opens a popup in which user chooses a certain file from the MuinDrive file tree.
         @param num_row: The number of row that called the function.
@@ -164,68 +137,50 @@ class CreateWixPage(Page):
         @param grid: Grid to add pass on to handle_file_chosen
         """
         popup = DataChoosePopUp(
-            on_file_chosen=lambda file: self.handle_file_chosen(file, num_row, grid),
+            on_file_chosen=lambda res_list, mode: self.handle_file_chosen(res_list, mode, num_row),
             is_shown=False,
             is_cancelable=True,
             title="בחר/י הצגת נתונים")
         self.sp.add_component(popup)
         popup.show()
 
-    def handle_file_chosen(self, file: FileTree, num_row: int, grid: GridPanel) -> None:
-        # Insert file path into list
-        self.files[num_row] = file
-
-        # Open fields combobox
-        field_list: List[str] = CreateWixPage.get_field_list(file)
-        cb_field: ComboBox = ComboBox(field_list,
-                                      on_changed=lambda ind: self.update_list_fields(field_list[int(ind)], num_row))
-
-        grid.add_component(cb_field, num_row, 2)
+    def handle_file_chosen(self, popup_res_list: List[Any], mode: str, num_row: int) -> None:
+        # Insert result list into final dict
+        if mode == MODE_DATA:
+            self.res_dict[DATAS][NAME_OF_GROUP][str(num_row)] = popup_res_list
+        if mode == MODE_GRAPH:
+            self.res_dict[GRAPHS][str(num_row)] = popup_res_list
 
         # Replace choose file button with file chosen label
-        # file_path: str = file.get_full_path()
-        label_file_chosen: Label = Label(file.title)
-        grid.add_component(label_file_chosen, num_row, 1)
+        label_graph_chosen: Label = Label(popup_res_list[0])
+        self.grid.add_component(label_graph_chosen, num_row, 1)
 
     def update_list_fields(self, new_val: str, ind: int) -> None:
         self.fields[ind] = new_val
 
-    @staticmethod
-    def create_single_report(in_path: str, out_path: str, dictionary: Dict[str, str]) -> None:
-        """
-        Replaces keys that appear in "in_file" with their corresponding values.
-        :param in_path: Path to original word file.
-        :param out_path: Path to result word file.
-        :param dictionary: Format - Dict[key, [file, value]]
-        :return: None.
-        """
-        # in_path = "C:/Users/TLP-280/PyCharmProjects/Magdad/Magdad/web_features/tech_miun_temp/report_creation/input.docx"
-        # out_path = "C:/Users/TLP-280/PyCharmProjects/Magdad/Magdad/web_features/tech_miun_temp/report_creation/output.docx"
+    def on_submit(self) -> None:
+        self.update_dict_values()
+        self.dump_dict_into_json()
 
-        # Open the Word document
-        doc: docx.Document = docx.Document(in_path)
-        # Loop through all paragraphs in the document
-        for para in doc.paragraphs:
-            # Loop through keys in the dictionary
-            for key, value in dictionary.items():
-                # Check if the key is in the paragraph
-                if key in para.text:
-                    # Replace all instances of key with value
-                    para.text = para.text.replace(key, value)
+    def update_dict_values(self) -> None:
+        # Update Datas
+        datas_dict = copy.deepcopy(self.res_dict[DATAS][NAME_OF_GROUP])
+        for key, val in datas_dict.items():
+            del self.res_dict[DATAS][NAME_OF_GROUP] [key]
+            self.res_dict[DATAS][NAME_OF_GROUP][self.ti_keys[int(key)].text] = val
 
-        # Loop through all tables in the document
-        for table in doc.tables:
-            # Loop through all cells in the table
-            for row in table.rows:
-                for cell in row.cells:
-                    for key, value in dictionary.items():
-                        # Check if the key is in the cell
-                        if key in cell.text:
-                            # Replace all instances of key with value
-                            cell.text = cell.text.replace(key, value)
+        # Update Graphs
+        graphs_dict = copy.deepcopy(self.res_dict[GRAPHS])
+        for key, val in graphs_dict.items():
+            del self.res_dict[GRAPHS] [key]
+            self.res_dict[GRAPHS][self.ti_keys[int(key)].text] = val
 
-        # Save the modified document as a new file
-        doc.save(out_path)
+    def dump_dict_into_json(self) -> None:
+        new_page_json_path: str = os.path.join(CUSTOM_PAGES_DIR, self.ti_page_name.text)
+        with open(f"{new_page_json_path}.json", "w+") as outfile:
+            json.dump(self.res_dict, outfile)
+
+
 
     @staticmethod
     def get_field_list(file: FileTree) -> List[str]:
@@ -236,3 +191,4 @@ class CreateWixPage(Page):
         df: pd.DataFrame = open_file(file)
         fields = [str(i) for i in df]
         return fields
+

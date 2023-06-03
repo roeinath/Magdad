@@ -1,8 +1,7 @@
 from mongoengine import *
 
-import web_features.shagmach.permissions as permissions
 from web_framework.server_side.infastructure.constants import *
-from APIs.TalpiotAPIs.Shagmach.blay_request import ItemFixRequest, ItemTypes
+from APIs.TalpiotAPIs.Shagmach.blay_request import ItemFixRequest, ItemTypes, StatusRequest
 from web_framework.server_side.infastructure.components.pop_up import PopUp
 from web_framework.server_side.infastructure.components.label import Label
 from web_framework.server_side.infastructure.components.button import Button
@@ -16,6 +15,8 @@ from web_framework.server_side.infastructure.page import Page
 
 
 class BlayRequests(Page):
+    AUTH_ROLES = ["Cadet", "Sagab"]
+
     @staticmethod
     def get_title() -> str:
         return "בקשות בלאי"
@@ -27,6 +28,7 @@ class BlayRequests(Page):
         self.container_table = None
         self.popup = None
         self.reports_stack = StackPanel([])
+        self.ordered_reports_stack = StackPanel([])
         self.closed_reports_stack = StackPanel([])
         self.user = None
 
@@ -40,6 +42,10 @@ class BlayRequests(Page):
         self.sp.add_component(Divider())
         self.sp.add_component(self.reports_stack)
 
+        self.sp.add_component(Label("בלאי שהוזמן", size=SIZE_LARGE))
+        self.sp.add_component(Divider())
+        self.sp.add_component(self.ordered_reports_stack)
+
         self.sp.add_component(Label("בקשות סגורות", size=SIZE_LARGE))
         self.sp.add_component(Divider())
         self.sp.add_component(self.closed_reports_stack)
@@ -49,17 +55,23 @@ class BlayRequests(Page):
         return self.sp
 
     def draw_tables(self):
+        # TODO - not working properly, sp.clera need to be cleared()
         self.reports_stack.clear()
-        self.reports_stack.add_component(self.get_reports_table(is_closed=False))
-        self.closed_reports_stack.clear()
-        self.closed_reports_stack.add_component(self.get_reports_table(is_closed=True))
+        self.reports_stack.add_component(self.get_reports_table(status=StatusRequest.get_status_list()[0]))
 
-    def get_reports_table(self, is_closed):
+        self.ordered_reports_stack.clear()
+        self.ordered_reports_stack.add_component(self.get_reports_table(status=StatusRequest.get_status_list()[1]))
+
+        self.closed_reports_stack.clear()
+        self.closed_reports_stack.add_component(self.get_reports_table(status=StatusRequest.get_status_list()[2]))
+
+    def get_reports_table(self, status):
         reports_table = DocumentGridPanel(
             ItemFixRequest,
             column_list=[
                 DocumentGridPanelColumn('user', "שם",
                                         component_parser=lambda request, user: Label(user.get_full_name())),
+                DocumentGridPanelColumn('phone_number', "טלפון"),
                 DocumentGridPanelColumn('soldier_id', "מספר אישי",
                                         component_parser=lambda request, soldier_id: Label(soldier_id or 'חסר')),
                 DocumentGridPanelColumn('item_type', "סוג פריט"),
@@ -67,29 +79,69 @@ class BlayRequests(Page):
                 DocumentGridPanelColumn('reason', "סיבה"),
                 DocumentGridPanelColumn('size_required', "מידה"),
                 DocumentGridPanelColumn('comment', "הערות", component_parser=self.draw_comment_column)
-            ], filter_by={'closed': is_closed}
+            ], filter_by={'status': status}
         )
         reports_table.add_column(self.draw_action_buttons)
         return reports_table
 
     def draw_action_buttons(self, fix_request):
         button_sp = StackPanel([])
-        if permissions.is_user_rasap(self.user):
-            button_sp.add_component(
-                Button("הגשה מחדש" if fix_request.closed else "סגירת הבקשה",
-                       action=lambda fix_request=fix_request: self.switch_blay_fix(fix_request))
-            )
-        if self.user == fix_request.user or permissions.is_user_rasap(self.user):
+        if self.user.has_role(["Admin", "Rasap", "Kamat"]):
+            if fix_request.status == StatusRequest.get_status_list()[0]:
+                button_sp.add_component(
+                    Button("סמן הוזמן",
+                           action=lambda fix_request=fix_request: self.set_blay_request_ordered(fix_request))
+                )
+
+                button_sp.add_component(
+                    Button("סגור בקשה",
+                           action=lambda fix_request=fix_request: self.close_blay_request(fix_request))
+                )
+
+            if fix_request.status == StatusRequest.get_status_list()[1]:
+                button_sp.add_component(
+                    Button("סמן הוגש",
+                           action=lambda fix_request=fix_request: self.set_blay_request_submited(fix_request))
+                )
+
+                button_sp.add_component(
+                    Button("סגור בקשה",
+                           action=lambda fix_request=fix_request: self.close_blay_request(fix_request))
+                )
+
+            if fix_request.status == StatusRequest.get_status_list()[2]:
+                button_sp.add_component(
+                    Button("סמן הוגש",
+                           action=lambda fix_request=fix_request: self.set_blay_request_submited(fix_request))
+                )
+
+                button_sp.add_component(
+                    Button("סמן הוזמן",
+                           action=lambda fix_request=fix_request: self.set_blay_request_ordered(fix_request))
+                )
+
+        if self.user == fix_request.user or self.user.has_role(["Admin", "Rasap", "Kamat"]):
             button_sp.add_component(
                 Button("מחיקת הבקשה", action=lambda fix_request=fix_request: self.delete_blay_fix(fix_request),
                        bg_color='red')
             )
         return button_sp
 
-    def switch_blay_fix(self, blay_fix: ItemFixRequest):
-        if blay_fix is None:
-            return
-        blay_fix.closed = not blay_fix.closed
+    def close_blay_request(self, blay_fix: ItemFixRequest):
+        blay_fix.status = StatusRequest.get_status_list()[2]
+        blay_fix.save()
+        self.draw_tables()
+
+    def set_blay_request_ordered(self, blay_fix: ItemFixRequest):
+        blay_fix.status = StatusRequest.get_status_list()[1]
+        blay_fix.save()
+        self.draw_tables()
+
+    def set_blay_request_submited(self, blay_fix: ItemFixRequest):
+        blay_fix.status = StatusRequest.get_status_list()[0]
+        blay_fix.save()
+        self.draw_tables()
+
         blay_fix.save()
         self.draw_tables()
 
@@ -102,7 +154,7 @@ class BlayRequests(Page):
     def draw_comment_column(self, request, comment):
         comment_sp = StackPanel([])
         comment_sp.add_component(Label(comment if comment is not None else ""))
-        if self.user == request.user or permissions.is_user_rasap(self.user):
+        if self.user == request.user or self.user.has_role(["Admin", "Rasap", "Kamat"]):
             comment_sp.add_component(Button("ערוך", action=lambda req=request: self.edit_req_comment(req)))
         return comment_sp
 
@@ -131,8 +183,9 @@ class BlayRequests(Page):
 
     def create_request(self):
         def save_request(request):
-            request.closed = False
+            request.status = "הוגש"
             request.user = self.user
+            request.phone_number = self.user.phone_number
             request.save()
             self.draw_tables()
             self.popup.hide()
