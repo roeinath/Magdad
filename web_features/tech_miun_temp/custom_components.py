@@ -22,16 +22,13 @@ from web_framework.server_side.infastructure.page import Page
 from web_framework.server_side.infastructure.page import Page
 # standard Talpix page class to inherit from.
 from web_framework.server_side.infastructure.components.combo_box import ComboBox
-from web_features.Elements.personal_page.modules.cadet_classes import *
-from web_features.Elements.personal_page.permissions import *
 from web_framework.server_side.infastructure.components.button import Button
 from web_framework.server_side.infastructure.components.divider import Divider
 from web_framework.server_side.infastructure.constants import *
-from web_features.tech_miun_temp.cadet_classes.utils import Data
 from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, update_file, open_file, FileTree
-
 from web_features.tech_miun_temp.wix.graph_functions import GRAPH_FUNCTIONS
 from web_features.tech_miun_temp.wix.statistics_functions import STATISTICS_FUNCTIONS
+from web_framework.server_side.infastructure.components.pop_up import PopUp
 
 class FileChoosePopUp(PopUp):
     def __init__(self, on_file_chosen, *params, **kargs):
@@ -48,7 +45,6 @@ class FileChoosePopUp(PopUp):
                                                  children[int(selected_file)])))
             self.sp.add_component(self.file_combos[-1])
         else:
-            print("found file")
             button = Button("בחר\י קובץ", action=lambda: self.on_file_chosen(self.current_file))
             self.sp.add_component(button)
 
@@ -206,8 +202,6 @@ class DataChoosePopUp(PopUp):
         self.grid_main = GridPanel(1, 5, bordered=True)
         self.sp_main.add_component(self.grid_main)
         self.add_first_row_to_main_grid(num_cols)
-        print("NUM COLS MAIN GRID")
-        print(num_cols)
 
         # Initialize lists that depend on num_cols
         self.stat_funcs_chosen = ["Empty" for _ in range(num_cols)]
@@ -235,41 +229,13 @@ class DataChoosePopUp(PopUp):
             self.sp_cols[col].add_component(ComboBox(STAT_FUNC_TYPES,
                                                      on_changed=create_lambda(col)))
 
-    # def add_row_to_col_in_main_grid(self, stat_func_ind: int, main_col: int) -> None:
-    #     # Insert calc_type chosen into list
-    #     self.stat_funcs_chosen[main_col] = STAT_FUNC_TYPES[stat_func_ind]
-    #
-    #     # Open root file combobox
-    #     self.file_cbs.append([])
-    #     root: FileTree = get_list_of_all_data_files()
-    #     self.current_files[main_col]: FileTree = root
-    #     children: List[FileTree] = root.get_all_children()
-    #
-    #     if children:
-    #         # If root has children, add a ComboBox with them as options
-    #         def create_lambda(column):
-    #             return lambda selected_ind: self.on_select_combo_box(children[int(selected_ind)], column)
-    #
-    #         self.file_cbs[main_col].append(ComboBox(children,
-    #                                                 on_changed=create_lambda(main_col)))
-    #     else:
-    #         # If root has no children, an error occurred
-    #         print("Error! Root file has no children.")
-    #
-    #     self.sp_cols[main_col].add_component(self.file_cbs[main_col][0])
-
     def on_stat_func_chosen(self, stat_func_ind: int, main_grid_col: int):
         """IN PROG"""
         # Insert stat_func chosen into list
-        print("inaise stat func")
         self.stat_funcs_chosen[main_grid_col] = STAT_FUNC_TYPES[stat_func_ind]
 
         # Create sub-grid
         num_cols: int = NUM_PARAMS_STAT_FUNC[stat_func_ind]
-        print("STAT FUNC IND")
-        print(stat_func_ind)
-        print("NUM PARAMS")
-        print(NUM_PARAMS_STAT_FUNC[stat_func_ind])
         self.generate_sub_grid(num_cols, main_grid_col)
 
     def generate_sub_grid(self, num_cols: int, main_col_ind: int) -> None:
@@ -280,45 +246,23 @@ class DataChoosePopUp(PopUp):
         self.current_files[main_col_ind] = [None for _ in range(num_cols)]
 
         # Generate grid
-        print("NUM COLS")
-        print(num_cols)
-        print("MAIN COL IND")
-        print(main_col_ind)
-        print("SUB GRIDS LENGTH")
-        print(len(self.sub_grids))
         self.sub_grids[main_col_ind] = GridPanel(1, 5, bordered=True)
         self.sp_cols[main_col_ind].add_component(self.sub_grids[main_col_ind])
 
         # Add first grid row
         self.add_first_row_to_sub_grid(num_cols, main_col_ind)
-        print("end gen sub grid")
 
     def add_first_row_to_sub_grid(self, num_cols: int, main_col_ind: int):
-        """IN PROG"""
-        print("inside add first row")
         # Create columns with root_file combo-box
         for col in range(num_cols):
             # Add stack-panel into sub cols list
-            print("SUB COLS LENGTH " + str(col))
-            print(len(self.sp_sub_cols))
             self.sp_sub_cols[main_col_ind].append(StackPanel([]))
             # Add stack-panel to sub-grid
             self.sub_grids[main_col_ind].add_component(self.sp_sub_cols[main_col_ind][col], 0, col)
             self.add_row_to_col_in_sub_grid(main_col_ind, col)
-            # Add root_file combo-box to column stack-panel
-            # def create_lambda(column):
-            #     """
-            #     Needed so that the on_changed func takes the actual column and not the last clicked.
-            #     """
-            #     return lambda selected_ind: self.add_row_to_col_in_sub_grid(int(selected_ind), main_col_ind, column)
-            #
-            # self.sp_sub_cols[main_col_ind][col].add_component(ComboBox(STAT_FUNC_TYPES,
-            #                                          on_changed=create_lambda(col)))
 
     def add_row_to_col_in_sub_grid(self, main_col: int, sub_col: int):
-        """IN PROG"""
         # Open root file combobox
-        # self.file_cbs[main_col][sub_col].append([])
         root: FileTree = get_list_of_all_data_files()
         self.current_files[main_col][sub_col] = root
         children: List[FileTree] = root.get_all_children()
@@ -365,24 +309,7 @@ class DataChoosePopUp(PopUp):
 
     def btn_clicked(self):
         res_list: List[Any] = self.create_popup_result()
-        print(res_list)
         self.on_file_chosen(res_list, self.mode)
-        # print("MODE")
-        # print(self.mode)
-        # print("DISPLAY TYPE")
-        # if self.mode == MODE_GRAPH:
-        #     print(self.graph_func_chosen)
-        # elif self.mode == MODE_DATA:
-        #     print("no graph")
-        # print("CALC TYPES")
-        # for i in range(num_params):
-        #     print(str(i) + " calc type: " + self.stat_funcs_chosen[i])
-        # print("FILE PATHS")
-        # for i in range(num_params):
-        #     print(str(i) + " file path: " + self.current_files[i].get_full_path())
-        # print("FIELDS")
-        # for i in range(num_params):
-        #     print(str(i) + " field: " + self.field_names_chosen[i])
         self.hide()
 
     def create_popup_result(self) -> List[Any]:

@@ -4,6 +4,8 @@ import json
 import os
 from os import path
 import sys
+import numpy as np
+import pandas as pd
 
 
 import web_framework.server_side.infastructure.constants as const
@@ -18,38 +20,31 @@ from web_framework.server_side.infastructure.components.label import Label
 from web_framework.server_side.infastructure.components.stack_panel import StackPanel
 from web_framework.server_side.infastructure.components.accordion import Accordion
 from web_framework.server_side.infastructure.page import Page
-
+from web_features.Elements.personal_page.permissions import *
 from web_framework.server_side.infastructure.page import Page
 # standard Talpix page class to inherit from.
 from web_framework.server_side.infastructure.components.combo_box import ComboBox
-from web_features.Elements.personal_page.modules.cadet_classes import *
-from web_features.Elements.personal_page.permissions import *
 from web_framework.server_side.infastructure.components.button import Button
 from web_framework.server_side.infastructure.components.divider import Divider
+from web_framework.server_side.infastructure.components.chartjs_component import ChartjsComponent
 from web_framework.server_side.infastructure.constants import *
-from web_features.tech_miun_temp.cadet_classes.utils import Data
 from APIs.ExternalAPIs.MiunDrive.MiunDriveAPI import get_list_of_all_data_files, update_file, open_file, \
     get_file_object, open_not_drive_file
 from web_features.tech_miun_temp.wix.utils import fetch_fields_dict, ID_names, CUSTOM_PAGES_DIR
 from web_features.tech_miun_temp.wix.graph_functions import GRAPH_FUNCTIONS
 from web_features.tech_miun_temp.wix.statistics_functions import STATISTICS_FUNCTIONS
 from typing import *
+from APIs.TalpiotAPIs.User.user import User
 
 CUSTOM_PAGES = os.path.join(path.abspath(__file__), '..', 'כל הכתובות של תלפיות.xlsx')
 
 
 
 class CustomPage(Page):
-    person_id=0
+    person_id=1
 
     def __init__(self, params):
         super().__init__(params)
-
-    def handle_error(exctype, value, traceback):  #TODO: CHECK IF COULD BE USED
-        print('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
-
-    # Set the global exception handler
-    sys.excepthook = handle_error
 
     @staticmethod
     def get_title() -> str:
@@ -70,7 +65,7 @@ class CustomPage(Page):
         return self.df[name_column]
 
 
-    def fetch_field_values(self,user,root,person_id,field): #TODO erase
+    def fetch_field_values(self,user,root,field): #TODO erase
         try:
             name_file=field.split(':')[0]
             name_column=field.split(':')[1]
@@ -82,19 +77,30 @@ class CustomPage(Page):
             self.current_file = get_file_object(root,name_file)
             update_file(self.current_file)
             self.df = open_file(self.current_file)  # opens file as pandas dataframe
-            for id_name in ID_names:
-                if(id_name in self.df):
-                    print(self.df[self.df[id_name] == person_id])
-                    value = self.df.loc[self.df[id_name] == person_id, name_column].iloc[0]
-                    print(value)
-                    return value
-            raise Exception('No ID Field')
-        except:
+            return self.df[name_column]
+        except Exception as e:
+            print(f"Exception occurred at fetch_field_values: {e.fu}")
             error_label = Label(text='אחד או יותר מפרטי המידע בקובץ שנבחר בעמוד שגויים, כדאי לבדוק את הקובץ או לפנות לתמיכה מצוות האתר',
                                 fg_color=COLOR_PRIMARY_DARK,
                                 bold=True, size=SIZE_LARGE)
             error_popup = PopUp(error_label, is_shown=True, is_cancelable=True, title='שגיאה')
             self.sp.add_component(error_popup)
+    
+    def fetch_field_value_by_id(self, value_arr, person_id):
+        try:
+            for id_name in ID_names:
+                if(id_name in self.df):
+                    value = value_arr.loc[self.df[id_name] == person_id].iloc[0]
+                    print(f'Value = {value}\n\n')
+                    return value
+            raise Exception('No ID Field')
+        except:
+            error_label = Label(text='התז שבחרת אינו קיים',
+                                fg_color=COLOR_PRIMARY_DARK,
+                                bold=True, size=SIZE_LARGE)
+            error_popup = PopUp(error_label, is_shown=True, is_cancelable=True, title='שגיאה')
+            self.sp.add_component(error_popup)
+
 
     def return_id(self,number,user):
         self.person_id=int(number)
@@ -134,16 +140,11 @@ class CustomPage(Page):
             self.sp.add_component(error_popup)
 
     def update_page(self,user):
-        with open(os.path.join(CUSTOM_PAGES_DIR,self.selected_page_name),'r') as f:
+        with open(os.path.join(CUSTOM_PAGES_DIR, self.selected_page_name),'r') as f:
             groups_dict = json.load(f)
-            root = get_list_of_all_data_files()
-            group_names = []
-            for group_name, fields_list in groups_dict.items():
-                group_names.append(group_name)
+            self.update_data(groups_dict)
+            self.update_graphs(groups_dict)
 
-                for index, field in enumerate(fields_list):
-                    real_value = self.fetch_field_values(user, root, self.person_id, field)
-                    self.labels[field].update_text(real_value)
 
     def update_data(self, groups_dict): #TODO fix
         self.root = get_list_of_all_data_files()
@@ -153,13 +154,16 @@ class CustomPage(Page):
         for group_name, fields_dict in groups_dict['Data'].items():
             group_names.append(group_name)
 
-            group_layout = GridPanel(2, len(list(fields_dict.values())), bg_color=COLOR_PRIMARY_DARK)
+            group_layout = GridPanel(len(list(fields_dict.values())), 2, bg_color=COLOR_PRIMARY_DARK)
             index = 0
-            for field_name, field in fields_dict.items():
-                group_layout.add_component(Label(field_name, fg_color='White'), 0, index)
-                real_value = self.fetch_field_values(self.user, self.root, self.person_id, field)
-                self.labels[field]=Label(real_value, fg_color='White')
-                group_layout.add_component(self.labels[field], 1, index)   #real_value_dict[field]
+            for field_name, field_calculation in fields_dict.items():
+                result = self.calculate_func(field_calculation)
+                if isinstance(result, pd.Series):
+                    result = self.fetch_field_value_by_id(result, self.person_id)
+
+                group_layout.add_component(Label(field_name, fg_color='White'), index, 0)
+                self.labels[str(field_calculation)]=Label(result, fg_color='White')
+                group_layout.add_component(self.labels[str(field_calculation)], index, 1)   #real_value_dict[field]
                 index += 1
             group_layouts.append(group_layout)
 
@@ -190,11 +194,12 @@ class CustomPage(Page):
         grid_panel_id= GridPanel(50, 3, bordered=True,bg_color=COLOR_PRIMARY_DARK)
         self.custom_stack.add_component(grid_panel_id)
         #self.cadet_id=self.get_id(user)
-        '''
-        id_utils = [str(u.click_email).split('@')[0] for u in User.objects()]
-        name_utils= [str(u.name) for u in User.objects()]
-        '''
-        data_df =open_not_drive_file(CUSTOM_PAGES)  #opens the abs path of all the ids and names
+
+        #id_utils = [str(u.click_email).split('@')[0] for u in User.objects()]
+        #name_utils= [str(u.name) for u in User.objects()]
+        id_utils = [i for i in range(1, 21)]
+        
+        data_df = open_not_drive_file(CUSTOM_PAGES)  #opens the abs path of all the ids and names
         personaln_df=data_df['שם פרטי']
         family_names= data_df['שם משפחה']
         id_df=data_df['תעודת זהות']
@@ -206,23 +211,18 @@ class CustomPage(Page):
             ids.append(id_df[i])
         grid_panel_id.add_component(
             ComboBox(names, on_changed=lambda person_id: self.return_id(ids[int(person_id)],self.user)),1)
-
-        #fetch_fields_dict(root: FileTree, json_dict: dict, candidate_id: int)
+        '''
         try:
             with open(os.path.join(CUSTOM_PAGES_DIR, page_name),'r') as f:
                 groups_dict = json.load(f)
                 self.update_data(groups_dict)
-                '''
-                for i in json:
-                    graph= ChartjsComponent()
-                    group_layout.add_component(graph_i)
-                '''
                 self.update_graphs(groups_dict)
-        except:
+        except Exception as e:
+            raise e
             error_label=Label(text='אופס, כנראה שזה דף לא חוקי, נסו לבחור אחד אחר', fg_color=COLOR_PRIMARY_DARK,bold=True,size=SIZE_LARGE)
             error_popup= PopUp(error_label,is_shown=True,is_cancelable=True,title='שגיאה')
             self.sp.add_component(error_popup)
-
+        '''
 
     def get_page_ui(self, user: User):
         self.user = user

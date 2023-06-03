@@ -111,7 +111,6 @@ def get_list_of_all_data_files():
         recursive_list_all_files(MIUN_FOLDER_DRIVE_ID, root_tree)
     except Exception as e:
         logger.warning('Exception occurred during get_list_of_all_data_files():\n' + str(e))
-        print('gg')
         os.remove(CREDENTIALS_FILE)
         #recursive_list_all_files(MIUN_FOLDER_DRIVE_ID, root_tree)
     return root_tree
@@ -188,8 +187,8 @@ def get_file_object(root: FileTree, path: str) -> FileTree:
             child_name = path
             path = ''
         else:
-            path = path[i+1:]
             child_name = path[:i]
+            path = path[i+1:]
         curr_obj = curr_obj.get_child(child_name)
     return curr_obj
 
