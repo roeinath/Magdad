@@ -330,7 +330,7 @@ class DataChoosePopUp(PopUp):
             for i in range(len(self.stat_funcs_chosen)):
                 params = []
                 for j in range(len(self.field_names_chosen[i])):
-                    params.append(f'{self.current_files[i][j].get_full_path()}:{self.field_names_chosen[i][j]}')
+                    params.append(f'{self.current_files[i][j].get_full_path()[1:]}:{self.field_names_chosen[i][j]}')
                 stat_funcs_list.append([self.stat_funcs_chosen[i], params])
             return [self.graph_func_chosen, stat_funcs_list]
 

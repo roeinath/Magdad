@@ -163,7 +163,7 @@ def is_file_updated(file_tree_obj):
     file_path = MIUN_FOLDER_NAME + '/' + path_inside
     if not (path.exists(file_path) and path.exists(METADATA_FILE)):
         return False
-    with open(METADATA_FILE,'r') as metadata_file:
+    with open(METADATA_FILE, 'r') as metadata_file:
          metadata_dict = json.load(metadata_file)
          if(not path_inside in metadata_dict):
              return False
