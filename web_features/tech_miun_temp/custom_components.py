@@ -30,6 +30,7 @@ from web_features.tech_miun_temp.wix.graph_functions import GRAPH_FUNCTIONS
 from web_features.tech_miun_temp.wix.statistics_functions import STATISTICS_FUNCTIONS
 from web_framework.server_side.infastructure.components.pop_up import PopUp
 
+
 class FileChoosePopUp(PopUp):
     def __init__(self, on_file_chosen, *params, **kargs):
         sp = self.initialize()
@@ -318,7 +319,7 @@ class DataChoosePopUp(PopUp):
             # Iterate over sub-scale.
             params: List[str] = []
             for i in range(len(self.field_names_chosen[0])):
-                params.append(f'{self.current_files[0][i].get_full_path()}:{self.field_names_chosen[0][i]}')
+                params.append(f'{self.current_files[0][i].get_full_path()[1:]}:{self.field_names_chosen[0][i]}')
             return [self.stat_funcs_chosen[0], params]
 
         if self.mode == MODE_GRAPH:
